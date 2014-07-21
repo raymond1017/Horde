@@ -1,0 +1,18 @@
+/* 
+  Horde.strings
+  Horde
+
+  Created by junwen.wu on 14-7-20.
+  Copyright (c) 2014年 Bwl. All rights reserved.
+*/
+
+"Application_Name" = "说走就走";
+
+//Main
+"MainVC_" = "";
+
+//Taxi PickingUp
+"TaxiPickingUp_Title" = "接机";
+"TaxiPickingUp_PlaceOrder" = "开始叫车";
+"TaxiPickingUp_Estimated" = "车费预估";
+"TaxiPickingUp_FlightNumber" = "航班号";
