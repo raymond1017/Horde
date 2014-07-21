@@ -15,7 +15,6 @@
 		2F1C602C197AD501004D3C2A /* TaxiBookingVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 2F1C602B197AD501004D3C2A /* TaxiBookingVC.m */; };
 		2F1C602F197AD50F004D3C2A /* TaxiLookingForVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 2F1C602E197AD50F004D3C2A /* TaxiLookingForVC.m */; };
 		2F1C6032197AD52F004D3C2A /* TaxiPickingUpVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 2F1C6031197AD52F004D3C2A /* TaxiPickingUpVC.m */; };
-		2F1C6041197B5F7C004D3C2A /* Horde.strings in Resources */ = {isa = PBXBuildFile; fileRef = 2F1C6043197B5F7C004D3C2A /* Horde.strings */; };
 		2F1C6049197BAC5F004D3C2A /* back@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 2F1C6048197BAC5F004D3C2A /* back@2x.png */; };
 		2F1C6060197BACD0004D3C2A /* ArachnidQuarterVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 2F1C604B197BACD0004D3C2A /* ArachnidQuarterVC.m */; };
 		2F1C6061197BACD0004D3C2A /* ConstructQuarterVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 2F1C604D197BACD0004D3C2A /* ConstructQuarterVC.m */; };
@@ -29,7 +28,6 @@
 		2F5028521977DD420052F818 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2F5028511977DD420052F818 /* Foundation.framework */; };
 		2F5028541977DD420052F818 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2F5028531977DD420052F818 /* CoreGraphics.framework */; };
 		2F5028561977DD420052F818 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2F5028551977DD420052F818 /* UIKit.framework */; };
-		2F50285C1977DD420052F818 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 2F50285A1977DD420052F818 /* InfoPlist.strings */; };
 		2F50285E1977DD430052F818 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 2F50285D1977DD430052F818 /* main.m */; };
 		2F5028621977DD430052F818 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 2F5028611977DD430052F818 /* AppDelegate.m */; };
 		2F5028651977DD430052F818 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2F5028631977DD430052F818 /* Main.storyboard */; };
@@ -38,13 +36,13 @@
 		2F5028711977DD430052F818 /* XCTest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2F5028701977DD430052F818 /* XCTest.framework */; };
 		2F5028721977DD430052F818 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2F5028511977DD420052F818 /* Foundation.framework */; };
 		2F5028731977DD430052F818 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2F5028551977DD420052F818 /* UIKit.framework */; };
-		2F50287B1977DD430052F818 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 2F5028791977DD430052F818 /* InfoPlist.strings */; };
 		2F50287D1977DD430052F818 /* HordeTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 2F50287C1977DD430052F818 /* HordeTests.m */; };
 		2F7860F4197CC84500AAE6E1 /* DungeonsVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 2F7860F1197CC84500AAE6E1 /* DungeonsVC.m */; };
 		2F7860F5197CC84500AAE6E1 /* SoloVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 2F7860F3197CC84500AAE6E1 /* SoloVC.m */; };
 		2F7860F7197CC90900AAE6E1 /* minback@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 2F7860F6197CC90900AAE6E1 /* minback@2x.png */; };
 		2F8C7916197CCDCC0071297C /* NSBundle+Language.m in Sources */ = {isa = PBXBuildFile; fileRef = 2F8C7913197CCDCC0071297C /* NSBundle+Language.m */; };
 		2F8C7917197CCDCC0071297C /* Orgrimar.m in Sources */ = {isa = PBXBuildFile; fileRef = 2F8C7915197CCDCC0071297C /* Orgrimar.m */; };
+		2F8C791A197CCF3A0071297C /* Dungeons.strings in Resources */ = {isa = PBXBuildFile; fileRef = 2F8C791C197CCF3A0071297C /* Dungeons.strings */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -74,8 +72,6 @@
 		2F1C602E197AD50F004D3C2A /* TaxiLookingForVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TaxiLookingForVC.m; sourceTree = "<group>"; };
 		2F1C6030197AD52F004D3C2A /* TaxiPickingUpVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TaxiPickingUpVC.h; sourceTree = "<group>"; };
 		2F1C6031197AD52F004D3C2A /* TaxiPickingUpVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TaxiPickingUpVC.m; sourceTree = "<group>"; };
-		2F1C6042197B5F7C004D3C2A /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Horde.strings; sourceTree = "<group>"; };
-		2F1C6044197B5F97004D3C2A /* zh-Hans */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hans"; path = "zh-Hans.lproj/Horde.strings"; sourceTree = "<group>"; };
 		2F1C6048197BAC5F004D3C2A /* back@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "back@2x.png"; path = "images/back@2x.png"; sourceTree = "<group>"; };
 		2F1C604A197BACD0004D3C2A /* ArachnidQuarterVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ArachnidQuarterVC.h; sourceTree = "<group>"; };
 		2F1C604B197BACD0004D3C2A /* ArachnidQuarterVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ArachnidQuarterVC.m; sourceTree = "<group>"; };
@@ -100,7 +96,6 @@
 		2F5028531977DD420052F818 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
 		2F5028551977DD420052F818 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		2F5028591977DD420052F818 /* Horde-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "Horde-Info.plist"; sourceTree = "<group>"; };
-		2F50285B1977DD420052F818 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		2F50285D1977DD430052F818 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		2F50285F1977DD430052F818 /* Horde-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Horde-Prefix.pch"; sourceTree = "<group>"; };
 		2F5028601977DD430052F818 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -112,7 +107,6 @@
 		2F50286F1977DD430052F818 /* HordeTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = HordeTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		2F5028701977DD430052F818 /* XCTest.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = XCTest.framework; path = Library/Frameworks/XCTest.framework; sourceTree = DEVELOPER_DIR; };
 		2F5028781977DD430052F818 /* HordeTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "HordeTests-Info.plist"; sourceTree = "<group>"; };
-		2F50287A1977DD430052F818 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		2F50287C1977DD430052F818 /* HordeTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HordeTests.m; sourceTree = "<group>"; };
 		2F7860F0197CC84500AAE6E1 /* DungeonsVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = DungeonsVC.h; path = Dungeons/DungeonsVC.h; sourceTree = "<group>"; };
 		2F7860F1197CC84500AAE6E1 /* DungeonsVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = DungeonsVC.m; path = Dungeons/DungeonsVC.m; sourceTree = "<group>"; };
@@ -123,6 +117,8 @@
 		2F8C7913197CCDCC0071297C /* NSBundle+Language.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "NSBundle+Language.m"; path = "Dungeons/NSBundle+Language.m"; sourceTree = "<group>"; };
 		2F8C7914197CCDCC0071297C /* Orgrimar.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Orgrimar.h; path = Dungeons/Orgrimar.h; sourceTree = "<group>"; };
 		2F8C7915197CCDCC0071297C /* Orgrimar.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = Orgrimar.m; path = Dungeons/Orgrimar.m; sourceTree = "<group>"; };
+		2F8C791D197CD0420071297C /* zh-Hans */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hans"; path = "zh-Hans.lproj/Dungeons.strings"; sourceTree = "<group>"; };
+		2F8C791E197CD5A20071297C /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Dungeons.strings; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -256,10 +252,9 @@
 			isa = PBXGroup;
 			children = (
 				2F5028591977DD420052F818 /* Horde-Info.plist */,
-				2F50285A1977DD420052F818 /* InfoPlist.strings */,
 				2F50285D1977DD430052F818 /* main.m */,
 				2F50285F1977DD430052F818 /* Horde-Prefix.pch */,
-				2F1C6043197B5F7C004D3C2A /* Horde.strings */,
+				2F8C791C197CCF3A0071297C /* Dungeons.strings */,
 			);
 			name = "Supporting Files";
 			sourceTree = "<group>";
@@ -277,7 +272,6 @@
 			isa = PBXGroup;
 			children = (
 				2F5028781977DD430052F818 /* HordeTests-Info.plist */,
-				2F5028791977DD430052F818 /* InfoPlist.strings */,
 			);
 			name = "Supporting Files";
 			sourceTree = "<group>";
@@ -401,11 +395,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				2F50286A1977DD430052F818 /* Images.xcassets in Resources */,
-				2F50285C1977DD420052F818 /* InfoPlist.strings in Resources */,
 				2F7860F7197CC90900AAE6E1 /* minback@2x.png in Resources */,
 				2F1C6049197BAC5F004D3C2A /* back@2x.png in Resources */,
+				2F8C791A197CCF3A0071297C /* Dungeons.strings in Resources */,
 				2F5028651977DD430052F818 /* Main.storyboard in Resources */,
-				2F1C6041197B5F7C004D3C2A /* Horde.strings in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -413,7 +406,6 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				2F50287B1977DD430052F818 /* InfoPlist.strings in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -470,23 +462,6 @@
 /* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
-		2F1C6043197B5F7C004D3C2A /* Horde.strings */ = {
-			isa = PBXVariantGroup;
-			children = (
-				2F1C6042197B5F7C004D3C2A /* en */,
-				2F1C6044197B5F97004D3C2A /* zh-Hans */,
-			);
-			name = Horde.strings;
-			sourceTree = "<group>";
-		};
-		2F50285A1977DD420052F818 /* InfoPlist.strings */ = {
-			isa = PBXVariantGroup;
-			children = (
-				2F50285B1977DD420052F818 /* en */,
-			);
-			name = InfoPlist.strings;
-			sourceTree = "<group>";
-		};
 		2F5028631977DD430052F818 /* Main.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
@@ -495,12 +470,13 @@
 			name = Main.storyboard;
 			sourceTree = "<group>";
 		};
-		2F5028791977DD430052F818 /* InfoPlist.strings */ = {
+		2F8C791C197CCF3A0071297C /* Dungeons.strings */ = {
 			isa = PBXVariantGroup;
 			children = (
-				2F50287A1977DD430052F818 /* en */,
+				2F8C791D197CD0420071297C /* zh-Hans */,
+				2F8C791E197CD5A20071297C /* en */,
 			);
-			name = InfoPlist.strings;
+			name = Dungeons.strings;
 			sourceTree = "<group>";
 		};
 /* End PBXVariantGroup section */
