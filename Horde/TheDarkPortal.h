@@ -9,7 +9,7 @@
 #import <Foundation/Foundation.h>
 
 #define REQUEST_WEATHER @"weather.htm"
-#define REQUEST_PLACEORDER @"order/commit"
+#define REQUEST_PLACEORDER @"order/commit" 
 
 @interface TheDarkPortal : NSObject
 
