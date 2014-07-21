@@ -8,8 +8,6 @@
 
 /* Begin PBXBuildFile section */
 		2F1C60051979F285004D3C2A /* TheDarkPortal.m in Sources */ = {isa = PBXBuildFile; fileRef = 2F1C60041979F285004D3C2A /* TheDarkPortal.m */; };
-		2F1C6009197AA084004D3C2A /* NSMutableDictionary+Status.m in Sources */ = {isa = PBXBuildFile; fileRef = 2F1C6008197AA084004D3C2A /* NSMutableDictionary+Status.m */; };
-		2F1C600C197AA11D004D3C2A /* NSMutableDictionary+Response.m in Sources */ = {isa = PBXBuildFile; fileRef = 2F1C600B197AA11D004D3C2A /* NSMutableDictionary+Response.m */; };
 		2F1C600F197AA590004D3C2A /* NSMutableDictionary+Weather.m in Sources */ = {isa = PBXBuildFile; fileRef = 2F1C600E197AA590004D3C2A /* NSMutableDictionary+Weather.m */; };
 		2F1C6016197AB0FA004D3C2A /* OldCrafty.m in Sources */ = {isa = PBXBuildFile; fileRef = 2F1C6015197AB0FA004D3C2A /* OldCrafty.m */; };
 		2F1C602C197AD501004D3C2A /* TaxiBookingVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 2F1C602B197AD501004D3C2A /* TaxiBookingVC.m */; };
@@ -43,6 +41,9 @@
 		2F8C7916197CCDCC0071297C /* NSBundle+Language.m in Sources */ = {isa = PBXBuildFile; fileRef = 2F8C7913197CCDCC0071297C /* NSBundle+Language.m */; };
 		2F8C7917197CCDCC0071297C /* Orgrimar.m in Sources */ = {isa = PBXBuildFile; fileRef = 2F8C7915197CCDCC0071297C /* Orgrimar.m */; };
 		2F8C791A197CCF3A0071297C /* Dungeons.strings in Resources */ = {isa = PBXBuildFile; fileRef = 2F8C791C197CCF3A0071297C /* Dungeons.strings */; };
+		2FBA0D80197CFFA400B8C280 /* NSMutableDictionary+Response.m in Sources */ = {isa = PBXBuildFile; fileRef = 2FBA0D7D197CFFA400B8C280 /* NSMutableDictionary+Response.m */; };
+		2FBA0D81197CFFA400B8C280 /* NSMutableDictionary+Status.m in Sources */ = {isa = PBXBuildFile; fileRef = 2FBA0D7F197CFFA400B8C280 /* NSMutableDictionary+Status.m */; };
+		2FBA0D84197CFFC800B8C280 /* NSMutableDictionary+Request.m in Sources */ = {isa = PBXBuildFile; fileRef = 2FBA0D83197CFFC800B8C280 /* NSMutableDictionary+Request.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -58,10 +59,6 @@
 /* Begin PBXFileReference section */
 		2F1C60031979F285004D3C2A /* TheDarkPortal.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TheDarkPortal.h; sourceTree = "<group>"; };
 		2F1C60041979F285004D3C2A /* TheDarkPortal.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TheDarkPortal.m; sourceTree = "<group>"; };
-		2F1C6007197AA084004D3C2A /* NSMutableDictionary+Status.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSMutableDictionary+Status.h"; sourceTree = "<group>"; };
-		2F1C6008197AA084004D3C2A /* NSMutableDictionary+Status.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSMutableDictionary+Status.m"; sourceTree = "<group>"; };
-		2F1C600A197AA11D004D3C2A /* NSMutableDictionary+Response.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSMutableDictionary+Response.h"; sourceTree = "<group>"; };
-		2F1C600B197AA11D004D3C2A /* NSMutableDictionary+Response.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSMutableDictionary+Response.m"; sourceTree = "<group>"; };
 		2F1C600D197AA590004D3C2A /* NSMutableDictionary+Weather.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSMutableDictionary+Weather.h"; sourceTree = "<group>"; };
 		2F1C600E197AA590004D3C2A /* NSMutableDictionary+Weather.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSMutableDictionary+Weather.m"; sourceTree = "<group>"; };
 		2F1C6014197AB0FA004D3C2A /* OldCrafty.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OldCrafty.h; sourceTree = "<group>"; };
@@ -119,6 +116,12 @@
 		2F8C7915197CCDCC0071297C /* Orgrimar.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = Orgrimar.m; path = Dungeons/Orgrimar.m; sourceTree = "<group>"; };
 		2F8C791D197CD0420071297C /* zh-Hans */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hans"; path = "zh-Hans.lproj/Dungeons.strings"; sourceTree = "<group>"; };
 		2F8C791E197CD5A20071297C /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Dungeons.strings; sourceTree = "<group>"; };
+		2FBA0D7C197CFFA400B8C280 /* NSMutableDictionary+Response.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "NSMutableDictionary+Response.h"; path = "Dungeons/NSMutableDictionary+Response.h"; sourceTree = "<group>"; };
+		2FBA0D7D197CFFA400B8C280 /* NSMutableDictionary+Response.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "NSMutableDictionary+Response.m"; path = "Dungeons/NSMutableDictionary+Response.m"; sourceTree = "<group>"; };
+		2FBA0D7E197CFFA400B8C280 /* NSMutableDictionary+Status.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "NSMutableDictionary+Status.h"; path = "Dungeons/NSMutableDictionary+Status.h"; sourceTree = "<group>"; };
+		2FBA0D7F197CFFA400B8C280 /* NSMutableDictionary+Status.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "NSMutableDictionary+Status.m"; path = "Dungeons/NSMutableDictionary+Status.m"; sourceTree = "<group>"; };
+		2FBA0D82197CFFC800B8C280 /* NSMutableDictionary+Request.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "NSMutableDictionary+Request.h"; path = "Dungeons/NSMutableDictionary+Request.h"; sourceTree = "<group>"; };
+		2FBA0D83197CFFC800B8C280 /* NSMutableDictionary+Request.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "NSMutableDictionary+Request.m"; path = "Dungeons/NSMutableDictionary+Request.m"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -157,10 +160,6 @@
 		2F1C6006197A94F8004D3C2A /* Service+bean */ = {
 			isa = PBXGroup;
 			children = (
-				2F1C6007197AA084004D3C2A /* NSMutableDictionary+Status.h */,
-				2F1C6008197AA084004D3C2A /* NSMutableDictionary+Status.m */,
-				2F1C600A197AA11D004D3C2A /* NSMutableDictionary+Response.h */,
-				2F1C600B197AA11D004D3C2A /* NSMutableDictionary+Response.m */,
 				2F1C600D197AA590004D3C2A /* NSMutableDictionary+Weather.h */,
 				2F1C600E197AA590004D3C2A /* NSMutableDictionary+Weather.m */,
 			);
@@ -304,13 +303,19 @@
 		2F7860EF197CC83300AAE6E1 /* Dungeons */ = {
 			isa = PBXGroup;
 			children = (
-				2F8C7912197CCDCC0071297C /* NSBundle+Language.h */,
-				2F8C7913197CCDCC0071297C /* NSBundle+Language.m */,
-				2F8C7914197CCDCC0071297C /* Orgrimar.h */,
-				2F8C7915197CCDCC0071297C /* Orgrimar.m */,
-				2F7860F6197CC90900AAE6E1 /* minback@2x.png */,
 				2F7860F0197CC84500AAE6E1 /* DungeonsVC.h */,
 				2F7860F1197CC84500AAE6E1 /* DungeonsVC.m */,
+				2F7860F6197CC90900AAE6E1 /* minback@2x.png */,
+				2F8C7912197CCDCC0071297C /* NSBundle+Language.h */,
+				2F8C7913197CCDCC0071297C /* NSBundle+Language.m */,
+				2FBA0D82197CFFC800B8C280 /* NSMutableDictionary+Request.h */,
+				2FBA0D83197CFFC800B8C280 /* NSMutableDictionary+Request.m */,
+				2FBA0D7C197CFFA400B8C280 /* NSMutableDictionary+Response.h */,
+				2FBA0D7D197CFFA400B8C280 /* NSMutableDictionary+Response.m */,
+				2FBA0D7E197CFFA400B8C280 /* NSMutableDictionary+Status.h */,
+				2FBA0D7F197CFFA400B8C280 /* NSMutableDictionary+Status.m */,
+				2F8C7914197CCDCC0071297C /* Orgrimar.h */,
+				2F8C7915197CCDCC0071297C /* Orgrimar.m */,
 				2F7860F2197CC84500AAE6E1 /* SoloVC.h */,
 				2F7860F3197CC84500AAE6E1 /* SoloVC.m */,
 			);
@@ -427,7 +432,6 @@
 				2F8C7917197CCDCC0071297C /* Orgrimar.m in Sources */,
 				2F1C6064197BACD0004D3C2A /* MilitaryQuarterVC.m in Sources */,
 				2F1C606A197BACD0004D3C2A /* TaxtPickingUpVC.m in Sources */,
-				2F1C600C197AA11D004D3C2A /* NSMutableDictionary+Response.m in Sources */,
 				2F1C602C197AD501004D3C2A /* TaxiBookingVC.m in Sources */,
 				2F1C6065197BACD0004D3C2A /* NaxxramasVC.m in Sources */,
 				2F7860F4197CC84500AAE6E1 /* DungeonsVC.m in Sources */,
@@ -435,9 +439,11 @@
 				2F1C6032197AD52F004D3C2A /* TaxiPickingUpVC.m in Sources */,
 				2F1C6068197BACD0004D3C2A /* PlaneToHotelVC.m in Sources */,
 				2F1C6063197BACD0004D3C2A /* FrostwyrmLairVC.m in Sources */,
-				2F1C6009197AA084004D3C2A /* NSMutableDictionary+Status.m in Sources */,
+				2FBA0D80197CFFA400B8C280 /* NSMutableDictionary+Response.m in Sources */,
 				2F1C602F197AD50F004D3C2A /* TaxiLookingForVC.m in Sources */,
+				2FBA0D84197CFFC800B8C280 /* NSMutableDictionary+Request.m in Sources */,
 				2F1C6067197BACD0004D3C2A /* PlagueQuarterVC.m in Sources */,
+				2FBA0D81197CFFA400B8C280 /* NSMutableDictionary+Status.m in Sources */,
 				2F1C60051979F285004D3C2A /* TheDarkPortal.m in Sources */,
 				2F1C6016197AB0FA004D3C2A /* OldCrafty.m in Sources */,
 			);
