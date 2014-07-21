@@ -11,13 +11,11 @@
 		2F1C6009197AA084004D3C2A /* NSMutableDictionary+Status.m in Sources */ = {isa = PBXBuildFile; fileRef = 2F1C6008197AA084004D3C2A /* NSMutableDictionary+Status.m */; };
 		2F1C600C197AA11D004D3C2A /* NSMutableDictionary+Response.m in Sources */ = {isa = PBXBuildFile; fileRef = 2F1C600B197AA11D004D3C2A /* NSMutableDictionary+Response.m */; };
 		2F1C600F197AA590004D3C2A /* NSMutableDictionary+Weather.m in Sources */ = {isa = PBXBuildFile; fileRef = 2F1C600E197AA590004D3C2A /* NSMutableDictionary+Weather.m */; };
-		2F1C6013197AA9A9004D3C2A /* Orgrimar.m in Sources */ = {isa = PBXBuildFile; fileRef = 2F1C6012197AA9A9004D3C2A /* Orgrimar.m */; };
 		2F1C6016197AB0FA004D3C2A /* OldCrafty.m in Sources */ = {isa = PBXBuildFile; fileRef = 2F1C6015197AB0FA004D3C2A /* OldCrafty.m */; };
 		2F1C602C197AD501004D3C2A /* TaxiBookingVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 2F1C602B197AD501004D3C2A /* TaxiBookingVC.m */; };
 		2F1C602F197AD50F004D3C2A /* TaxiLookingForVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 2F1C602E197AD50F004D3C2A /* TaxiLookingForVC.m */; };
 		2F1C6032197AD52F004D3C2A /* TaxiPickingUpVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 2F1C6031197AD52F004D3C2A /* TaxiPickingUpVC.m */; };
 		2F1C6041197B5F7C004D3C2A /* Horde.strings in Resources */ = {isa = PBXBuildFile; fileRef = 2F1C6043197B5F7C004D3C2A /* Horde.strings */; };
-		2F1C6047197B9A8D004D3C2A /* NSBundle+Language.m in Sources */ = {isa = PBXBuildFile; fileRef = 2F1C6046197B9A8D004D3C2A /* NSBundle+Language.m */; };
 		2F1C6049197BAC5F004D3C2A /* back@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 2F1C6048197BAC5F004D3C2A /* back@2x.png */; };
 		2F1C6060197BACD0004D3C2A /* ArachnidQuarterVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 2F1C604B197BACD0004D3C2A /* ArachnidQuarterVC.m */; };
 		2F1C6061197BACD0004D3C2A /* ConstructQuarterVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 2F1C604D197BACD0004D3C2A /* ConstructQuarterVC.m */; };
@@ -45,6 +43,8 @@
 		2F7860F4197CC84500AAE6E1 /* DungeonsVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 2F7860F1197CC84500AAE6E1 /* DungeonsVC.m */; };
 		2F7860F5197CC84500AAE6E1 /* SoloVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 2F7860F3197CC84500AAE6E1 /* SoloVC.m */; };
 		2F7860F7197CC90900AAE6E1 /* minback@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 2F7860F6197CC90900AAE6E1 /* minback@2x.png */; };
+		2F8C7916197CCDCC0071297C /* NSBundle+Language.m in Sources */ = {isa = PBXBuildFile; fileRef = 2F8C7913197CCDCC0071297C /* NSBundle+Language.m */; };
+		2F8C7917197CCDCC0071297C /* Orgrimar.m in Sources */ = {isa = PBXBuildFile; fileRef = 2F8C7915197CCDCC0071297C /* Orgrimar.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -66,8 +66,6 @@
 		2F1C600B197AA11D004D3C2A /* NSMutableDictionary+Response.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSMutableDictionary+Response.m"; sourceTree = "<group>"; };
 		2F1C600D197AA590004D3C2A /* NSMutableDictionary+Weather.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSMutableDictionary+Weather.h"; sourceTree = "<group>"; };
 		2F1C600E197AA590004D3C2A /* NSMutableDictionary+Weather.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSMutableDictionary+Weather.m"; sourceTree = "<group>"; };
-		2F1C6011197AA9A9004D3C2A /* Orgrimar.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Orgrimar.h; sourceTree = "<group>"; };
-		2F1C6012197AA9A9004D3C2A /* Orgrimar.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Orgrimar.m; sourceTree = "<group>"; };
 		2F1C6014197AB0FA004D3C2A /* OldCrafty.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OldCrafty.h; sourceTree = "<group>"; };
 		2F1C6015197AB0FA004D3C2A /* OldCrafty.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OldCrafty.m; sourceTree = "<group>"; };
 		2F1C602A197AD501004D3C2A /* TaxiBookingVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TaxiBookingVC.h; sourceTree = "<group>"; };
@@ -78,8 +76,6 @@
 		2F1C6031197AD52F004D3C2A /* TaxiPickingUpVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TaxiPickingUpVC.m; sourceTree = "<group>"; };
 		2F1C6042197B5F7C004D3C2A /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Horde.strings; sourceTree = "<group>"; };
 		2F1C6044197B5F97004D3C2A /* zh-Hans */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hans"; path = "zh-Hans.lproj/Horde.strings"; sourceTree = "<group>"; };
-		2F1C6045197B9A8D004D3C2A /* NSBundle+Language.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSBundle+Language.h"; sourceTree = "<group>"; };
-		2F1C6046197B9A8D004D3C2A /* NSBundle+Language.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSBundle+Language.m"; sourceTree = "<group>"; };
 		2F1C6048197BAC5F004D3C2A /* back@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "back@2x.png"; path = "images/back@2x.png"; sourceTree = "<group>"; };
 		2F1C604A197BACD0004D3C2A /* ArachnidQuarterVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ArachnidQuarterVC.h; sourceTree = "<group>"; };
 		2F1C604B197BACD0004D3C2A /* ArachnidQuarterVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ArachnidQuarterVC.m; sourceTree = "<group>"; };
@@ -123,6 +119,10 @@
 		2F7860F2197CC84500AAE6E1 /* SoloVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = SoloVC.h; path = Dungeons/SoloVC.h; sourceTree = "<group>"; };
 		2F7860F3197CC84500AAE6E1 /* SoloVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = SoloVC.m; path = Dungeons/SoloVC.m; sourceTree = "<group>"; };
 		2F7860F6197CC90900AAE6E1 /* minback@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "minback@2x.png"; path = "Dungeons/minback@2x.png"; sourceTree = "<group>"; };
+		2F8C7912197CCDCC0071297C /* NSBundle+Language.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "NSBundle+Language.h"; path = "Dungeons/NSBundle+Language.h"; sourceTree = "<group>"; };
+		2F8C7913197CCDCC0071297C /* NSBundle+Language.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "NSBundle+Language.m"; path = "Dungeons/NSBundle+Language.m"; sourceTree = "<group>"; };
+		2F8C7914197CCDCC0071297C /* Orgrimar.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Orgrimar.h; path = Dungeons/Orgrimar.h; sourceTree = "<group>"; };
+		2F8C7915197CCDCC0071297C /* Orgrimar.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = Orgrimar.m; path = Dungeons/Orgrimar.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -174,12 +174,8 @@
 		2F1C6010197AA85B004D3C2A /* Util */ = {
 			isa = PBXGroup;
 			children = (
-				2F1C6011197AA9A9004D3C2A /* Orgrimar.h */,
-				2F1C6012197AA9A9004D3C2A /* Orgrimar.m */,
 				2F1C6014197AB0FA004D3C2A /* OldCrafty.h */,
 				2F1C6015197AB0FA004D3C2A /* OldCrafty.m */,
-				2F1C6045197B9A8D004D3C2A /* NSBundle+Language.h */,
-				2F1C6046197B9A8D004D3C2A /* NSBundle+Language.m */,
 			);
 			name = Util;
 			sourceTree = "<group>";
@@ -314,6 +310,10 @@
 		2F7860EF197CC83300AAE6E1 /* Dungeons */ = {
 			isa = PBXGroup;
 			children = (
+				2F8C7912197CCDCC0071297C /* NSBundle+Language.h */,
+				2F8C7913197CCDCC0071297C /* NSBundle+Language.m */,
+				2F8C7914197CCDCC0071297C /* Orgrimar.h */,
+				2F8C7915197CCDCC0071297C /* Orgrimar.m */,
 				2F7860F6197CC90900AAE6E1 /* minback@2x.png */,
 				2F7860F0197CC84500AAE6E1 /* DungeonsVC.h */,
 				2F7860F1197CC84500AAE6E1 /* DungeonsVC.m */,
@@ -426,18 +426,18 @@
 			files = (
 				2F5028681977DD430052F818 /* ViewController.m in Sources */,
 				2F7860F5197CC84500AAE6E1 /* SoloVC.m in Sources */,
+				2F8C7916197CCDCC0071297C /* NSBundle+Language.m in Sources */,
 				2F1C6061197BACD0004D3C2A /* ConstructQuarterVC.m in Sources */,
 				2F1C600F197AA590004D3C2A /* NSMutableDictionary+Weather.m in Sources */,
 				2F1C6066197BACD0004D3C2A /* OrgrimarVC.m in Sources */,
 				2F5028621977DD430052F818 /* AppDelegate.m in Sources */,
 				2F1C6060197BACD0004D3C2A /* ArachnidQuarterVC.m in Sources */,
+				2F8C7917197CCDCC0071297C /* Orgrimar.m in Sources */,
 				2F1C6064197BACD0004D3C2A /* MilitaryQuarterVC.m in Sources */,
 				2F1C606A197BACD0004D3C2A /* TaxtPickingUpVC.m in Sources */,
 				2F1C600C197AA11D004D3C2A /* NSMutableDictionary+Response.m in Sources */,
 				2F1C602C197AD501004D3C2A /* TaxiBookingVC.m in Sources */,
 				2F1C6065197BACD0004D3C2A /* NaxxramasVC.m in Sources */,
-				2F1C6013197AA9A9004D3C2A /* Orgrimar.m in Sources */,
-				2F1C6047197B9A8D004D3C2A /* NSBundle+Language.m in Sources */,
 				2F7860F4197CC84500AAE6E1 /* DungeonsVC.m in Sources */,
 				2F50285E1977DD430052F818 /* main.m in Sources */,
 				2F1C6032197AD52F004D3C2A /* TaxiPickingUpVC.m in Sources */,
