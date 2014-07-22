@@ -23,12 +23,8 @@
               onSucceed:(void(^) (NSMutableDictionary* response)) onSucceed
               onFailure:(void(^) (NSMutableDictionary* response)) onFailure{
     
-    dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0), ^(void){
-        
-        
-        NSMutableDictionary* dict = [OldCrafty fakeRequestWithMethod:[[request URL] absoluteString] andRequestMethod:requestData];
-        onSucceed(dict);
-    });
+    NSMutableDictionary* dict = [OldCrafty fakeRequestWithMethod:[[request URL] absoluteString] andRequestMethod:requestData];
+    onSucceed(dict);
 }
 
 
@@ -37,13 +33,7 @@
              onFailure:(void(^) (NSMutableDictionary* status)) failure {
     
     NSMutableDictionary* reqData = [NSMutableDictionary new];
-    [self executeRequest:[self makeUrlWithMethod:REQUEST_WEATHER] requestData:reqData onSucceed:^(NSMutableDictionary* succeed) {
-        
-        
-    }onFailure:^(NSMutableDictionary* status){
-        
-        
-    }];
+    [self executeRequest:[self makeUrlWithMethod:REQUEST_WEATHER] requestData:reqData onSucceed:response onFailure:failure];
 
 }
 
@@ -51,13 +41,7 @@
                       onSucceed:(void(^) (NSMutableDictionary* response)) repsonse
                       onFailure:(void(^) (NSMutableDictionary* status)) failure {
     NSMutableDictionary* reqData = [NSMutableDictionary new];
-    [self executeRequest:[self makeUrlWithMethod:REQUEST_WEATHER] requestData:reqData onSucceed:^(NSMutableDictionary* succeed) {
-        
-        
-    }onFailure:^(NSMutableDictionary* status){
-        
-        
-    }];
+    [self executeRequest:[self makeUrlWithMethod:REQUEST_WEATHER] requestData:reqData onSucceed:repsonse onFailure:failure];
 }
 
 @end

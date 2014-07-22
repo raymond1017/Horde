@@ -8,8 +8,9 @@
 
 #import <Foundation/Foundation.h>
 
-#define REQUEST_WEATHER @"weather.htm"
+#define REQUEST_WEATHER @"common/weather.htm"
 #define REQUEST_PLACEORDER @"order/commit"
+#define REQUEST_FLIGHT @"common/flight.htm"
 
 @interface TheDarkPortal : NSObject
 

@@ -7,10 +7,32 @@
 //
 
 #import "NSMutableDictionary+Weather.h"
+#import "Orgrimar.h"
 
 @implementation NSMutableDictionary(Weather)
 
--(NSString*) weather_temperature {
-    return [self objectForKey:@"temperature"];
+-(NSString*) weather_temperature_min {
+    return [self objectForKey:@"min"];
+}
+
+-(NSString*) weather_temperature_cur {
+    return [self objectForKey:@"curr"];
+}
+
+-(enum WeatherType) weather_temperature_type {
+    return [[self objectForKey:@"type"] intValue];
+}
+
+
+-(NSString*) weather_temperature_desc {
+    switch ([self weather_temperature_type]) {
+        case weathertype_cleartoovercast:
+            return T_(@"Weather_CleartoOvercast");
+            break;
+            
+        default:
+            break;
+    }
+    return @"";
 }
 @end

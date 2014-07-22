@@ -6,13 +6,26 @@
  Copyright (c) 2014年 Bwl. All rights reserved.
  */
 
-"Application_Name" = "说走就走123";
+"Application_Name" = "说走就走";
 
 //Main
-"MainVC_" = "";
+"MainVC_Action_PickingUp" = "接机";
+"MainVC_Action_Booking" = "预约叫车";
+"MainVC_Action_LookingFor" = "即时叫车";
 
 //Taxi PickingUp
-"TaxiPickingUp_Title" = "接机123";
+"TaxiPickingUp_Title" = "接机";
 "TaxiPickingUp_PlaceOrder" = "开始叫车";
 "TaxiPickingUp_Estimated" = "车费预估";
-"TaxiPickingUp_FlightNumber" = "航班号";
+
+"TaxiPickingUp_Date" = "选择接机日期";
+"TaxiPickingUp_FlightNumber" = "选择航班号";
+
+"TaxiPickingUp_Location_Start" = "选择接机地点";
+"TaxiPickingUp_Location_End" = "输入酒店电话或直接选择下车地点";
+
+"TaxiPickingUp_SelectStyle" = "选择车型";
+
+//Weather
+"Weather_CleartoOvercast" = "晴转多云";
+

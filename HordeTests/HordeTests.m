@@ -39,7 +39,7 @@
     
     [TheDarkPortal queryWeatherWithCityID:[NSNumber numberWithInt:0] onSucceed:^(NSMutableDictionary* succeed) {
       
-        NSString* str = [succeed weather_temperature];
+        NSString* str = [succeed weather_temperature_desc];
         
         
     }onFailure:^(NSMutableDictionary* status) {
