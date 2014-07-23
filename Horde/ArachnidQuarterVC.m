@@ -13,6 +13,7 @@
 #import "TheDarkPortal.h"
 #import "UILabel+Util.h"
 #import "UIImageView+Util.h"
+#import "TaxiPickingUpCompletedVC.h"
 
 @interface ArachnidQuarterVC ()
 
@@ -185,8 +186,10 @@
 }
 
 -(void)handleLookingFor:(id)sender {
-    TaxiLookingForVC* vc = [TaxiLookingForVC new];
+//    TaxiLookingForVC* vc = [TaxiLookingForVC new];
+//    [self presentViewController:vc animated:YES completion:nil];
+
+    TaxiPickingUpCompletedVC* vc = [TaxiPickingUpCompletedVC new];
     [self presentViewController:vc animated:YES completion:nil];
-    
 }
 @end

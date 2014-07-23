@@ -26,6 +26,31 @@
 
 "TaxiPickingUp_SelectStyle" = "选择车型";
 
+//Taxi PickingUp Detail
+"TaxiPickingUpDetail_Title" = "预定成功";
+"TaxiPickingUpDetail_Tips" = "2天后，将显示司机信息";
+"TaxiPickingUpDetail_Succeed" = "恭喜你，接机服务预定成功！";
+"TaxiPickingUpDetail_Succeed_Tip" = "系统将在您出行前一天，告知相关司机信息";
+
+//Taxi PickingUp Completed
+"TaxiPickingUpCompleted_Title" = "司机信息";
+"TaxiPickingUpCompleted_Storage" = "车上货柜";
+"TaxiPickingUpCompleted_Wifi" = "WIFI信息";
+"TaxiPickingUpCompleted_PayInfo" = "支付方式";
+"TaxiPickingUpCompleted_PathDetail" = "查看路线";
+"TaxiPickingUpCompleted_Completed" = "我已到达";
+
+//Taxi Onboard Storage
+"TaxiOnBoardStorage_Title" = "车上货柜";
+"TaxiOnBoardStorage_Tip" = "下车结账时，我会把所购物品直接交付给您";
+
+
+//Common
+"Pay_Ailpay" = "支付宝支付";
+"Pay_Wechatpay" = "微信支付";
+"Pay_CreditCard" = "信用卡支付";
+
+
 //Weather
 "Weather_CleartoOvercast" = "晴转多云";
 

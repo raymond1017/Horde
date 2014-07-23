@@ -11,6 +11,7 @@
 #define REQUEST_WEATHER @"common/weather.htm"
 #define REQUEST_PLACEORDER @"order/commit"
 #define REQUEST_FLIGHT @"common/flight.htm"
+#define REQUEST_QUERY_STORAGE @"storage/query"
 
 @interface TheDarkPortal : NSObject
 
@@ -21,6 +22,11 @@
 +(void) commitOrder:(NSNumber*)flightNumber
              onSucceed:(void(^) (NSMutableDictionary* response)) response
              onFailure:(void(^) (NSMutableDictionary* status)) failure;
+
++(void) queryStorageByID:(NSNumber*)storageID
+               onSucceed:(void(^) (NSMutableDictionary* response)) response
+               onFailure:(void(^) (NSMutableDictionary* status)) failure;
+
 
 +(NSMutableURLRequest*) makeUrlWithMethod:(NSString *)method;
 @end

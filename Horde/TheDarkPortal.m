@@ -38,10 +38,17 @@
 }
 
 +(void) queryWeatherWithCityID :(NSNumber*)cityID
-                      onSucceed:(void(^) (NSMutableDictionary* response)) repsonse
+                      onSucceed:(void(^) (NSMutableDictionary* response)) response
                       onFailure:(void(^) (NSMutableDictionary* status)) failure {
     NSMutableDictionary* reqData = [NSMutableDictionary new];
-    [self executeRequest:[self makeUrlWithMethod:REQUEST_WEATHER] requestData:reqData onSucceed:repsonse onFailure:failure];
+    [self executeRequest:[self makeUrlWithMethod:REQUEST_WEATHER] requestData:reqData onSucceed:response onFailure:failure];
 }
 
+
++(void) queryStorageByID:(NSNumber*)storageID
+               onSucceed:(void(^) (NSMutableDictionary* response)) response
+               onFailure:(void(^) (NSMutableDictionary* status)) failure {
+    NSMutableDictionary* reqData = [NSMutableDictionary new];
+    [self executeRequest:[self makeUrlWithMethod:REQUEST_WEATHER] requestData:reqData onSucceed:response onFailure:failure];
+}
 @end

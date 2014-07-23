@@ -13,7 +13,6 @@
 		2F1C602C197AD501004D3C2A /* TaxiBookingVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 2F1C602B197AD501004D3C2A /* TaxiBookingVC.m */; };
 		2F1C602F197AD50F004D3C2A /* TaxiLookingForVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 2F1C602E197AD50F004D3C2A /* TaxiLookingForVC.m */; };
 		2F1C6032197AD52F004D3C2A /* TaxiPickingUpVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 2F1C6031197AD52F004D3C2A /* TaxiPickingUpVC.m */; };
-		2F1C6049197BAC5F004D3C2A /* back@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 2F1C6048197BAC5F004D3C2A /* back@2x.png */; };
 		2F1C6060197BACD0004D3C2A /* ArachnidQuarterVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 2F1C604B197BACD0004D3C2A /* ArachnidQuarterVC.m */; };
 		2F1C6061197BACD0004D3C2A /* ConstructQuarterVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 2F1C604D197BACD0004D3C2A /* ConstructQuarterVC.m */; };
 		2F1C6063197BACD0004D3C2A /* FrostwyrmLairVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 2F1C6051197BACD0004D3C2A /* FrostwyrmLairVC.m */; };
@@ -35,19 +34,27 @@
 		2F5028721977DD430052F818 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2F5028511977DD420052F818 /* Foundation.framework */; };
 		2F5028731977DD430052F818 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2F5028551977DD420052F818 /* UIKit.framework */; };
 		2F50287D1977DD430052F818 /* HordeTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 2F50287C1977DD430052F818 /* HordeTests.m */; };
-		2F7860F4197CC84500AAE6E1 /* DungeonsVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 2F7860F1197CC84500AAE6E1 /* DungeonsVC.m */; };
-		2F7860F5197CC84500AAE6E1 /* SoloVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 2F7860F3197CC84500AAE6E1 /* SoloVC.m */; };
-		2F7860F7197CC90900AAE6E1 /* minback@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 2F7860F6197CC90900AAE6E1 /* minback@2x.png */; };
-		2F8C7916197CCDCC0071297C /* NSBundle+Language.m in Sources */ = {isa = PBXBuildFile; fileRef = 2F8C7913197CCDCC0071297C /* NSBundle+Language.m */; };
-		2F8C7917197CCDCC0071297C /* Orgrimar.m in Sources */ = {isa = PBXBuildFile; fileRef = 2F8C7915197CCDCC0071297C /* Orgrimar.m */; };
 		2F8C791A197CCF3A0071297C /* Dungeons.strings in Resources */ = {isa = PBXBuildFile; fileRef = 2F8C791C197CCF3A0071297C /* Dungeons.strings */; };
-		2FB84B63197E3BFC002B807F /* UILabel+Util.m in Sources */ = {isa = PBXBuildFile; fileRef = 2FB84B62197E3BFC002B807F /* UILabel+Util.m */; };
-		2FB84B65197E3E2A002B807F /* traffic_airport@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 2FB84B64197E3E2A002B807F /* traffic_airport@2x.png */; };
-		2FB84B6B197E3ECB002B807F /* UIImageView+Util.m in Sources */ = {isa = PBXBuildFile; fileRef = 2FB84B6A197E3ECB002B807F /* UIImageView+Util.m */; };
-		2FB84B6E197E6CA7002B807F /* UIView+Util.m in Sources */ = {isa = PBXBuildFile; fileRef = 2FB84B6D197E6CA7002B807F /* UIView+Util.m */; };
-		2FBA0D80197CFFA400B8C280 /* NSMutableDictionary+Response.m in Sources */ = {isa = PBXBuildFile; fileRef = 2FBA0D7D197CFFA400B8C280 /* NSMutableDictionary+Response.m */; };
-		2FBA0D81197CFFA400B8C280 /* NSMutableDictionary+Status.m in Sources */ = {isa = PBXBuildFile; fileRef = 2FBA0D7F197CFFA400B8C280 /* NSMutableDictionary+Status.m */; };
-		2FBA0D84197CFFC800B8C280 /* NSMutableDictionary+Request.m in Sources */ = {isa = PBXBuildFile; fileRef = 2FBA0D83197CFFC800B8C280 /* NSMutableDictionary+Request.m */; };
+		2FB84B74197E75DA002B807F /* TaxiPickingUpOrder.m in Sources */ = {isa = PBXBuildFile; fileRef = 2FB84B73197E75DA002B807F /* TaxiPickingUpOrder.m */; };
+		2FB84B7A197E84DC002B807F /* TaxiPickingUpCompletedVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 2FB84B79197E84DC002B807F /* TaxiPickingUpCompletedVC.m */; };
+		2FB84B86197F5A66002B807F /* 1.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 2FB84B83197F5A66002B807F /* 1.jpg */; };
+		2FB84B87197F5A66002B807F /* back@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 2FB84B84197F5A66002B807F /* back@2x.png */; };
+		2FB84B88197F5A66002B807F /* traffic_airport@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 2FB84B85197F5A66002B807F /* traffic_airport@2x.png */; };
+		2FB84B9F197F5AAE002B807F /* DungeonsVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 2FB84B8B197F5AAE002B807F /* DungeonsVC.m */; };
+		2FB84BA0197F5AAE002B807F /* minback@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 2FB84B8C197F5AAE002B807F /* minback@2x.png */; };
+		2FB84BA1197F5AAE002B807F /* NSBundle+Language.m in Sources */ = {isa = PBXBuildFile; fileRef = 2FB84B8E197F5AAE002B807F /* NSBundle+Language.m */; };
+		2FB84BA2197F5AAE002B807F /* NSMutableDictionary+Request.m in Sources */ = {isa = PBXBuildFile; fileRef = 2FB84B90197F5AAE002B807F /* NSMutableDictionary+Request.m */; };
+		2FB84BA3197F5AAE002B807F /* NSMutableDictionary+Response.m in Sources */ = {isa = PBXBuildFile; fileRef = 2FB84B92197F5AAE002B807F /* NSMutableDictionary+Response.m */; };
+		2FB84BA4197F5AAE002B807F /* NSMutableDictionary+Status.m in Sources */ = {isa = PBXBuildFile; fileRef = 2FB84B94197F5AAE002B807F /* NSMutableDictionary+Status.m */; };
+		2FB84BA5197F5AAE002B807F /* Orgrimar.m in Sources */ = {isa = PBXBuildFile; fileRef = 2FB84B96197F5AAE002B807F /* Orgrimar.m */; };
+		2FB84BA6197F5AAE002B807F /* SoloVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 2FB84B98197F5AAE002B807F /* SoloVC.m */; };
+		2FB84BA7197F5AAE002B807F /* UIImageView+Util.m in Sources */ = {isa = PBXBuildFile; fileRef = 2FB84B9A197F5AAE002B807F /* UIImageView+Util.m */; };
+		2FB84BA8197F5AAE002B807F /* UILabel+Util.m in Sources */ = {isa = PBXBuildFile; fileRef = 2FB84B9C197F5AAE002B807F /* UILabel+Util.m */; };
+		2FB84BA9197F5AAE002B807F /* UIView+Util.m in Sources */ = {isa = PBXBuildFile; fileRef = 2FB84B9E197F5AAE002B807F /* UIView+Util.m */; };
+		2FB84BAC197F5F4C002B807F /* UIHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = 2FB84BAB197F5F4C002B807F /* UIHelper.m */; };
+		2FB84BB2197F6311002B807F /* TaxiOnBoardStorageVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 2FB84BB1197F6311002B807F /* TaxiOnBoardStorageVC.m */; };
+		2FB84BB6197F8DA0002B807F /* StorageItemCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 2FB84BB5197F8DA0002B807F /* StorageItemCell.m */; };
+		2FB84BB9197F8E07002B807F /* NSMutableDictionary+StorageItem.m in Sources */ = {isa = PBXBuildFile; fileRef = 2FB84BB8197F8E07002B807F /* NSMutableDictionary+StorageItem.m */; };
 		2FBA0D87197D04F000B8C280 /* NSMutableDictionary+Flight.m in Sources */ = {isa = PBXBuildFile; fileRef = 2FBA0D86197D04F000B8C280 /* NSMutableDictionary+Flight.m */; };
 /* End PBXBuildFile section */
 
@@ -74,7 +81,6 @@
 		2F1C602E197AD50F004D3C2A /* TaxiLookingForVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TaxiLookingForVC.m; sourceTree = "<group>"; };
 		2F1C6030197AD52F004D3C2A /* TaxiPickingUpVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TaxiPickingUpVC.h; sourceTree = "<group>"; };
 		2F1C6031197AD52F004D3C2A /* TaxiPickingUpVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TaxiPickingUpVC.m; sourceTree = "<group>"; };
-		2F1C6048197BAC5F004D3C2A /* back@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "back@2x.png"; path = "images/back@2x.png"; sourceTree = "<group>"; };
 		2F1C604A197BACD0004D3C2A /* ArachnidQuarterVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ArachnidQuarterVC.h; sourceTree = "<group>"; };
 		2F1C604B197BACD0004D3C2A /* ArachnidQuarterVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ArachnidQuarterVC.m; sourceTree = "<group>"; };
 		2F1C604C197BACD0004D3C2A /* ConstructQuarterVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ConstructQuarterVC.h; sourceTree = "<group>"; };
@@ -110,29 +116,43 @@
 		2F5028701977DD430052F818 /* XCTest.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = XCTest.framework; path = Library/Frameworks/XCTest.framework; sourceTree = DEVELOPER_DIR; };
 		2F5028781977DD430052F818 /* HordeTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "HordeTests-Info.plist"; sourceTree = "<group>"; };
 		2F50287C1977DD430052F818 /* HordeTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HordeTests.m; sourceTree = "<group>"; };
-		2F7860F0197CC84500AAE6E1 /* DungeonsVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = DungeonsVC.h; path = Dungeons/DungeonsVC.h; sourceTree = "<group>"; };
-		2F7860F1197CC84500AAE6E1 /* DungeonsVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = DungeonsVC.m; path = Dungeons/DungeonsVC.m; sourceTree = "<group>"; };
-		2F7860F2197CC84500AAE6E1 /* SoloVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = SoloVC.h; path = Dungeons/SoloVC.h; sourceTree = "<group>"; };
-		2F7860F3197CC84500AAE6E1 /* SoloVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = SoloVC.m; path = Dungeons/SoloVC.m; sourceTree = "<group>"; };
-		2F7860F6197CC90900AAE6E1 /* minback@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "minback@2x.png"; path = "Dungeons/minback@2x.png"; sourceTree = "<group>"; };
-		2F8C7912197CCDCC0071297C /* NSBundle+Language.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "NSBundle+Language.h"; path = "Dungeons/NSBundle+Language.h"; sourceTree = "<group>"; };
-		2F8C7913197CCDCC0071297C /* NSBundle+Language.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "NSBundle+Language.m"; path = "Dungeons/NSBundle+Language.m"; sourceTree = "<group>"; };
-		2F8C7914197CCDCC0071297C /* Orgrimar.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Orgrimar.h; path = Dungeons/Orgrimar.h; sourceTree = "<group>"; };
-		2F8C7915197CCDCC0071297C /* Orgrimar.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = Orgrimar.m; path = Dungeons/Orgrimar.m; sourceTree = "<group>"; };
 		2F8C791D197CD0420071297C /* zh-Hans */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hans"; path = "zh-Hans.lproj/Dungeons.strings"; sourceTree = "<group>"; };
-		2FB84B61197E3BFC002B807F /* UILabel+Util.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "UILabel+Util.h"; path = "Dungeons/UILabel+Util.h"; sourceTree = "<group>"; };
-		2FB84B62197E3BFC002B807F /* UILabel+Util.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "UILabel+Util.m"; path = "Dungeons/UILabel+Util.m"; sourceTree = "<group>"; };
-		2FB84B64197E3E2A002B807F /* traffic_airport@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "traffic_airport@2x.png"; path = "images/traffic_airport@2x.png"; sourceTree = "<group>"; };
-		2FB84B69197E3ECB002B807F /* UIImageView+Util.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "UIImageView+Util.h"; path = "Dungeons/UIImageView+Util.h"; sourceTree = "<group>"; };
-		2FB84B6A197E3ECB002B807F /* UIImageView+Util.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "UIImageView+Util.m"; path = "Dungeons/UIImageView+Util.m"; sourceTree = "<group>"; };
-		2FB84B6C197E6CA7002B807F /* UIView+Util.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "UIView+Util.h"; path = "Dungeons/UIView+Util.h"; sourceTree = "<group>"; };
-		2FB84B6D197E6CA7002B807F /* UIView+Util.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "UIView+Util.m"; path = "Dungeons/UIView+Util.m"; sourceTree = "<group>"; };
-		2FBA0D7C197CFFA400B8C280 /* NSMutableDictionary+Response.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "NSMutableDictionary+Response.h"; path = "Dungeons/NSMutableDictionary+Response.h"; sourceTree = "<group>"; };
-		2FBA0D7D197CFFA400B8C280 /* NSMutableDictionary+Response.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "NSMutableDictionary+Response.m"; path = "Dungeons/NSMutableDictionary+Response.m"; sourceTree = "<group>"; };
-		2FBA0D7E197CFFA400B8C280 /* NSMutableDictionary+Status.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "NSMutableDictionary+Status.h"; path = "Dungeons/NSMutableDictionary+Status.h"; sourceTree = "<group>"; };
-		2FBA0D7F197CFFA400B8C280 /* NSMutableDictionary+Status.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "NSMutableDictionary+Status.m"; path = "Dungeons/NSMutableDictionary+Status.m"; sourceTree = "<group>"; };
-		2FBA0D82197CFFC800B8C280 /* NSMutableDictionary+Request.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "NSMutableDictionary+Request.h"; path = "Dungeons/NSMutableDictionary+Request.h"; sourceTree = "<group>"; };
-		2FBA0D83197CFFC800B8C280 /* NSMutableDictionary+Request.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "NSMutableDictionary+Request.m"; path = "Dungeons/NSMutableDictionary+Request.m"; sourceTree = "<group>"; };
+		2FB84B72197E75DA002B807F /* TaxiPickingUpOrder.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TaxiPickingUpOrder.h; sourceTree = "<group>"; };
+		2FB84B73197E75DA002B807F /* TaxiPickingUpOrder.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TaxiPickingUpOrder.m; sourceTree = "<group>"; };
+		2FB84B78197E84DC002B807F /* TaxiPickingUpCompletedVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TaxiPickingUpCompletedVC.h; sourceTree = "<group>"; };
+		2FB84B79197E84DC002B807F /* TaxiPickingUpCompletedVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TaxiPickingUpCompletedVC.m; sourceTree = "<group>"; };
+		2FB84B83197F5A66002B807F /* 1.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = 1.jpg; sourceTree = "<group>"; };
+		2FB84B84197F5A66002B807F /* back@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "back@2x.png"; sourceTree = "<group>"; };
+		2FB84B85197F5A66002B807F /* traffic_airport@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "traffic_airport@2x.png"; sourceTree = "<group>"; };
+		2FB84B8A197F5AAE002B807F /* DungeonsVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DungeonsVC.h; sourceTree = "<group>"; };
+		2FB84B8B197F5AAE002B807F /* DungeonsVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DungeonsVC.m; sourceTree = "<group>"; };
+		2FB84B8C197F5AAE002B807F /* minback@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "minback@2x.png"; sourceTree = "<group>"; };
+		2FB84B8D197F5AAE002B807F /* NSBundle+Language.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSBundle+Language.h"; sourceTree = "<group>"; };
+		2FB84B8E197F5AAE002B807F /* NSBundle+Language.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSBundle+Language.m"; sourceTree = "<group>"; };
+		2FB84B8F197F5AAE002B807F /* NSMutableDictionary+Request.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSMutableDictionary+Request.h"; sourceTree = "<group>"; };
+		2FB84B90197F5AAE002B807F /* NSMutableDictionary+Request.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSMutableDictionary+Request.m"; sourceTree = "<group>"; };
+		2FB84B91197F5AAE002B807F /* NSMutableDictionary+Response.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSMutableDictionary+Response.h"; sourceTree = "<group>"; };
+		2FB84B92197F5AAE002B807F /* NSMutableDictionary+Response.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSMutableDictionary+Response.m"; sourceTree = "<group>"; };
+		2FB84B93197F5AAE002B807F /* NSMutableDictionary+Status.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSMutableDictionary+Status.h"; sourceTree = "<group>"; };
+		2FB84B94197F5AAE002B807F /* NSMutableDictionary+Status.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSMutableDictionary+Status.m"; sourceTree = "<group>"; };
+		2FB84B95197F5AAE002B807F /* Orgrimar.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Orgrimar.h; sourceTree = "<group>"; };
+		2FB84B96197F5AAE002B807F /* Orgrimar.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Orgrimar.m; sourceTree = "<group>"; };
+		2FB84B97197F5AAE002B807F /* SoloVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SoloVC.h; sourceTree = "<group>"; };
+		2FB84B98197F5AAE002B807F /* SoloVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SoloVC.m; sourceTree = "<group>"; };
+		2FB84B99197F5AAE002B807F /* UIImageView+Util.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIImageView+Util.h"; sourceTree = "<group>"; };
+		2FB84B9A197F5AAE002B807F /* UIImageView+Util.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIImageView+Util.m"; sourceTree = "<group>"; };
+		2FB84B9B197F5AAE002B807F /* UILabel+Util.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UILabel+Util.h"; sourceTree = "<group>"; };
+		2FB84B9C197F5AAE002B807F /* UILabel+Util.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UILabel+Util.m"; sourceTree = "<group>"; };
+		2FB84B9D197F5AAE002B807F /* UIView+Util.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+Util.h"; sourceTree = "<group>"; };
+		2FB84B9E197F5AAE002B807F /* UIView+Util.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+Util.m"; sourceTree = "<group>"; };
+		2FB84BAA197F5F4C002B807F /* UIHelper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UIHelper.h; sourceTree = "<group>"; };
+		2FB84BAB197F5F4C002B807F /* UIHelper.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UIHelper.m; sourceTree = "<group>"; };
+		2FB84BB0197F6311002B807F /* TaxiOnBoardStorageVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TaxiOnBoardStorageVC.h; sourceTree = "<group>"; };
+		2FB84BB1197F6311002B807F /* TaxiOnBoardStorageVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TaxiOnBoardStorageVC.m; sourceTree = "<group>"; };
+		2FB84BB4197F8DA0002B807F /* StorageItemCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = StorageItemCell.h; sourceTree = "<group>"; };
+		2FB84BB5197F8DA0002B807F /* StorageItemCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = StorageItemCell.m; sourceTree = "<group>"; };
+		2FB84BB7197F8E07002B807F /* NSMutableDictionary+StorageItem.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSMutableDictionary+StorageItem.h"; sourceTree = "<group>"; };
+		2FB84BB8197F8E07002B807F /* NSMutableDictionary+StorageItem.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSMutableDictionary+StorageItem.m"; sourceTree = "<group>"; };
 		2FBA0D85197D04F000B8C280 /* NSMutableDictionary+Flight.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSMutableDictionary+Flight.h"; sourceTree = "<group>"; };
 		2FBA0D86197D04F000B8C280 /* NSMutableDictionary+Flight.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSMutableDictionary+Flight.m"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -177,6 +197,8 @@
 				2F1C600E197AA590004D3C2A /* NSMutableDictionary+Weather.m */,
 				2FBA0D85197D04F000B8C280 /* NSMutableDictionary+Flight.h */,
 				2FBA0D86197D04F000B8C280 /* NSMutableDictionary+Flight.m */,
+				2FB84BB7197F8E07002B807F /* NSMutableDictionary+StorageItem.h */,
+				2FB84BB8197F8E07002B807F /* NSMutableDictionary+StorageItem.m */,
 			);
 			name = "Service+bean";
 			sourceTree = "<group>";
@@ -199,17 +221,14 @@
 				2F1C602E197AD50F004D3C2A /* TaxiLookingForVC.m */,
 				2F1C6030197AD52F004D3C2A /* TaxiPickingUpVC.h */,
 				2F1C6031197AD52F004D3C2A /* TaxiPickingUpVC.m */,
+				2FB84B72197E75DA002B807F /* TaxiPickingUpOrder.h */,
+				2FB84B73197E75DA002B807F /* TaxiPickingUpOrder.m */,
+				2FB84B78197E84DC002B807F /* TaxiPickingUpCompletedVC.h */,
+				2FB84B79197E84DC002B807F /* TaxiPickingUpCompletedVC.m */,
+				2FB84BB0197F6311002B807F /* TaxiOnBoardStorageVC.h */,
+				2FB84BB1197F6311002B807F /* TaxiOnBoardStorageVC.m */,
 			);
 			name = "VC+Detail";
-			sourceTree = "<group>";
-		};
-		2F1C6038197B5ED7004D3C2A /* Images */ = {
-			isa = PBXGroup;
-			children = (
-				2FB84B64197E3E2A002B807F /* traffic_airport@2x.png */,
-				2F1C6048197BAC5F004D3C2A /* back@2x.png */,
-			);
-			name = Images;
 			sourceTree = "<group>";
 		};
 		2F5028451977DD420052F818 = {
@@ -245,8 +264,9 @@
 		2F5028571977DD420052F818 /* Horde */ = {
 			isa = PBXGroup;
 			children = (
-				2F7860EF197CC83300AAE6E1 /* Dungeons */,
-				2F1C6038197B5ED7004D3C2A /* Images */,
+				2FB84BB3197F8C01002B807F /* Cell */,
+				2FB84B89197F5AAE002B807F /* Dungeons */,
+				2FB84B82197F5A66002B807F /* images */,
 				2F5028601977DD430052F818 /* AppDelegate.h */,
 				2F5028611977DD430052F818 /* AppDelegate.m */,
 				2F5028691977DD430052F818 /* Images.xcassets */,
@@ -316,32 +336,53 @@
 			name = VC;
 			sourceTree = "<group>";
 		};
-		2F7860EF197CC83300AAE6E1 /* Dungeons */ = {
+		2FB84B82197F5A66002B807F /* images */ = {
 			isa = PBXGroup;
 			children = (
-				2FB84B69197E3ECB002B807F /* UIImageView+Util.h */,
-				2FB84B6A197E3ECB002B807F /* UIImageView+Util.m */,
-				2F7860F0197CC84500AAE6E1 /* DungeonsVC.h */,
-				2F7860F1197CC84500AAE6E1 /* DungeonsVC.m */,
-				2F7860F6197CC90900AAE6E1 /* minback@2x.png */,
-				2F8C7912197CCDCC0071297C /* NSBundle+Language.h */,
-				2F8C7913197CCDCC0071297C /* NSBundle+Language.m */,
-				2FBA0D82197CFFC800B8C280 /* NSMutableDictionary+Request.h */,
-				2FBA0D83197CFFC800B8C280 /* NSMutableDictionary+Request.m */,
-				2FBA0D7C197CFFA400B8C280 /* NSMutableDictionary+Response.h */,
-				2FBA0D7D197CFFA400B8C280 /* NSMutableDictionary+Response.m */,
-				2FBA0D7E197CFFA400B8C280 /* NSMutableDictionary+Status.h */,
-				2FBA0D7F197CFFA400B8C280 /* NSMutableDictionary+Status.m */,
-				2F8C7914197CCDCC0071297C /* Orgrimar.h */,
-				2F8C7915197CCDCC0071297C /* Orgrimar.m */,
-				2F7860F2197CC84500AAE6E1 /* SoloVC.h */,
-				2F7860F3197CC84500AAE6E1 /* SoloVC.m */,
-				2FB84B61197E3BFC002B807F /* UILabel+Util.h */,
-				2FB84B62197E3BFC002B807F /* UILabel+Util.m */,
-				2FB84B6C197E6CA7002B807F /* UIView+Util.h */,
-				2FB84B6D197E6CA7002B807F /* UIView+Util.m */,
+				2FB84B83197F5A66002B807F /* 1.jpg */,
+				2FB84B84197F5A66002B807F /* back@2x.png */,
+				2FB84B85197F5A66002B807F /* traffic_airport@2x.png */,
 			);
-			name = Dungeons;
+			path = images;
+			sourceTree = "<group>";
+		};
+		2FB84B89197F5AAE002B807F /* Dungeons */ = {
+			isa = PBXGroup;
+			children = (
+				2FB84B8A197F5AAE002B807F /* DungeonsVC.h */,
+				2FB84B8B197F5AAE002B807F /* DungeonsVC.m */,
+				2FB84B8C197F5AAE002B807F /* minback@2x.png */,
+				2FB84B8D197F5AAE002B807F /* NSBundle+Language.h */,
+				2FB84B8E197F5AAE002B807F /* NSBundle+Language.m */,
+				2FB84B8F197F5AAE002B807F /* NSMutableDictionary+Request.h */,
+				2FB84B90197F5AAE002B807F /* NSMutableDictionary+Request.m */,
+				2FB84B91197F5AAE002B807F /* NSMutableDictionary+Response.h */,
+				2FB84B92197F5AAE002B807F /* NSMutableDictionary+Response.m */,
+				2FB84B93197F5AAE002B807F /* NSMutableDictionary+Status.h */,
+				2FB84B94197F5AAE002B807F /* NSMutableDictionary+Status.m */,
+				2FB84B95197F5AAE002B807F /* Orgrimar.h */,
+				2FB84B96197F5AAE002B807F /* Orgrimar.m */,
+				2FB84B97197F5AAE002B807F /* SoloVC.h */,
+				2FB84B98197F5AAE002B807F /* SoloVC.m */,
+				2FB84B99197F5AAE002B807F /* UIImageView+Util.h */,
+				2FB84B9A197F5AAE002B807F /* UIImageView+Util.m */,
+				2FB84B9B197F5AAE002B807F /* UILabel+Util.h */,
+				2FB84B9C197F5AAE002B807F /* UILabel+Util.m */,
+				2FB84B9D197F5AAE002B807F /* UIView+Util.h */,
+				2FB84B9E197F5AAE002B807F /* UIView+Util.m */,
+				2FB84BAA197F5F4C002B807F /* UIHelper.h */,
+				2FB84BAB197F5F4C002B807F /* UIHelper.m */,
+			);
+			path = Dungeons;
+			sourceTree = "<group>";
+		};
+		2FB84BB3197F8C01002B807F /* Cell */ = {
+			isa = PBXGroup;
+			children = (
+				2FB84BB4197F8DA0002B807F /* StorageItemCell.h */,
+				2FB84BB5197F8DA0002B807F /* StorageItemCell.m */,
+			);
+			name = Cell;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -421,12 +462,13 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				2FB84B65197E3E2A002B807F /* traffic_airport@2x.png in Resources */,
+				2FB84BA0197F5AAE002B807F /* minback@2x.png in Resources */,
 				2F50286A1977DD430052F818 /* Images.xcassets in Resources */,
-				2F7860F7197CC90900AAE6E1 /* minback@2x.png in Resources */,
-				2F1C6049197BAC5F004D3C2A /* back@2x.png in Resources */,
+				2FB84B88197F5A66002B807F /* traffic_airport@2x.png in Resources */,
 				2F8C791A197CCF3A0071297C /* Dungeons.strings in Resources */,
 				2F5028651977DD430052F818 /* Main.storyboard in Resources */,
+				2FB84B86197F5A66002B807F /* 1.jpg in Resources */,
+				2FB84B87197F5A66002B807F /* back@2x.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -444,34 +486,40 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2FB84BB6197F8DA0002B807F /* StorageItemCell.m in Sources */,
 				2F5028681977DD430052F818 /* ViewController.m in Sources */,
-				2F7860F5197CC84500AAE6E1 /* SoloVC.m in Sources */,
-				2F8C7916197CCDCC0071297C /* NSBundle+Language.m in Sources */,
 				2F1C6061197BACD0004D3C2A /* ConstructQuarterVC.m in Sources */,
+				2FB84BB9197F8E07002B807F /* NSMutableDictionary+StorageItem.m in Sources */,
+				2FB84BA8197F5AAE002B807F /* UILabel+Util.m in Sources */,
+				2FB84BAC197F5F4C002B807F /* UIHelper.m in Sources */,
+				2FB84BA1197F5AAE002B807F /* NSBundle+Language.m in Sources */,
 				2F1C600F197AA590004D3C2A /* NSMutableDictionary+Weather.m in Sources */,
+				2FB84BB2197F6311002B807F /* TaxiOnBoardStorageVC.m in Sources */,
 				2F1C6066197BACD0004D3C2A /* OrgrimarVC.m in Sources */,
 				2F5028621977DD430052F818 /* AppDelegate.m in Sources */,
-				2FB84B6E197E6CA7002B807F /* UIView+Util.m in Sources */,
 				2FBA0D87197D04F000B8C280 /* NSMutableDictionary+Flight.m in Sources */,
 				2F1C6060197BACD0004D3C2A /* ArachnidQuarterVC.m in Sources */,
-				2F8C7917197CCDCC0071297C /* Orgrimar.m in Sources */,
-				2FB84B6B197E3ECB002B807F /* UIImageView+Util.m in Sources */,
+				2FB84B9F197F5AAE002B807F /* DungeonsVC.m in Sources */,
 				2F1C6064197BACD0004D3C2A /* MilitaryQuarterVC.m in Sources */,
 				2F1C606A197BACD0004D3C2A /* TaxtPickingUpVC.m in Sources */,
 				2F1C602C197AD501004D3C2A /* TaxiBookingVC.m in Sources */,
 				2F1C6065197BACD0004D3C2A /* NaxxramasVC.m in Sources */,
-				2FB84B63197E3BFC002B807F /* UILabel+Util.m in Sources */,
-				2F7860F4197CC84500AAE6E1 /* DungeonsVC.m in Sources */,
+				2FB84B7A197E84DC002B807F /* TaxiPickingUpCompletedVC.m in Sources */,
+				2FB84BA7197F5AAE002B807F /* UIImageView+Util.m in Sources */,
 				2F50285E1977DD430052F818 /* main.m in Sources */,
 				2F1C6032197AD52F004D3C2A /* TaxiPickingUpVC.m in Sources */,
 				2F1C6068197BACD0004D3C2A /* PlaneToHotelVC.m in Sources */,
+				2FB84BA5197F5AAE002B807F /* Orgrimar.m in Sources */,
 				2F1C6063197BACD0004D3C2A /* FrostwyrmLairVC.m in Sources */,
-				2FBA0D80197CFFA400B8C280 /* NSMutableDictionary+Response.m in Sources */,
 				2F1C602F197AD50F004D3C2A /* TaxiLookingForVC.m in Sources */,
-				2FBA0D84197CFFC800B8C280 /* NSMutableDictionary+Request.m in Sources */,
+				2FB84B74197E75DA002B807F /* TaxiPickingUpOrder.m in Sources */,
+				2FB84BA6197F5AAE002B807F /* SoloVC.m in Sources */,
+				2FB84BA3197F5AAE002B807F /* NSMutableDictionary+Response.m in Sources */,
 				2F1C6067197BACD0004D3C2A /* PlagueQuarterVC.m in Sources */,
-				2FBA0D81197CFFA400B8C280 /* NSMutableDictionary+Status.m in Sources */,
+				2FB84BA2197F5AAE002B807F /* NSMutableDictionary+Request.m in Sources */,
+				2FB84BA4197F5AAE002B807F /* NSMutableDictionary+Status.m in Sources */,
 				2F1C60051979F285004D3C2A /* TheDarkPortal.m in Sources */,
+				2FB84BA9197F5AAE002B807F /* UIView+Util.m in Sources */,
 				2F1C6016197AB0FA004D3C2A /* OldCrafty.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
