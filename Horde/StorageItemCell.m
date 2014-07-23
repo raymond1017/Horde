@@ -11,6 +11,10 @@
 #import "StorageItemSectionView.h"
 
 @interface StorageItemCell()
+
+@property (weak, nonatomic) StorageItemSectionView* leftSection;
+@property (weak, nonatomic) StorageItemSectionView* rightSection;
+
 @end
 
 @implementation StorageItemCell
@@ -26,25 +30,16 @@
     if (self) {
         // Initialization code
         
-        UIView* leftSection = [[UIView alloc] initWithFrame:CGRectMake(margin, margin, (self.contentView.frame.size.width - 3 * margin) / 2, sectionHeight)];
-        [leftSection setBackgroundColor:[UIColor redColor]];
-        int innerMargin = 5;
-        {
-            UIImageView* imageView = [[UIImageView alloc] initWithFrame:CGRectMake(innerMargin, innerMargin, leftSection.frame.size.width - 2*innerMargin, 90)];
-            [imageView setBackgroundColor:[UIColor blackColor]];
-            [leftSection addSubview:imageView];
-            
-            UILabel* label = [UILabel new];
-            label.frame = [UIHelper bottomTo:imageView.frame margin:innerMargin width:imageView.frame.size.width height:30];
-            [label setBackgroundColor:[UIColor grayColor]];
-            [leftSection addSubview:label];
-            
-            self.bgImg = imageView;
-        }
+        StorageItemSectionView* leftSection = [[StorageItemSectionView alloc] initWithFrame:CGRectMake(margin, margin, (self.contentView.frame.size.width - 3 * margin) / 2, sectionHeight)];
         
-        UIView* rightSection = [[UIView alloc] initWithFrame:CGRectZero];
-        rightSection.frame = [UIHelper rightTo:leftSection.frame margin:margin width:leftSection.frame.size.width height:sectionHeight];
+        [leftSection setBackgroundColor:[UIColor redColor]];
+        
+        StorageItemSectionView* rightSection = [[StorageItemSectionView alloc] initWithFrame:[UIHelper rightTo:leftSection.frame margin:margin width:leftSection.frame.size.width height:sectionHeight]];
+        
         [rightSection setBackgroundColor:[UIColor greenColor]];
+        
+        self.leftSection = leftSection;
+        self.rightSection = rightSection;
         
         [self.contentView addSubview:leftSection];
         [self.contentView addSubview:rightSection];
@@ -65,7 +60,11 @@
 }
 
 -(void) setStorageItems:(NSArray*) items {
+    NSMutableDictionary* left = [items objectAtIndex:0];
+    NSMutableDictionary* right = [items objectAtIndex:1];
     
+    [self.leftSection setStorageItem:left];
+    [self.rightSection setStorageItem:right];
 }
 
 +(NSMutableArray*) changeToCellArrayWithDictionary:(NSMutableDictionary*) itemList {

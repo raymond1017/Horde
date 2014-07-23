@@ -21,7 +21,6 @@
 		2F1C6066197BACD0004D3C2A /* OrgrimarVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 2F1C6057197BACD0004D3C2A /* OrgrimarVC.m */; };
 		2F1C6067197BACD0004D3C2A /* PlagueQuarterVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 2F1C6059197BACD0004D3C2A /* PlagueQuarterVC.m */; };
 		2F1C6068197BACD0004D3C2A /* PlaneToHotelVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 2F1C605B197BACD0004D3C2A /* PlaneToHotelVC.m */; };
-		2F1C606A197BACD0004D3C2A /* TaxtPickingUpVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 2F1C605F197BACD0004D3C2A /* TaxtPickingUpVC.m */; };
 		2F5028521977DD420052F818 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2F5028511977DD420052F818 /* Foundation.framework */; };
 		2F5028541977DD420052F818 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2F5028531977DD420052F818 /* CoreGraphics.framework */; };
 		2F5028561977DD420052F818 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2F5028551977DD420052F818 /* UIKit.framework */; };
@@ -102,8 +101,6 @@
 		2F1C6059197BACD0004D3C2A /* PlagueQuarterVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PlagueQuarterVC.m; sourceTree = "<group>"; };
 		2F1C605A197BACD0004D3C2A /* PlaneToHotelVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PlaneToHotelVC.h; sourceTree = "<group>"; };
 		2F1C605B197BACD0004D3C2A /* PlaneToHotelVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PlaneToHotelVC.m; sourceTree = "<group>"; };
-		2F1C605E197BACD0004D3C2A /* TaxtPickingUpVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TaxtPickingUpVC.h; sourceTree = "<group>"; };
-		2F1C605F197BACD0004D3C2A /* TaxtPickingUpVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TaxtPickingUpVC.m; sourceTree = "<group>"; };
 		2F50284E1977DD420052F818 /* Horde.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Horde.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		2F5028511977DD420052F818 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		2F5028531977DD420052F818 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
@@ -341,8 +338,6 @@
 				2F1C6059197BACD0004D3C2A /* PlagueQuarterVC.m */,
 				2F1C605A197BACD0004D3C2A /* PlaneToHotelVC.h */,
 				2F1C605B197BACD0004D3C2A /* PlaneToHotelVC.m */,
-				2F1C605E197BACD0004D3C2A /* TaxtPickingUpVC.h */,
-				2F1C605F197BACD0004D3C2A /* TaxtPickingUpVC.m */,
 			);
 			name = VC;
 			sourceTree = "<group>";
@@ -523,7 +518,6 @@
 				2F1C6060197BACD0004D3C2A /* ArachnidQuarterVC.m in Sources */,
 				2FB84B9F197F5AAE002B807F /* DungeonsVC.m in Sources */,
 				2F1C6064197BACD0004D3C2A /* MilitaryQuarterVC.m in Sources */,
-				2F1C606A197BACD0004D3C2A /* TaxtPickingUpVC.m in Sources */,
 				2F1C602C197AD501004D3C2A /* TaxiBookingVC.m in Sources */,
 				2F1C6065197BACD0004D3C2A /* NaxxramasVC.m in Sources */,
 				2FB84B7A197E84DC002B807F /* TaxiPickingUpCompletedVC.m in Sources */,

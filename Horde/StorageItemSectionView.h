@@ -10,8 +10,5 @@
 
 @interface StorageItemSectionView : UIView
 
-@property (weak, nonatomic) UIImageView* bgImg;
-@property (weak, nonatomic) UILabel* desc;
-@property (weak, nonatomic) UILabel* value;
-
+-(void) setStorageItem:(NSMutableDictionary*) item;
 @end
