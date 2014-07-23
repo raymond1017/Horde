@@ -7,9 +7,12 @@
 //
 
 #import "TaxiOnBoardStorageVC.h"
+#import "TheDarkPortal.h"
+#import "StorageItemCell.h"
 
 @interface TaxiOnBoardStorageVC ()<UITableViewDelegate, UITableViewDataSource>
 @property (strong, nonatomic) NSMutableArray* array;
+@property (strong, nonatomic) UITableView* tableView;
 @end
 
 @implementation TaxiOnBoardStorageVC
@@ -59,7 +62,6 @@
         name.frame = [UIHelper rightTo:portrait.frame margin:10 width:70 height:20];
         [name setText:@"名字名字"];
         [name setFont:[UIFont systemFontOfSize:15]];
-        [name setBackgroundColor:[UIColor redColor]];
         [section addSubview:name];
         
         UILabel* desc = [UILabel new];
@@ -93,12 +95,26 @@
         tableView.showsHorizontalScrollIndicator = NO;
         tableView.showsVerticalScrollIndicator = NO;
         
-        [tableView setBackgroundColor:[UIColor redColor]];
+        [tableView setBackgroundColor:[UIColor clearColor]];
         [container addSubview:tableView];
-    }
-    {
         
+        self.tableView = tableView;
     }
+    
+    {
+        //启动时的请求
+        [TheDarkPortal queryStorageByID:[NSNumber numberWithInt:0] onSucceed:^(NSMutableDictionary* succeed){
+           
+            dispatch_async(dispatch_get_main_queue(), ^(void){
+                self.array = [StorageItemCell changeToCellArrayWithDictionary:succeed];
+                [self.tableView reloadData];
+            });
+        }onFailure:^(NSMutableDictionary* status){
+            
+        }];
+    }
+    
+    self.array = [NSMutableArray new];
 }
 
 - (void)didReceiveMemoryWarning
@@ -147,7 +163,7 @@
 }
 
 - (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath{
-    return 50;
+    return StorageItemCellHeight;
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
@@ -157,25 +173,13 @@
     NSInteger index = indexPath.row;
     NSArray* pairItem = [self.array objectAtIndex:index];
     
-//    PoiItemCell *poiCell = [tableView dequeueReusableCellWithIdentifier:poiCellIdentifier];
-//    if(poiCell == nil){
-//        poiCell = [[PoiItemCell alloc] initWithStyle:UITableViewCellStyleSubtitle reuseIdentifier:poiCellIdentifier];
-//        poiCell.delegateCell = self;
-//    }
-//    
-//    [poiCell setTag:indexPath.row];
-//    [poiCell setCardItem:item];
-//    if(index < sDataCentre.poiItems.count - 1){
-//        [poiCell showCardWithTrafficMode];
-//    }else {
-//        [poiCell showCardMode];
-//        
-//    }
-//    
-//    [poiCell setShouldIndentWhileEditing:NO];
-//    [poiCell setShowsReorderControl:NO];
+    StorageItemCell* cell = [tableView dequeueReusableCellWithIdentifier:cellIdentifier];
+    if(cell == nil) {
+        cell = [[StorageItemCell alloc] initWithStyle:UITableViewCellStyleSubtitle reuseIdentifier:cellIdentifier];
+    }
     
-    return nil;
+    [cell setStorageItems:pairItem];
+    return cell;
 }
 
 @end

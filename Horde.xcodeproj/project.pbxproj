@@ -55,6 +55,11 @@
 		2FB84BB2197F6311002B807F /* TaxiOnBoardStorageVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 2FB84BB1197F6311002B807F /* TaxiOnBoardStorageVC.m */; };
 		2FB84BB6197F8DA0002B807F /* StorageItemCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 2FB84BB5197F8DA0002B807F /* StorageItemCell.m */; };
 		2FB84BB9197F8E07002B807F /* NSMutableDictionary+StorageItem.m in Sources */ = {isa = PBXBuildFile; fileRef = 2FB84BB8197F8E07002B807F /* NSMutableDictionary+StorageItem.m */; };
+		2FB84BBE197FCFB9002B807F /* section_1.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 2FB84BBA197FCFB9002B807F /* section_1.jpg */; };
+		2FB84BBF197FCFB9002B807F /* section_2.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 2FB84BBB197FCFB9002B807F /* section_2.jpg */; };
+		2FB84BC0197FCFB9002B807F /* section_3.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 2FB84BBC197FCFB9002B807F /* section_3.jpg */; };
+		2FB84BC1197FCFB9002B807F /* section_4.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 2FB84BBD197FCFB9002B807F /* section_4.jpg */; };
+		2FB84BC4197FD1B9002B807F /* StorageItemSectionView.m in Sources */ = {isa = PBXBuildFile; fileRef = 2FB84BC3197FD1B9002B807F /* StorageItemSectionView.m */; };
 		2FBA0D87197D04F000B8C280 /* NSMutableDictionary+Flight.m in Sources */ = {isa = PBXBuildFile; fileRef = 2FBA0D86197D04F000B8C280 /* NSMutableDictionary+Flight.m */; };
 /* End PBXBuildFile section */
 
@@ -153,6 +158,12 @@
 		2FB84BB5197F8DA0002B807F /* StorageItemCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = StorageItemCell.m; sourceTree = "<group>"; };
 		2FB84BB7197F8E07002B807F /* NSMutableDictionary+StorageItem.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSMutableDictionary+StorageItem.h"; sourceTree = "<group>"; };
 		2FB84BB8197F8E07002B807F /* NSMutableDictionary+StorageItem.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSMutableDictionary+StorageItem.m"; sourceTree = "<group>"; };
+		2FB84BBA197FCFB9002B807F /* section_1.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = section_1.jpg; sourceTree = "<group>"; };
+		2FB84BBB197FCFB9002B807F /* section_2.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = section_2.jpg; sourceTree = "<group>"; };
+		2FB84BBC197FCFB9002B807F /* section_3.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = section_3.jpg; sourceTree = "<group>"; };
+		2FB84BBD197FCFB9002B807F /* section_4.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = section_4.jpg; sourceTree = "<group>"; };
+		2FB84BC2197FD1B9002B807F /* StorageItemSectionView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = StorageItemSectionView.h; sourceTree = "<group>"; };
+		2FB84BC3197FD1B9002B807F /* StorageItemSectionView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = StorageItemSectionView.m; sourceTree = "<group>"; };
 		2FBA0D85197D04F000B8C280 /* NSMutableDictionary+Flight.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSMutableDictionary+Flight.h"; sourceTree = "<group>"; };
 		2FBA0D86197D04F000B8C280 /* NSMutableDictionary+Flight.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSMutableDictionary+Flight.m"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -339,6 +350,10 @@
 		2FB84B82197F5A66002B807F /* images */ = {
 			isa = PBXGroup;
 			children = (
+				2FB84BBA197FCFB9002B807F /* section_1.jpg */,
+				2FB84BBB197FCFB9002B807F /* section_2.jpg */,
+				2FB84BBC197FCFB9002B807F /* section_3.jpg */,
+				2FB84BBD197FCFB9002B807F /* section_4.jpg */,
 				2FB84B83197F5A66002B807F /* 1.jpg */,
 				2FB84B84197F5A66002B807F /* back@2x.png */,
 				2FB84B85197F5A66002B807F /* traffic_airport@2x.png */,
@@ -381,6 +396,8 @@
 			children = (
 				2FB84BB4197F8DA0002B807F /* StorageItemCell.h */,
 				2FB84BB5197F8DA0002B807F /* StorageItemCell.m */,
+				2FB84BC2197FD1B9002B807F /* StorageItemSectionView.h */,
+				2FB84BC3197FD1B9002B807F /* StorageItemSectionView.m */,
 			);
 			name = Cell;
 			sourceTree = "<group>";
@@ -463,9 +480,13 @@
 			buildActionMask = 2147483647;
 			files = (
 				2FB84BA0197F5AAE002B807F /* minback@2x.png in Resources */,
+				2FB84BC0197FCFB9002B807F /* section_3.jpg in Resources */,
+				2FB84BC1197FCFB9002B807F /* section_4.jpg in Resources */,
+				2FB84BBE197FCFB9002B807F /* section_1.jpg in Resources */,
 				2F50286A1977DD430052F818 /* Images.xcassets in Resources */,
 				2FB84B88197F5A66002B807F /* traffic_airport@2x.png in Resources */,
 				2F8C791A197CCF3A0071297C /* Dungeons.strings in Resources */,
+				2FB84BBF197FCFB9002B807F /* section_2.jpg in Resources */,
 				2F5028651977DD430052F818 /* Main.storyboard in Resources */,
 				2FB84B86197F5A66002B807F /* 1.jpg in Resources */,
 				2FB84B87197F5A66002B807F /* back@2x.png in Resources */,
@@ -489,6 +510,7 @@
 				2FB84BB6197F8DA0002B807F /* StorageItemCell.m in Sources */,
 				2F5028681977DD430052F818 /* ViewController.m in Sources */,
 				2F1C6061197BACD0004D3C2A /* ConstructQuarterVC.m in Sources */,
+				2FB84BC4197FD1B9002B807F /* StorageItemSectionView.m in Sources */,
 				2FB84BB9197F8E07002B807F /* NSMutableDictionary+StorageItem.m in Sources */,
 				2FB84BA8197F5AAE002B807F /* UILabel+Util.m in Sources */,
 				2FB84BAC197F5F4C002B807F /* UIHelper.m in Sources */,

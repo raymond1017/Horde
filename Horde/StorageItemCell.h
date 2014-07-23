@@ -8,6 +8,10 @@
 
 #import <UIKit/UIKit.h>
 
-@interface StorageItemCell : UITableViewCell
+#define StorageItemCellHeight 180
 
+@interface StorageItemCell : UITableViewCell
++(NSMutableArray*) changeToCellArrayWithDictionary:(NSMutableDictionary*) dict;
+
+-(void) setStorageItems:(NSArray*) items;
 @end

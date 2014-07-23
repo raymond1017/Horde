@@ -49,6 +49,6 @@
                onSucceed:(void(^) (NSMutableDictionary* response)) response
                onFailure:(void(^) (NSMutableDictionary* status)) failure {
     NSMutableDictionary* reqData = [NSMutableDictionary new];
-    [self executeRequest:[self makeUrlWithMethod:REQUEST_WEATHER] requestData:reqData onSucceed:response onFailure:failure];
+    [self executeRequest:[self makeUrlWithMethod:REQUEST_QUERY_STORAGE] requestData:reqData onSucceed:response onFailure:failure];
 }
 @end
