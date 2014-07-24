@@ -10,6 +10,7 @@
 #import "StorageItemCell.h"
 #import "UIHelper.h"
 #import "NSMutableDictionary+StorageItem.h"
+#import "Orgrimar.h"
 
 @interface StorageItemSectionView()
 
@@ -39,10 +40,16 @@
         label.numberOfLines = 2;
         [self addSubview:label];
         
-        UILabel* labelValue = [[UILabel alloc] initWithFrame:[UIHelper bottomTo:label.frame margin:30 width:imageView.frame.size.width height:30]];
+        UILabel* labelValue = [[UILabel alloc] initWithFrame:[UIHelper bottomTo:label.frame margin:10 width:50 height:15]];
         [labelValue setBackgroundColor:[UIColor orangeColor]];
         [labelValue setFont:[UIFont systemFontOfSize:12]];
         [self addSubview:labelValue];
+        
+        UIButton* btn = [[UIButton alloc] initWithFrame:CGRectMake(frame.size.width / 2 - innerMargin, labelValue.frame.origin.y, frame.size.width / 2, 18)];
+        [btn setTitle:T_(@"TaxiOnBoardStorage_Buy") forState:UIControlStateNormal];
+        [btn.titleLabel setFont:[UIFont systemFontOfSize:14]];
+        [btn setBackgroundColor:[UIColor colorWithRed:243.0/255.0 green:69.0/255.0 blue:60.0/255.0 alpha:1.0]];
+        [self addSubview:btn];
         
         self.desc = label;
         self.bgImg = imageView;

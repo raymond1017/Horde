@@ -9,5 +9,5 @@
 #import "DungeonsVC.h"
 
 @interface TaxiOnBoardStorageVC : DungeonsVC
-
+@property (strong, nonatomic) NSMutableDictionary* orderDetail;
 @end

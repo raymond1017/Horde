@@ -9,6 +9,7 @@
 #import "TaxiOnBoardStorageVC.h"
 #import "TheDarkPortal.h"
 #import "StorageItemCell.h"
+#import "NSMutableDictionary+OrderDetail.h"
 
 @interface TaxiOnBoardStorageVC ()<UITableViewDelegate, UITableViewDataSource>
 @property (strong, nonatomic) NSMutableArray* array;
@@ -41,14 +42,14 @@
     UIView* container = self.container_body;
     [container setBackgroundColor:[UIColor colorWithRed:248.0/255.0 green:248.0/255.0 blue:237.0/255.0 alpha:1.0]];
     
-    int topOffset = 20;
+    int topOffset = 0;
     int leftMargin = 20;
     {
         UIView* section = [[UIView alloc] initWithFrame:CGRectMake(0, 0, self.container_body.frame.size.width, 120)];
         [section setBackgroundColor:[UIColor whiteColor]];
         [container addSubview:section];
         
-        UIImage* image = [UIImage imageNamed:@"1.jpg"];
+        UIImage* image = [UIImage imageNamed:[[self.orderDetail orderdetail_driverinfo] orderdetail_driverinfo_avator]];
         UIImageView* portrait = [[UIImageView alloc] initWithFrame:CGRectMake(leftMargin, 15, 50, 50)];
         [portrait setImage:image];
         [portrait setContentMode:UIViewContentModeScaleAspectFill];
@@ -60,19 +61,19 @@
         
         UILabel* name = [UILabel new];
         name.frame = [UIHelper rightTo:portrait.frame margin:10 width:70 height:20];
-        [name setText:@"名字名字"];
+        [name setText:[[self.orderDetail orderdetail_driverinfo] orderdetail_driverinfo_name]];
         [name setFont:[UIFont systemFontOfSize:15]];
         [section addSubview:name];
         
         UILabel* desc = [UILabel new];
         desc.frame = [UIHelper bottomTo:name.frame margin:10 width:90 height:20];
-        [desc setText:@"1~4人舒适型"];
+        [desc setText:[[self.orderDetail orderdetail_driverinfo] orderdetail_driverinfo_carinfo]];
         [desc setFont:[UIFont systemFontOfSize:15]];
         [section addSubview:desc];
         
         UILabel* license = [UILabel new];
         license.frame = [UIHelper rightTo:desc.frame margin:10 width:200 height:20];
-        [license setText:@"车牌：EH－6548"];
+        [license setText:[[self.orderDetail orderdetail_driverinfo] orderdetail_driverinfo_license]];
         [license setFont:[UIFont systemFontOfSize:15]];
         [section addSubview:license];
         
@@ -94,7 +95,6 @@
         tableView.separatorStyle = UITableViewCellSeparatorStyleNone;
         tableView.showsHorizontalScrollIndicator = NO;
         tableView.showsVerticalScrollIndicator = NO;
-        
         [tableView setBackgroundColor:[UIColor clearColor]];
         [container addSubview:tableView];
         

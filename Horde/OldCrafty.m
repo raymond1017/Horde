@@ -23,8 +23,8 @@
         NSMutableDictionary* resp = [NSMutableDictionary new];
         
         {
-            [resp setObject:@"-5" forKey:@"min"];
-            [resp setObject:@"20" forKey:@"curr"];
+            [resp setObject:@"-5℃" forKey:@"min"];
+            [resp setObject:@"20℃" forKey:@"curr"];
             [resp setObject:[NSNumber numberWithInt:1] forKey:@"type"];
         }
         
@@ -113,6 +113,55 @@
         }
         
         [resp setObject:array forKey:@"list"];
+        return resp;
+    }else if([method isEqualToString:MAKE_WITH_REQUEST(REQUEST_ORDER_QUERY)]){
+        NSMutableDictionary* resp = [NSMutableDictionary new];
+        {
+            [resp setObject:@"BJ 11402120129125" forKey:@"id"];
+            [resp setObject:@"185" forKey:@"value"];
+            {
+                NSMutableDictionary* dict = [NSMutableDictionary new];
+                
+                [dict setObject:@"一个名字" forKey:@"name"];
+                [dict setObject:[NSNumber numberWithInt:0] forKey:@"sex"];
+                [dict setObject:@"EH-6548" forKey:@"license"];
+                [dict setObject:@"1.jpg" forKey:@"avator"];
+                [dict setObject:@"1~4人舒适型" forKey:@"info"];
+                [dict setObject:[NSNumber numberWithInt:4] forKey:@"star"];
+                
+                [resp setObject:dict forKey:@"driverinfo"];
+            }
+            {
+                NSMutableDictionary* dict = [NSMutableDictionary new];
+                [dict setObject:@"后天 4月16日 12:15" forKey:@"date"];
+                [dict setObject:@"素万那普国际机场" forKey:@"begin"];
+                [dict setObject:@"曼谷莲花大酒店" forKey:@"end"];
+                [dict setObject:@"0066-26249999" forKey:@"tel"];
+                
+                [resp setObject:dict forKey:@"info"];
+            }
+            {
+                NSMutableDictionary* dict = [NSMutableDictionary new];
+                [dict setObject:[NSNumber numberWithInt:5] forKey:@"count"];
+                [dict setObject:@"OD0055" forKey:@"id"];
+                
+                [resp setObject:dict forKey:@"storage"];
+            }
+            {
+                NSMutableDictionary* dict = [NSMutableDictionary new];
+                [dict setObject:@"微信支付" forKey:@"type"];
+                
+                
+                [resp setObject:dict forKey:@"payment"];
+            }
+            {
+                NSMutableDictionary* dict = [NSMutableDictionary new];
+                [dict setObject:@"TP_LINK_3850403" forKey:@"ssid"];
+                [dict setObject:@"H03B481" forKey:@"password"];
+                
+                [resp setObject:dict forKey:@"wifi"];
+            }
+        }
         return resp;
     }
     

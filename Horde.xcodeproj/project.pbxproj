@@ -59,6 +59,8 @@
 		2FB84BC0197FCFB9002B807F /* section_3.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 2FB84BBC197FCFB9002B807F /* section_3.jpg */; };
 		2FB84BC1197FCFB9002B807F /* section_4.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 2FB84BBD197FCFB9002B807F /* section_4.jpg */; };
 		2FB84BC4197FD1B9002B807F /* StorageItemSectionView.m in Sources */ = {isa = PBXBuildFile; fileRef = 2FB84BC3197FD1B9002B807F /* StorageItemSectionView.m */; };
+		2FB84BC7197FDF90002B807F /* NSMutableDictionary+Driver.m in Sources */ = {isa = PBXBuildFile; fileRef = 2FB84BC6197FDF90002B807F /* NSMutableDictionary+Driver.m */; };
+		2FB84BCA1980A8A2002B807F /* NSMutableDictionary+OrderDetail.m in Sources */ = {isa = PBXBuildFile; fileRef = 2FB84BC91980A8A2002B807F /* NSMutableDictionary+OrderDetail.m */; };
 		2FBA0D87197D04F000B8C280 /* NSMutableDictionary+Flight.m in Sources */ = {isa = PBXBuildFile; fileRef = 2FBA0D86197D04F000B8C280 /* NSMutableDictionary+Flight.m */; };
 /* End PBXBuildFile section */
 
@@ -161,6 +163,10 @@
 		2FB84BBD197FCFB9002B807F /* section_4.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = section_4.jpg; sourceTree = "<group>"; };
 		2FB84BC2197FD1B9002B807F /* StorageItemSectionView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = StorageItemSectionView.h; sourceTree = "<group>"; };
 		2FB84BC3197FD1B9002B807F /* StorageItemSectionView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = StorageItemSectionView.m; sourceTree = "<group>"; };
+		2FB84BC5197FDF90002B807F /* NSMutableDictionary+Driver.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSMutableDictionary+Driver.h"; sourceTree = "<group>"; };
+		2FB84BC6197FDF90002B807F /* NSMutableDictionary+Driver.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSMutableDictionary+Driver.m"; sourceTree = "<group>"; };
+		2FB84BC81980A8A2002B807F /* NSMutableDictionary+OrderDetail.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSMutableDictionary+OrderDetail.h"; sourceTree = "<group>"; };
+		2FB84BC91980A8A2002B807F /* NSMutableDictionary+OrderDetail.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSMutableDictionary+OrderDetail.m"; sourceTree = "<group>"; };
 		2FBA0D85197D04F000B8C280 /* NSMutableDictionary+Flight.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSMutableDictionary+Flight.h"; sourceTree = "<group>"; };
 		2FBA0D86197D04F000B8C280 /* NSMutableDictionary+Flight.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSMutableDictionary+Flight.m"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -207,6 +213,10 @@
 				2FBA0D86197D04F000B8C280 /* NSMutableDictionary+Flight.m */,
 				2FB84BB7197F8E07002B807F /* NSMutableDictionary+StorageItem.h */,
 				2FB84BB8197F8E07002B807F /* NSMutableDictionary+StorageItem.m */,
+				2FB84BC5197FDF90002B807F /* NSMutableDictionary+Driver.h */,
+				2FB84BC6197FDF90002B807F /* NSMutableDictionary+Driver.m */,
+				2FB84BC81980A8A2002B807F /* NSMutableDictionary+OrderDetail.h */,
+				2FB84BC91980A8A2002B807F /* NSMutableDictionary+OrderDetail.m */,
 			);
 			name = "Service+bean";
 			sourceTree = "<group>";
@@ -525,7 +535,9 @@
 				2F50285E1977DD430052F818 /* main.m in Sources */,
 				2F1C6032197AD52F004D3C2A /* TaxiPickingUpVC.m in Sources */,
 				2F1C6068197BACD0004D3C2A /* PlaneToHotelVC.m in Sources */,
+				2FB84BC7197FDF90002B807F /* NSMutableDictionary+Driver.m in Sources */,
 				2FB84BA5197F5AAE002B807F /* Orgrimar.m in Sources */,
+				2FB84BCA1980A8A2002B807F /* NSMutableDictionary+OrderDetail.m in Sources */,
 				2F1C6063197BACD0004D3C2A /* FrostwyrmLairVC.m in Sources */,
 				2F1C602F197AD50F004D3C2A /* TaxiLookingForVC.m in Sources */,
 				2FB84B74197E75DA002B807F /* TaxiPickingUpOrder.m in Sources */,

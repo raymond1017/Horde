@@ -39,10 +39,14 @@
 "TaxiPickingUpCompleted_PayInfo" = "支付方式";
 "TaxiPickingUpCompleted_PathDetail" = "查看路线";
 "TaxiPickingUpCompleted_Completed" = "我已到达";
+"TaxiPickingUpCompleted_Lisence" = "车牌：%@";
+"TaxiPickingUpCompleted_Cost" = "预计花费%@泰铢";
+"TaxiPickingUpCompleted_Selection" = "已选5件商品";
 
 //Taxi Onboard Storage
 "TaxiOnBoardStorage_Title" = "车上货柜";
 "TaxiOnBoardStorage_Tip" = "下车结账时，我会把所购物品直接交付给您";
+"TaxiOnBoardStorage_Buy" = "放入购物车";
 
 
 //Common

@@ -9,9 +9,11 @@
 #import <Foundation/Foundation.h>
 
 #define REQUEST_WEATHER @"common/weather.htm"
-#define REQUEST_PLACEORDER @"order/commit"
 #define REQUEST_FLIGHT @"common/flight.htm"
 #define REQUEST_QUERY_STORAGE @"storage/query"
+#define REQUEST_DRIVERINFO @"driver/query"
+#define REQUEST_ORDER_QUERY @"order/query"
+#define REQUEST_PLACEORDER @"order/commit"
 
 @interface TheDarkPortal : NSObject
 
@@ -26,6 +28,11 @@
 +(void) queryStorageByID:(NSNumber*)storageID
                onSucceed:(void(^) (NSMutableDictionary* response)) response
                onFailure:(void(^) (NSMutableDictionary* status)) failure;
+
++(void) queryOrder:(NSNumber*)orderID
+         onSucceed:(void(^) (NSMutableDictionary* response)) response
+         onFailure:(void(^) (NSMutableDictionary* status)) failure;
+
 
 
 +(NSMutableURLRequest*) makeUrlWithMethod:(NSString *)method;

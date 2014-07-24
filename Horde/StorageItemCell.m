@@ -43,6 +43,8 @@
         
         [self.contentView addSubview:leftSection];
         [self.contentView addSubview:rightSection];
+        
+        [self setSelectionStyle:UITableViewCellSelectionStyleNone];
     }
     return self;
 }

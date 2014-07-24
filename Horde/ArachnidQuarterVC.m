@@ -13,6 +13,7 @@
 #import "TheDarkPortal.h"
 #import "UILabel+Util.h"
 #import "UIImageView+Util.h"
+#import "NSMutableDictionary+Weather.h"
 #import "TaxiPickingUpCompletedVC.h"
 
 @interface ArachnidQuarterVC ()
@@ -53,30 +54,33 @@
         //sky
         
         UILabel* currTemp = [[UILabel alloc] initWithFrame:CGRectMake(offsetX, sky.frame.size.height - 80, 80, 23)];
-        [currTemp setText:@"20℃"];
+//        [currTemp setText:@"20℃"];
         [currTemp setFont:[UIFont systemFontOfSize:28.0]];
         [currTemp setTextColor:[UIColor colorWithRed:255.0/255.0 green:175/255.0 blue:37/255.0 alpha:1]];
         [sky addSubview:currTemp];
         
         UILabel* minTemp = [[UILabel alloc] initWithFrame:CGRectMake(offsetX + 65, sky.frame.size.height - 75, 60, 23)];
-        [minTemp setText:@"/ -5℃"];
+//        [minTemp setText:@"/ -5℃"];
         [minTemp setFont:[UIFont systemFontOfSize:15.0]];
         [minTemp setTextColor:[UIColor colorWithRed:120.0/255.0 green:120.0/255.0 blue:120.0/255.0 alpha:1]];
         [sky addSubview:minTemp];
         
         UILabel* desc = [[UILabel alloc] initWithFrame:CGRectMake(offsetX, currTemp.frame.origin.y + currTemp.frame.size.height, 160, 40)];
         [desc setTextColor:[UIColor colorWithRed:120.0/255.0 green:120.0/255.0 blue:120.0/255.0 alpha:1]];
-        [desc setText:@"18:47CST 晴转小雨"];
+//        [desc setText:@"18:47CST 晴转小雨"];
         [sky addSubview:desc];
         
         //获取天气逻辑
-        dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0), ^(void){
-            [TheDarkPortal queryWeatherWithCityID:[NSNumber numberWithInt:0] onSucceed:^(NSMutableDictionary* succeed){
+        [TheDarkPortal queryWeatherWithCityID:[NSNumber numberWithInt:1] onSucceed:^(NSMutableDictionary* succeed) {
+            dispatch_async(dispatch_get_main_queue(), ^(void){
                 
-            }onFailure:^(NSMutableDictionary* status){
-                
-            }];
-        });
+                [currTemp setText:[succeed weather_temperature_cur]];
+                [minTemp setText:[[NSString alloc] initWithFormat:@"/ %@", [succeed weather_temperature_min]]];
+                [desc setText:[succeed weather_temperature_desc]];
+            });
+        }onFailure:^(NSMutableDictionary* status){
+            
+        }];
     }
     
     {
@@ -150,6 +154,41 @@
             [imgArrow centerWithRight:arrowRightMargin andView:btn1];
             [btn3 addSubview:imgArrow];
         }
+    }
+    
+    {
+//        dispatch_async(dispatch_get_main_queue(), ^(void){
+//            
+//            int margin = 20;
+//            UIView* settingbackground = [[UIView alloc] initWithFrame:self.view.bounds];
+//            [settingbackground setBackgroundColor:[UIColor colorWithRed:200.0/255.0 green:200.0/255.0 blue:200.0/255.0 alpha:0.8]];
+//            [self.view addSubview:settingbackground];
+//            
+//            int height = settingbackground.frame.size.height - 2 * margin;
+//            int width = settingbackground.frame.size.width - 2 * margin;
+//            
+//            CGRect pos1 = CGRectMake(margin, 0-height, width, height);
+//            CGRect pos2 = CGRectMake(margin, margin, width, height);
+//            CGRect pos3 = CGRectMake(margin, settingbackground.frame.size.height - height, width, height);
+//            UIView* setting = [[UIView alloc] initWithFrame:pos1];
+//            [setting setBackgroundColor:[UIColor redColor]];
+//            [settingbackground addSubview:setting];
+//            
+//            {
+//                
+//            }
+//            
+//            [UIView animateWithDuration:1 animations:^{
+//                setting.frame = pos2;
+//            } completion:^(BOOL finished){
+//                
+//            }];
+//        });
+    }
+    
+    {
+        //服务器请求
+        
     }
     
     self.view.window.autoresizesSubviews = YES;
