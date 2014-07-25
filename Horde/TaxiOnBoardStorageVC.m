@@ -9,11 +9,13 @@
 #import "TaxiOnBoardStorageVC.h"
 #import "TheDarkPortal.h"
 #import "StorageItemCell.h"
+#import "UILabel+Util.h"
 #import "NSMutableDictionary+OrderDetail.h"
 
-@interface TaxiOnBoardStorageVC ()<UITableViewDelegate, UITableViewDataSource>
+@interface TaxiOnBoardStorageVC ()<UITableViewDelegate, UITableViewDataSource, StorageCellDelegate>
 @property (strong, nonatomic) NSMutableArray* array;
 @property (strong, nonatomic) UITableView* tableView;
+@property (strong, nonatomic) UILabel* shopping;
 @end
 
 @implementation TaxiOnBoardStorageVC
@@ -45,7 +47,7 @@
     int topOffset = 0;
     int leftMargin = 20;
     {
-        UIView* section = [[UIView alloc] initWithFrame:CGRectMake(0, 0, self.container_body.frame.size.width, 120)];
+        UIView* section = [[UIView alloc] initWithFrame:CGRectMake(0, 0, self.container_body.frame.size.width, 117)];
         [section setBackgroundColor:[UIColor whiteColor]];
         [container addSubview:section];
         
@@ -85,6 +87,9 @@
         [tip setTextColor:[UIColor colorWithRed:153/255.0 green:0/255.0 blue:0/255.0 alpha:1.0]];
         [section addSubview:tip];
         
+        UIImageView* fake = IMAGEVIEW_SCALE(@"车上货柜，头部信息");
+        [section addSubview:fake];
+        
         topOffset += (section.frame.origin.y + section.frame.size.height);
     }
     {
@@ -99,6 +104,28 @@
         [container addSubview:tableView];
         
         self.tableView = tableView;
+    }
+    
+    {
+        UIImage* shoppingImg = IMAGE_SCALE(@"购物车");
+        UIButton* shopping = [[UIButton alloc] initWithFrame:CGRectMake(container.frame.size.width - shoppingImg.size.width - 20, container.frame.size.height - shoppingImg.size.height - 20, shoppingImg.size.width, shoppingImg.size.height)];
+        [shopping setImage:shoppingImg forState:UIControlStateNormal];
+        [container addSubview:shopping];
+        
+        UIImageView* bg = IMAGEVIEW_SCALE(@"提示");
+        [bg setFrame:CGRectMake(shopping.frame.size.width - 25, 12, bg.image.size.width, bg.image.size.height)];
+        [bg setBackgroundColor:[UIColor clearColor]];
+        [shopping addSubview:bg];
+        
+        UILabel* count = [[UILabel alloc] initWithFrame:[bg frame]];
+        [count setText: [[NSNumber numberWithInteger:self.storageCount] stringValue]];
+        [count setFont:[UIFont systemFontOfSize:12]];
+        [count setTextColor:[UIColor whiteColor]];
+        [count setTextAlignment:NSTextAlignmentCenter];
+        [shopping addSubview:count];
+        
+        self.shopping = count;
+        
     }
     
     {
@@ -153,8 +180,7 @@
 //    }];
 }
 
-- (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView
-{
+- (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView{
     return 1;
 }
 
@@ -176,10 +202,22 @@
     StorageItemCell* cell = [tableView dequeueReusableCellWithIdentifier:cellIdentifier];
     if(cell == nil) {
         cell = [[StorageItemCell alloc] initWithStyle:UITableViewCellStyleSubtitle reuseIdentifier:cellIdentifier];
+        cell.cellDelegate = self;
     }
     
     [cell setStorageItems:pairItem];
     return cell;
 }
 
+
+#pragma mark Cell Delegate
+
+-(void)handleAddItem:(StorageItemSectionView*) view
+             andItem:(NSMutableDictionary*)item {
+    
+    self.storageCount++;
+    [self.shopping setText: [[NSNumber numberWithInteger:self.storageCount] stringValue]];
+    
+    [self.storageDelegate onSelectionChanged:self.storageCount];
+}
 @end

@@ -8,6 +8,16 @@
 
 #import "DungeonsVC.h"
 
+@protocol StorageCellDelegate <NSObject>
+
+-(void)onSelectionChanged:(NSInteger)count;
+
+@end
+
 @interface TaxiOnBoardStorageVC : DungeonsVC
 @property (strong, nonatomic) NSMutableDictionary* orderDetail;
+
+@property (assign, nonatomic) NSInteger storageCount;
+
+@property (weak, nonatomic) id<StorageCellDelegate> storageDelegate;
 @end

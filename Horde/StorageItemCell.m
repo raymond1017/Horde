@@ -19,7 +19,10 @@
 
 @implementation StorageItemCell
 
-
+-(void) setCellDelegate:(id<StorageCellDelegate>)cellDelegate {
+    self.leftSection.cellDelegate = cellDelegate;
+    self.rightSection.cellDelegate = cellDelegate;
+}
 - (id)initWithStyle:(UITableViewCellStyle)style reuseIdentifier:(NSString *)reuseIdentifier
 {
     self = [super initWithStyle:style reuseIdentifier:reuseIdentifier];
@@ -32,11 +35,11 @@
         
         StorageItemSectionView* leftSection = [[StorageItemSectionView alloc] initWithFrame:CGRectMake(margin, margin, (self.contentView.frame.size.width - 3 * margin) / 2, sectionHeight)];
         
-        [leftSection setBackgroundColor:[UIColor redColor]];
+//        [leftSection setBackgroundColor:[UIColor redColor]];
         
         StorageItemSectionView* rightSection = [[StorageItemSectionView alloc] initWithFrame:[UIHelper rightTo:leftSection.frame margin:margin width:leftSection.frame.size.width height:sectionHeight]];
         
-        [rightSection setBackgroundColor:[UIColor greenColor]];
+//        [rightSection setBackgroundColor:[UIColor greenColor]];
         
         self.leftSection = leftSection;
         self.rightSection = rightSection;

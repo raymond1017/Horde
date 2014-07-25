@@ -10,4 +10,7 @@
 
 @interface NaxxramasVC : UITabBarController
 
+#define IMAGEVIEW_SCALE(x) [[UIImageView alloc] initWithImage:IMAGE_SCALE(x)]
+#define IMAGE_SCALE(x) [UIImage imageWithData:[[NSData alloc] initWithContentsOfFile:[[NSBundle mainBundle] pathForResource:x ofType:@"png"]] scale:2.0]
+
 @end

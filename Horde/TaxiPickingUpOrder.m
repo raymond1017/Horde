@@ -10,7 +10,7 @@
 #import "UILabel+Util.h"
 
 @interface TaxiPickingUpOrder ()
-
+@property (strong, nonatomic) UIImageView* paymentSelection;
 @end
 
 @implementation TaxiPickingUpOrder
@@ -27,7 +27,9 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-    // Do any additional setup after loading the view.
+    // Do any additional setup after loading the view
+    
+    self.paymentSelection = IMAGEVIEW_SCALE(@"选择对勾");
     
     [self navigationWithTitle:T_(@"TaxiPickingUpDetail_Title") isHiddenBack:NO];
     
@@ -74,20 +76,43 @@
         [date setTextColor:[UIColor colorWithRed:233/255.0 green:40/255.0 blue:0/255.0 alpha:1.0]];
         [section addSubview:date];
         
-        UILabel* start = [[UILabel alloc] initWithFrame:CGRectMake(leftMargin, date.frame.origin.y + date.frame.size.height + 15, section.frame.size.width, 20)];
+        UIImageView* ivStart = IMAGEVIEW_SCALE(@"起");
+        UIImageView* ivEnd = IMAGEVIEW_SCALE(@"终");
+        
+        [ivStart setFrame:CGRectMake(leftMargin, date.frame.origin.y + date.frame.size.height + 10, ivStart.image.size.width, ivStart.image.size.height)];
+        [ivEnd setFrame:CGRectMake(leftMargin, ivStart.frame.origin.y + ivStart.frame.size.height + 10, ivStart.image.size.width, ivStart.image.size.height)];
+        [section addSubview:ivStart];
+        [section addSubview:ivEnd];
+        
+        UILabel* start = [[UILabel alloc] initWithFrame:CGRectMake(ivStart.frame.origin.x + ivStart.frame.size.width + 15, date.frame.origin.y + date.frame.size.height + 15, section.frame.size.width, 20)];
         [start setText:@"素万那普国际机场"];
         [start setTextColor: [UIColor colorWithRed:100.0/255.0 green:100.0/255.0 blue:100.0/255.0 alpha:1.0]];
         [section addSubview:start];
         
-        UILabel* end = [[UILabel alloc] initWithFrame:CGRectMake(leftMargin, start.frame.origin.y + start.frame.size.height + 15, section.frame.size.width, 20)];
+        UILabel* end = [[UILabel alloc] initWithFrame:CGRectMake(ivStart.frame.origin.x + ivStart.frame.size.width + 15, start.frame.origin.y + start.frame.size.height + 15, section.frame.size.width, 20)];
         [end setText:@"曼谷莲花大酒店"];
         [end setTextColor: [UIColor colorWithRed:100.0/255.0 green:100.0/255.0 blue:100.0/255.0 alpha:1.0]];
         [section addSubview:end];
         
-        UILabel* endTel = [[UILabel alloc] initWithFrame:CGRectMake(leftMargin, end.frame.origin.y + end.frame.size.height + 5, section.frame.size.width, 20)];
+        UILabel* endTel = [[UILabel alloc] initWithFrame:CGRectMake(ivStart.frame.origin.x + ivStart.frame.size.width + 15, end.frame.origin.y + end.frame.size.height + 5, section.frame.size.width, 20)];
         [endTel setText:@"(0066-26249999)"];
         [endTel setTextColor: [UIColor colorWithRed:141.0/255.0 green:141.0/255.0 blue:141.0/255.0 alpha:1.0]];
         [section addSubview:endTel];
+        
+        UIButton* detail = [[UIButton alloc] initWithFrame:CGRectMake(section.frame.size.width - 130, section.frame.size.height/2, 150, 20)];
+        [detail setTitle:T_(@"TaxiPickingUpCompleted_PathDetail") forState:UIControlStateNormal];
+//        [detail setTextAlignment:NSTextAlignmentRight];
+        [detail setTitleColor:[UIColor colorWithRed:233/255.0 green:40/255.0 blue:0/255.0 alpha:1.0] forState:UIControlStateNormal];
+        [detail.titleLabel setFont:[UIFont systemFontOfSize:15]];
+        [detail setImage:IMAGE_SCALE(@"查看路线") forState:UIControlStateNormal];
+        [detail addTarget:self action:@selector(handleViewDetail:) forControlEvents:UIControlEventTouchUpInside];
+        [detail setImageEdgeInsets:UIEdgeInsetsMake(0.0,
+                                                     0.0,
+                                                     0.0,
+                                                     -(detail.frame.size.width))];
+        [detail setBackgroundColor:[UIColor clearColor]];
+        
+        [section addSubview:detail];
         
         topOffset += section.frame.size.height;
     }
@@ -110,6 +135,8 @@
 //            [label setTextColor:[UIColor colorWithRed:141.0/255.0 green:141.0/255.0 blue:141.0/255.0 alpha:1.0]];
             [label centerWithLeft:leftMargin andView:btn1];
             [btn1 addSubview:label];
+            
+            [btn1 addTarget:self action:@selector(handlePaymentChanged:) forControlEvents:UIControlEventTouchUpInside];
         }
         [section addSubview:btn1];
         
@@ -121,6 +148,8 @@
 //            [label setTextColor:[UIColor colorWithRed:141.0/255.0 green:141.0/255.0 blue:141.0/255.0 alpha:1.0]];
             [label centerWithLeft:leftMargin andView:btn2];
             [btn2 addSubview:label];
+            
+            [btn2 addTarget:self action:@selector(handlePaymentChanged:) forControlEvents:UIControlEventTouchUpInside];
         }
         [section addSubview:btn2];
         
@@ -132,8 +161,12 @@
 //            [label setTextColor:[UIColor colorWithRed:141.0/255.0 green:141.0/255.0 blue:141.0/255.0 alpha:1.0]];
             [label centerWithLeft:leftMargin andView:btn3];
             [btn3 addSubview:label];
+            
+            [btn3 addTarget:self action:@selector(handlePaymentChanged:) forControlEvents:UIControlEventTouchUpInside];
         }
         [section addSubview:btn3];
+        
+        [self handlePaymentChanged:btn1];
         
         topOffset += section.frame.size.height;
     }
@@ -144,6 +177,7 @@
         [btn setTitle:T_(@"TaxiPickingUpDetail_Tips") forState:UIControlStateNormal];
         [container addSubview:btn];
     }
+    
 }
 
 - (void)didReceiveMemoryWarning
@@ -163,4 +197,16 @@
 }
 */
 
+- (void) handlePaymentChanged:(id)sender {
+ 
+    [self.paymentSelection removeFromSuperview];
+    UIButton* btn = (UIButton*)sender;
+    
+    [self.paymentSelection setFrame:CGRectMake(btn.frame.size.width - 30, (btn.frame.size.height - self.paymentSelection.image.size.height) / 2, self.paymentSelection.image.size.width, self.paymentSelection.image.size.height)];
+    [btn addSubview:self.paymentSelection];
+}
+
+- (void) handleViewDetail:(id)sender {
+    
+}
 @end

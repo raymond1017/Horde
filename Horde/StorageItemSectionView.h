@@ -8,7 +8,11 @@
 
 #import <UIKit/UIKit.h>
 
+@protocol StorageCellDelegate;
+
 @interface StorageItemSectionView : UIView
 
 -(void) setStorageItem:(NSMutableDictionary*) item;
+
+@property (weak, nonatomic) id<StorageCellDelegate> cellDelegate;
 @end

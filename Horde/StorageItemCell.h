@@ -8,10 +8,21 @@
 
 #import <UIKit/UIKit.h>
 
-#define StorageItemCellHeight 180
+#define StorageItemCellHeight 188
+
+@class StorageItemSectionView;
+
+@protocol StorageCellDelegate <NSObject>
+
+-(void)handleAddItem:(StorageItemSectionView*) view
+             andItem:(NSMutableDictionary*)item;
+
+@end
 
 @interface StorageItemCell : UITableViewCell
 +(NSMutableArray*) changeToCellArrayWithDictionary:(NSMutableDictionary*) dict;
 
 -(void) setStorageItems:(NSArray*) items;
+
+@property (weak, nonatomic) id<StorageCellDelegate> cellDelegate;
 @end

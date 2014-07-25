@@ -7,6 +7,40 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		2F01D0D51982083200C840E7 /* fake_main.png in Resources */ = {isa = PBXBuildFile; fileRef = 2F01D0D41982083200C840E7 /* fake_main.png */; };
+		2F01D0E0198209AB00C840E7 /* icon_location@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 2F01D0DD198209AB00C840E7 /* icon_location@2x.png */; };
+		2F01D0E1198209AB00C840E7 /* icon_plant@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 2F01D0DE198209AB00C840E7 /* icon_plant@2x.png */; };
+		2F01D0E319820A1500C840E7 /* 进入@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 2F01D0E219820A1500C840E7 /* 进入@2x.png */; };
+		2F01D0EF19820B2E00C840E7 /* 货柜_normal.png in Resources */ = {isa = PBXBuildFile; fileRef = 2F01D0E419820B2E00C840E7 /* 货柜_normal.png */; };
+		2F01D0F019820B2E00C840E7 /* 货柜_pressed.png in Resources */ = {isa = PBXBuildFile; fileRef = 2F01D0E519820B2E00C840E7 /* 货柜_pressed.png */; };
+		2F01D0F119820B2E00C840E7 /* 进入.png in Resources */ = {isa = PBXBuildFile; fileRef = 2F01D0E619820B2E00C840E7 /* 进入.png */; };
+		2F01D0F219820B2E00C840E7 /* 通知.png in Resources */ = {isa = PBXBuildFile; fileRef = 2F01D0E719820B2E00C840E7 /* 通知.png */; };
+		2F01D0F319820B2E00C840E7 /* 退税_normal.png in Resources */ = {isa = PBXBuildFile; fileRef = 2F01D0E819820B2E00C840E7 /* 退税_normal.png */; };
+		2F01D0F419820B2E00C840E7 /* 退税_pressed.png in Resources */ = {isa = PBXBuildFile; fileRef = 2F01D0E919820B2E00C840E7 /* 退税_pressed.png */; };
+		2F01D0F519820B2E00C840E7 /* 我的_normal.png in Resources */ = {isa = PBXBuildFile; fileRef = 2F01D0EA19820B2E00C840E7 /* 我的_normal.png */; };
+		2F01D0F619820B2E00C840E7 /* 我的_pressed.png in Resources */ = {isa = PBXBuildFile; fileRef = 2F01D0EB19820B2E00C840E7 /* 我的_pressed.png */; };
+		2F01D0F719820B2E00C840E7 /* 预约用车.png in Resources */ = {isa = PBXBuildFile; fileRef = 2F01D0EC19820B2E00C840E7 /* 预约用车.png */; };
+		2F01D0F819820B2E00C840E7 /* 约车_normal.png in Resources */ = {isa = PBXBuildFile; fileRef = 2F01D0ED19820B2E00C840E7 /* 约车_normal.png */; };
+		2F01D0F919820B2E00C840E7 /* 约车_perssed.png in Resources */ = {isa = PBXBuildFile; fileRef = 2F01D0EE19820B2E00C840E7 /* 约车_perssed.png */; };
+		2F01D101198210F900C840E7 /* 价格.png in Resources */ = {isa = PBXBuildFile; fileRef = 2F01D0FA198210F900C840E7 /* 价格.png */; };
+		2F01D102198210F900C840E7 /* 起.png in Resources */ = {isa = PBXBuildFile; fileRef = 2F01D0FB198210F900C840E7 /* 起.png */; };
+		2F01D103198210F900C840E7 /* 填写接机_进入.png in Resources */ = {isa = PBXBuildFile; fileRef = 2F01D0FC198210F900C840E7 /* 填写接机_进入.png */; };
+		2F01D104198210F900C840E7 /* 选择.png in Resources */ = {isa = PBXBuildFile; fileRef = 2F01D0FD198210F900C840E7 /* 选择.png */; };
+		2F01D105198210F900C840E7 /* 选择车型.png in Resources */ = {isa = PBXBuildFile; fileRef = 2F01D0FE198210F900C840E7 /* 选择车型.png */; };
+		2F01D106198210F900C840E7 /* 选择航班号.png in Resources */ = {isa = PBXBuildFile; fileRef = 2F01D0FF198210F900C840E7 /* 选择航班号.png */; };
+		2F01D107198210F900C840E7 /* 选择接机时间.png in Resources */ = {isa = PBXBuildFile; fileRef = 2F01D100198210F900C840E7 /* 选择接机时间.png */; };
+		2F01D109198212EA00C840E7 /* 终.png in Resources */ = {isa = PBXBuildFile; fileRef = 2F01D108198212EA00C840E7 /* 终.png */; };
+		2F01D10C198230A200C840E7 /* 查看路线.png in Resources */ = {isa = PBXBuildFile; fileRef = 2F01D10A198230A200C840E7 /* 查看路线.png */; };
+		2F01D10D198230A200C840E7 /* 选择对勾.png in Resources */ = {isa = PBXBuildFile; fileRef = 2F01D10B198230A200C840E7 /* 选择对勾.png */; };
+		2F01D11019823F5E00C840E7 /* 司机信息.png in Resources */ = {isa = PBXBuildFile; fileRef = 2F01D10E19823F5E00C840E7 /* 司机信息.png */; };
+		2F01D11119823F5E00C840E7 /* Wifi.png in Resources */ = {isa = PBXBuildFile; fileRef = 2F01D10F19823F5E00C840E7 /* Wifi.png */; };
+		2F01D1151982511B00C840E7 /* 车上货柜，头部信息.png in Resources */ = {isa = PBXBuildFile; fileRef = 2F01D1121982511B00C840E7 /* 车上货柜，头部信息.png */; };
+		2F01D1161982511B00C840E7 /* 购物车.png in Resources */ = {isa = PBXBuildFile; fileRef = 2F01D1131982511B00C840E7 /* 购物车.png */; };
+		2F01D1171982511B00C840E7 /* 提示.png in Resources */ = {isa = PBXBuildFile; fileRef = 2F01D1141982511B00C840E7 /* 提示.png */; };
+		2F01D11C198252DF00C840E7 /* 1.png in Resources */ = {isa = PBXBuildFile; fileRef = 2F01D118198252DF00C840E7 /* 1.png */; };
+		2F01D11D198252DF00C840E7 /* 2.png in Resources */ = {isa = PBXBuildFile; fileRef = 2F01D119198252DF00C840E7 /* 2.png */; };
+		2F01D11E198252DF00C840E7 /* 3.png in Resources */ = {isa = PBXBuildFile; fileRef = 2F01D11A198252DF00C840E7 /* 3.png */; };
+		2F01D11F198252DF00C840E7 /* 4.png in Resources */ = {isa = PBXBuildFile; fileRef = 2F01D11B198252DF00C840E7 /* 4.png */; };
 		2F1C60051979F285004D3C2A /* TheDarkPortal.m in Sources */ = {isa = PBXBuildFile; fileRef = 2F1C60041979F285004D3C2A /* TheDarkPortal.m */; };
 		2F1C600F197AA590004D3C2A /* NSMutableDictionary+Weather.m in Sources */ = {isa = PBXBuildFile; fileRef = 2F1C600E197AA590004D3C2A /* NSMutableDictionary+Weather.m */; };
 		2F1C6016197AB0FA004D3C2A /* OldCrafty.m in Sources */ = {isa = PBXBuildFile; fileRef = 2F1C6015197AB0FA004D3C2A /* OldCrafty.m */; };
@@ -75,6 +109,40 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		2F01D0D41982083200C840E7 /* fake_main.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = fake_main.png; sourceTree = "<group>"; };
+		2F01D0DD198209AB00C840E7 /* icon_location@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "icon_location@2x.png"; sourceTree = "<group>"; };
+		2F01D0DE198209AB00C840E7 /* icon_plant@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "icon_plant@2x.png"; sourceTree = "<group>"; };
+		2F01D0E219820A1500C840E7 /* 进入@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "进入@2x.png"; sourceTree = "<group>"; };
+		2F01D0E419820B2E00C840E7 /* 货柜_normal.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "货柜_normal.png"; sourceTree = "<group>"; };
+		2F01D0E519820B2E00C840E7 /* 货柜_pressed.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "货柜_pressed.png"; sourceTree = "<group>"; };
+		2F01D0E619820B2E00C840E7 /* 进入.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "进入.png"; sourceTree = "<group>"; };
+		2F01D0E719820B2E00C840E7 /* 通知.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "通知.png"; sourceTree = "<group>"; };
+		2F01D0E819820B2E00C840E7 /* 退税_normal.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "退税_normal.png"; sourceTree = "<group>"; };
+		2F01D0E919820B2E00C840E7 /* 退税_pressed.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "退税_pressed.png"; sourceTree = "<group>"; };
+		2F01D0EA19820B2E00C840E7 /* 我的_normal.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "我的_normal.png"; sourceTree = "<group>"; };
+		2F01D0EB19820B2E00C840E7 /* 我的_pressed.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "我的_pressed.png"; sourceTree = "<group>"; };
+		2F01D0EC19820B2E00C840E7 /* 预约用车.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "预约用车.png"; sourceTree = "<group>"; };
+		2F01D0ED19820B2E00C840E7 /* 约车_normal.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "约车_normal.png"; sourceTree = "<group>"; };
+		2F01D0EE19820B2E00C840E7 /* 约车_perssed.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "约车_perssed.png"; sourceTree = "<group>"; };
+		2F01D0FA198210F900C840E7 /* 价格.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "价格.png"; sourceTree = "<group>"; };
+		2F01D0FB198210F900C840E7 /* 起.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "起.png"; sourceTree = "<group>"; };
+		2F01D0FC198210F900C840E7 /* 填写接机_进入.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "填写接机_进入.png"; sourceTree = "<group>"; };
+		2F01D0FD198210F900C840E7 /* 选择.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "选择.png"; sourceTree = "<group>"; };
+		2F01D0FE198210F900C840E7 /* 选择车型.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "选择车型.png"; sourceTree = "<group>"; };
+		2F01D0FF198210F900C840E7 /* 选择航班号.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "选择航班号.png"; sourceTree = "<group>"; };
+		2F01D100198210F900C840E7 /* 选择接机时间.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "选择接机时间.png"; sourceTree = "<group>"; };
+		2F01D108198212EA00C840E7 /* 终.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "终.png"; sourceTree = "<group>"; };
+		2F01D10A198230A200C840E7 /* 查看路线.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "查看路线.png"; sourceTree = "<group>"; };
+		2F01D10B198230A200C840E7 /* 选择对勾.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "选择对勾.png"; sourceTree = "<group>"; };
+		2F01D10E19823F5E00C840E7 /* 司机信息.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "司机信息.png"; sourceTree = "<group>"; };
+		2F01D10F19823F5E00C840E7 /* Wifi.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Wifi.png; sourceTree = "<group>"; };
+		2F01D1121982511B00C840E7 /* 车上货柜，头部信息.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "车上货柜，头部信息.png"; sourceTree = "<group>"; };
+		2F01D1131982511B00C840E7 /* 购物车.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "购物车.png"; sourceTree = "<group>"; };
+		2F01D1141982511B00C840E7 /* 提示.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "提示.png"; sourceTree = "<group>"; };
+		2F01D118198252DF00C840E7 /* 1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = 1.png; sourceTree = "<group>"; };
+		2F01D119198252DF00C840E7 /* 2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = 2.png; sourceTree = "<group>"; };
+		2F01D11A198252DF00C840E7 /* 3.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = 3.png; sourceTree = "<group>"; };
+		2F01D11B198252DF00C840E7 /* 4.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = 4.png; sourceTree = "<group>"; };
 		2F1C60031979F285004D3C2A /* TheDarkPortal.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TheDarkPortal.h; sourceTree = "<group>"; };
 		2F1C60041979F285004D3C2A /* TheDarkPortal.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TheDarkPortal.m; sourceTree = "<group>"; };
 		2F1C600D197AA590004D3C2A /* NSMutableDictionary+Weather.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSMutableDictionary+Weather.h"; sourceTree = "<group>"; };
@@ -355,6 +423,40 @@
 		2FB84B82197F5A66002B807F /* images */ = {
 			isa = PBXGroup;
 			children = (
+				2F01D118198252DF00C840E7 /* 1.png */,
+				2F01D119198252DF00C840E7 /* 2.png */,
+				2F01D11A198252DF00C840E7 /* 3.png */,
+				2F01D11B198252DF00C840E7 /* 4.png */,
+				2F01D1121982511B00C840E7 /* 车上货柜，头部信息.png */,
+				2F01D1131982511B00C840E7 /* 购物车.png */,
+				2F01D1141982511B00C840E7 /* 提示.png */,
+				2F01D10E19823F5E00C840E7 /* 司机信息.png */,
+				2F01D10F19823F5E00C840E7 /* Wifi.png */,
+				2F01D10A198230A200C840E7 /* 查看路线.png */,
+				2F01D10B198230A200C840E7 /* 选择对勾.png */,
+				2F01D108198212EA00C840E7 /* 终.png */,
+				2F01D0FA198210F900C840E7 /* 价格.png */,
+				2F01D0FB198210F900C840E7 /* 起.png */,
+				2F01D0FC198210F900C840E7 /* 填写接机_进入.png */,
+				2F01D0FD198210F900C840E7 /* 选择.png */,
+				2F01D0FE198210F900C840E7 /* 选择车型.png */,
+				2F01D0FF198210F900C840E7 /* 选择航班号.png */,
+				2F01D100198210F900C840E7 /* 选择接机时间.png */,
+				2F01D0E419820B2E00C840E7 /* 货柜_normal.png */,
+				2F01D0E519820B2E00C840E7 /* 货柜_pressed.png */,
+				2F01D0E619820B2E00C840E7 /* 进入.png */,
+				2F01D0E719820B2E00C840E7 /* 通知.png */,
+				2F01D0E819820B2E00C840E7 /* 退税_normal.png */,
+				2F01D0E919820B2E00C840E7 /* 退税_pressed.png */,
+				2F01D0EA19820B2E00C840E7 /* 我的_normal.png */,
+				2F01D0EB19820B2E00C840E7 /* 我的_pressed.png */,
+				2F01D0EC19820B2E00C840E7 /* 预约用车.png */,
+				2F01D0ED19820B2E00C840E7 /* 约车_normal.png */,
+				2F01D0EE19820B2E00C840E7 /* 约车_perssed.png */,
+				2F01D0E219820A1500C840E7 /* 进入@2x.png */,
+				2F01D0DD198209AB00C840E7 /* icon_location@2x.png */,
+				2F01D0DE198209AB00C840E7 /* icon_plant@2x.png */,
+				2F01D0D41982083200C840E7 /* fake_main.png */,
 				2FB84BBA197FCFB9002B807F /* section_1.jpg */,
 				2FB84BBB197FCFB9002B807F /* section_2.jpg */,
 				2FB84BBC197FCFB9002B807F /* section_3.jpg */,
@@ -484,17 +586,51 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2F01D0F719820B2E00C840E7 /* 预约用车.png in Resources */,
+				2F01D10C198230A200C840E7 /* 查看路线.png in Resources */,
+				2F01D11019823F5E00C840E7 /* 司机信息.png in Resources */,
+				2F01D0F219820B2E00C840E7 /* 通知.png in Resources */,
 				2FB84BA0197F5AAE002B807F /* minback@2x.png in Resources */,
+				2F01D0F919820B2E00C840E7 /* 约车_perssed.png in Resources */,
+				2F01D105198210F900C840E7 /* 选择车型.png in Resources */,
 				2FB84BC0197FCFB9002B807F /* section_3.jpg in Resources */,
+				2F01D0E0198209AB00C840E7 /* icon_location@2x.png in Resources */,
+				2F01D11D198252DF00C840E7 /* 2.png in Resources */,
+				2F01D10D198230A200C840E7 /* 选择对勾.png in Resources */,
+				2F01D11E198252DF00C840E7 /* 3.png in Resources */,
+				2F01D11119823F5E00C840E7 /* Wifi.png in Resources */,
 				2FB84BC1197FCFB9002B807F /* section_4.jpg in Resources */,
+				2F01D103198210F900C840E7 /* 填写接机_进入.png in Resources */,
+				2F01D0F819820B2E00C840E7 /* 约车_normal.png in Resources */,
 				2FB84BBE197FCFB9002B807F /* section_1.jpg in Resources */,
+				2F01D1171982511B00C840E7 /* 提示.png in Resources */,
+				2F01D11F198252DF00C840E7 /* 4.png in Resources */,
+				2F01D0F019820B2E00C840E7 /* 货柜_pressed.png in Resources */,
+				2F01D0F119820B2E00C840E7 /* 进入.png in Resources */,
 				2F50286A1977DD430052F818 /* Images.xcassets in Resources */,
+				2F01D0F519820B2E00C840E7 /* 我的_normal.png in Resources */,
+				2F01D0E319820A1500C840E7 /* 进入@2x.png in Resources */,
 				2FB84B88197F5A66002B807F /* traffic_airport@2x.png in Resources */,
 				2F8C791A197CCF3A0071297C /* Dungeons.strings in Resources */,
+				2F01D0D51982083200C840E7 /* fake_main.png in Resources */,
+				2F01D0F319820B2E00C840E7 /* 退税_normal.png in Resources */,
 				2FB84BBF197FCFB9002B807F /* section_2.jpg in Resources */,
+				2F01D102198210F900C840E7 /* 起.png in Resources */,
+				2F01D11C198252DF00C840E7 /* 1.png in Resources */,
+				2F01D101198210F900C840E7 /* 价格.png in Resources */,
+				2F01D107198210F900C840E7 /* 选择接机时间.png in Resources */,
+				2F01D109198212EA00C840E7 /* 终.png in Resources */,
+				2F01D0EF19820B2E00C840E7 /* 货柜_normal.png in Resources */,
+				2F01D1161982511B00C840E7 /* 购物车.png in Resources */,
+				2F01D0E1198209AB00C840E7 /* icon_plant@2x.png in Resources */,
 				2F5028651977DD430052F818 /* Main.storyboard in Resources */,
+				2F01D104198210F900C840E7 /* 选择.png in Resources */,
+				2F01D0F619820B2E00C840E7 /* 我的_pressed.png in Resources */,
+				2F01D106198210F900C840E7 /* 选择航班号.png in Resources */,
 				2FB84B86197F5A66002B807F /* 1.jpg in Resources */,
 				2FB84B87197F5A66002B807F /* back@2x.png in Resources */,
+				2F01D0F419820B2E00C840E7 /* 退税_pressed.png in Resources */,
+				2F01D1151982511B00C840E7 /* 车上货柜，头部信息.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

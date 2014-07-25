@@ -42,10 +42,12 @@
     item3.tabBarHeight = self.tabBar.frame.size.height;
     item4.tabBarHeight = self.tabBar.frame.size.height;
     
-    item1.tabBarItem = [[UITabBarItem alloc] initWithTitle:@"hello 1" image:nil selectedImage:nil];
-    item2.tabBarItem = [[UITabBarItem alloc] initWithTitle:@"hello 2" image:nil selectedImage:nil];
-    item3.tabBarItem = [[UITabBarItem alloc] initWithTitle:@"hello 3" image:nil selectedImage:nil];
-    item4.tabBarItem = [[UITabBarItem alloc] initWithTitle:@"hello 4" image:nil selectedImage:nil];
+    IMAGE_SCALE(@"约车_normal");
+    
+    item1.tabBarItem = [[UITabBarItem alloc] initWithTitle:nil image:IMAGE_SCALE(@"约车_normal") selectedImage:nil];
+    item2.tabBarItem = [[UITabBarItem alloc] initWithTitle:nil image:IMAGE_SCALE(@"货柜_normal") selectedImage:nil];
+    item3.tabBarItem = [[UITabBarItem alloc] initWithTitle:nil image:IMAGE_SCALE(@"退税_normal") selectedImage:nil];
+    item4.tabBarItem = [[UITabBarItem alloc] initWithTitle:nil image:IMAGE_SCALE(@"我的_normal") selectedImage:nil];
     
     [self addChildViewController:item1];
     [self addChildViewController:item2];

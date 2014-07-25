@@ -70,6 +70,7 @@
 //        [desc setText:@"18:47CST 晴转小雨"];
         [sky addSubview:desc];
         
+        
         //获取天气逻辑
         [TheDarkPortal queryWeatherWithCityID:[NSNumber numberWithInt:1] onSucceed:^(NSMutableDictionary* succeed) {
             dispatch_async(dispatch_get_main_queue(), ^(void){
@@ -81,6 +82,12 @@
         }onFailure:^(NSMutableDictionary* status){
             
         }];
+        
+        
+        UIImageView* fakeimage = [[UIImageView alloc] initWithFrame:sky.bounds];
+        [fakeimage setImage:[UIImage imageNamed:@"fake_main.png"]];
+        
+        [sky addSubview:fakeimage];
     }
     
     {
@@ -95,7 +102,7 @@
         [btn1 addTarget:self action:@selector(handlePickup:) forControlEvents:UIControlEventTouchUpInside];
         [land addSubview:btn1];
         {
-            UIImageView* imageView = [[UIImageView alloc] initWithImage:[UIImage imageNamed:@"traffic_airport.png"]];
+            UIImageView* imageView = [[UIImageView alloc] initWithImage:[UIImage imageNamed:@"icon_plant.png"]];
             [imageView centerWithLeft:iconLeftMargin andView:btn1];
             [btn1 addSubview:imageView];
             
@@ -106,7 +113,7 @@
             [label centerWithLeft:imageView.frame.size.width + imageView.frame.origin.x + textLeftMargin andView:btn1];
             [btn1 addSubview:label];
             
-            UIImageView* imgArrow = [[UIImageView alloc] initWithImage:[UIImage imageNamed:@"back"]];
+            UIImageView* imgArrow = [[UIImageView alloc] initWithImage:[UIImage imageNamed:@"进入"]];
             [imgArrow centerWithRight:arrowRightMargin andView:btn1];
             [btn1 addSubview:imgArrow];
             
@@ -117,7 +124,7 @@
         [btn2 addTarget:self action:@selector(handleLookingFor:) forControlEvents:UIControlEventTouchUpInside];
         [land addSubview:btn2];
         {
-            UIImageView* imageView = [[UIImageView alloc] initWithImage:[UIImage imageNamed:@"traffic_airport.png"]];
+            UIImageView* imageView = [[UIImageView alloc] initWithImage:[UIImage imageNamed:@"icon_location.png"]];
             [imageView centerWithLeft:iconLeftMargin andView:btn1];
             [btn2 addSubview:imageView];
             
@@ -128,7 +135,7 @@
             [label centerWithLeft:imageView.frame.size.width + imageView.frame.origin.x + textLeftMargin andView:btn1];
             [btn2 addSubview:label];
             
-            UIImageView* imgArrow = [[UIImageView alloc] initWithImage:[UIImage imageNamed:@"back"]];
+            UIImageView* imgArrow = [[UIImageView alloc] initWithImage:[UIImage imageNamed:@"进入"]];
             [imgArrow centerWithRight:arrowRightMargin andView:btn1];
             [btn2 addSubview:imgArrow];
             
@@ -139,7 +146,7 @@
         [btn3 addTarget:self action:@selector(handleBooking:) forControlEvents:UIControlEventTouchUpInside];
         [land addSubview:btn3];
         {
-            UIImageView* imageView = [[UIImageView alloc] initWithImage:[UIImage imageNamed:@"traffic_airport.png"]];
+            UIImageView* imageView = IMAGEVIEW_SCALE(@"预约用车");
             [imageView centerWithLeft:iconLeftMargin andView:btn1];
             [btn3 addSubview:imageView];
             
@@ -150,7 +157,7 @@
             [label centerWithLeft:imageView.frame.size.width + imageView.frame.origin.x + textLeftMargin andView:btn1];
             [btn3 addSubview:label];
             
-            UIImageView* imgArrow = [[UIImageView alloc] initWithImage:[UIImage imageNamed:@"back"]];
+            UIImageView* imgArrow = [[UIImageView alloc] initWithImage:[UIImage imageNamed:@"进入"]];
             [imgArrow centerWithRight:arrowRightMargin andView:btn1];
             [btn3 addSubview:imgArrow];
         }

@@ -80,7 +80,7 @@
             [item setObject:@"" forKey:@"title"];
             [item setObject:@"普吉岛西蒙人妖表演秀成人VIP" forKey:@"desc"];
             [item setObject:@"230" forKey:@"value"];
-            [item setObject:@"section_1.jpg" forKey:@"image"];
+            [item setObject:@"1" forKey:@"image"];
             [item setObject:[NSNumber numberWithInt:1] forKey:@"type"];
             [array addObject:item];
         }
@@ -89,7 +89,7 @@
             [item setObject:@"巴厘岛一日游" forKey:@"title"];
             [item setObject:@"南湾海滩度假区是巴厘岛的舞蹈与戏剧扮演着" forKey:@"desc"];
             [item setObject:@"230" forKey:@"value"];
-            [item setObject:@"section_2.jpg" forKey:@"image"];
+            [item setObject:@"2" forKey:@"image"];
             [item setObject:[NSNumber numberWithInt:2] forKey:@"type"];
             [array addObject:item];
         }
@@ -98,7 +98,7 @@
             [item setObject:@"雅玛花式铁板烧" forKey:@"title"];
             [item setObject:@"价值198元雅玛花式铁板烧单人自助" forKey:@"desc"];
             [item setObject:@"888" forKey:@"value"];
-            [item setObject:@"section_3.jpg" forKey:@"image"];
+            [item setObject:@"3" forKey:@"image"];
             [item setObject:[NSNumber numberWithInt:3] forKey:@"type"];
             [array addObject:item];
         }
@@ -107,7 +107,7 @@
             [item setObject:@"巴厘岛3天2晚5星自由行" forKey:@"title"];
             [item setObject:@"价值50元代金卷新鲜优质" forKey:@"desc"];
             [item setObject:@"888" forKey:@"value"];
-            [item setObject:@"section_4.jpg" forKey:@"image"];
+            [item setObject:@"4" forKey:@"image"];
             [item setObject:[NSNumber numberWithInt:1] forKey:@"type"];
             [array addObject:item];
         }

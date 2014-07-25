@@ -14,12 +14,12 @@
 "MainVC_Action_LookingFor" = "即时叫车";
 
 //Taxi PickingUp
-"TaxiPickingUp_Title" = "接机";
+"TaxiPickingUp_Title" = "填写接机信息";
 "TaxiPickingUp_PlaceOrder" = "开始叫车";
 "TaxiPickingUp_Estimated" = "车费预估";
 
 "TaxiPickingUp_Date" = "选择接机日期";
-"TaxiPickingUp_FlightNumber" = "选择航班号";
+"TaxiPickingUp_FlightNumber" = "输入航班号";
 
 "TaxiPickingUp_Location_Start" = "选择接机地点";
 "TaxiPickingUp_Location_End" = "输入酒店电话或直接选择下车地点";
@@ -35,24 +35,26 @@
 //Taxi PickingUp Completed
 "TaxiPickingUpCompleted_Title" = "司机信息";
 "TaxiPickingUpCompleted_Storage" = "车上货柜";
-"TaxiPickingUpCompleted_Wifi" = "WIFI信息";
+"TaxiPickingUpCompleted_Wifi" = "信息";
 "TaxiPickingUpCompleted_PayInfo" = "支付方式";
 "TaxiPickingUpCompleted_PathDetail" = "查看路线";
 "TaxiPickingUpCompleted_Completed" = "我已到达";
 "TaxiPickingUpCompleted_Lisence" = "车牌：%@";
 "TaxiPickingUpCompleted_Cost" = "预计花费%@泰铢";
-"TaxiPickingUpCompleted_Selection" = "已选5件商品";
+"TaxiPickingUpCompleted_Selection" = "车载商品";
 
 //Taxi Onboard Storage
 "TaxiOnBoardStorage_Title" = "车上货柜";
 "TaxiOnBoardStorage_Tip" = "下车结账时，我会把所购物品直接交付给您";
 "TaxiOnBoardStorage_Buy" = "放入购物车";
+"TaxiOnBoradStorage_Selection" = "已选%d件商品"; 
 
 
 //Common
 "Pay_Ailpay" = "支付宝支付";
 "Pay_Wechatpay" = "微信支付";
 "Pay_CreditCard" = "信用卡支付";
+"Common_Back" = "返回";
 
 
 //Weather
