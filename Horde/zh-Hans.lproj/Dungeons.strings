@@ -60,3 +60,5 @@
 //Weather
 "Weather_CleartoOvercast" = "晴转多云";
 
+//check point
+"TaxiCheckPoint" = "步行去乘车点";

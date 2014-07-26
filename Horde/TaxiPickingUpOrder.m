@@ -8,6 +8,7 @@
 
 #import "TaxiPickingUpOrder.h"
 #import "UILabel+Util.h"
+#import "TaxiCheckPointVC.h"
 
 @interface TaxiPickingUpOrder ()
 @property (strong, nonatomic) UIImageView* paymentSelection;
@@ -207,6 +208,7 @@
 }
 
 - (void) handleViewDetail:(id)sender {
-    
+    TaxiCheckPointVC* vc = [TaxiCheckPointVC new];
+    [self presentViewController:vc animated:YES completion:nil];
 }
 @end

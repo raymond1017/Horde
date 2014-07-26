@@ -11,6 +11,7 @@
 #import "UILabel+Util.h"
 #import "NSMutableDictionary+OrderDetail.h"
 #import "TheDarkPortal.h"
+#import "TaxiCheckPointVC.h"
 
 @interface TaxiPickingUpCompletedVC () <StorageCellDelegate>
 @property (weak, nonatomic) UIImageView* driver_portrait;
@@ -323,6 +324,8 @@
 
 -(void)handleViewDetail:(id)sender {
     
+    TaxiCheckPointVC* vc = [TaxiCheckPointVC new];
+    [self presentViewController:vc animated:YES completion:nil];
 }
 
 

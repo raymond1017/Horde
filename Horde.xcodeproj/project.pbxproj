@@ -41,6 +41,9 @@
 		2F01D11D198252DF00C840E7 /* 2.png in Resources */ = {isa = PBXBuildFile; fileRef = 2F01D119198252DF00C840E7 /* 2.png */; };
 		2F01D11E198252DF00C840E7 /* 3.png in Resources */ = {isa = PBXBuildFile; fileRef = 2F01D11A198252DF00C840E7 /* 3.png */; };
 		2F01D11F198252DF00C840E7 /* 4.png in Resources */ = {isa = PBXBuildFile; fileRef = 2F01D11B198252DF00C840E7 /* 4.png */; };
+		2F01D1221982742900C840E7 /* TaxiCheckPointVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 2F01D1211982742900C840E7 /* TaxiCheckPointVC.m */; };
+		2F01D12419827CC200C840E7 /* 步行去乘车点.png in Resources */ = {isa = PBXBuildFile; fileRef = 2F01D12319827CC200C840E7 /* 步行去乘车点.png */; };
+		2F01D12619827D3100C840E7 /* 06.png in Resources */ = {isa = PBXBuildFile; fileRef = 2F01D12519827D3100C840E7 /* 06.png */; };
 		2F1C60051979F285004D3C2A /* TheDarkPortal.m in Sources */ = {isa = PBXBuildFile; fileRef = 2F1C60041979F285004D3C2A /* TheDarkPortal.m */; };
 		2F1C600F197AA590004D3C2A /* NSMutableDictionary+Weather.m in Sources */ = {isa = PBXBuildFile; fileRef = 2F1C600E197AA590004D3C2A /* NSMutableDictionary+Weather.m */; };
 		2F1C6016197AB0FA004D3C2A /* OldCrafty.m in Sources */ = {isa = PBXBuildFile; fileRef = 2F1C6015197AB0FA004D3C2A /* OldCrafty.m */; };
@@ -143,6 +146,10 @@
 		2F01D119198252DF00C840E7 /* 2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = 2.png; sourceTree = "<group>"; };
 		2F01D11A198252DF00C840E7 /* 3.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = 3.png; sourceTree = "<group>"; };
 		2F01D11B198252DF00C840E7 /* 4.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = 4.png; sourceTree = "<group>"; };
+		2F01D1201982742900C840E7 /* TaxiCheckPointVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TaxiCheckPointVC.h; sourceTree = "<group>"; };
+		2F01D1211982742900C840E7 /* TaxiCheckPointVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TaxiCheckPointVC.m; sourceTree = "<group>"; };
+		2F01D12319827CC200C840E7 /* 步行去乘车点.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "步行去乘车点.png"; sourceTree = "<group>"; };
+		2F01D12519827D3100C840E7 /* 06.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = 06.png; sourceTree = "<group>"; };
 		2F1C60031979F285004D3C2A /* TheDarkPortal.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TheDarkPortal.h; sourceTree = "<group>"; };
 		2F1C60041979F285004D3C2A /* TheDarkPortal.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TheDarkPortal.m; sourceTree = "<group>"; };
 		2F1C600D197AA590004D3C2A /* NSMutableDictionary+Weather.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSMutableDictionary+Weather.h"; sourceTree = "<group>"; };
@@ -313,6 +320,8 @@
 				2FB84B79197E84DC002B807F /* TaxiPickingUpCompletedVC.m */,
 				2FB84BB0197F6311002B807F /* TaxiOnBoardStorageVC.h */,
 				2FB84BB1197F6311002B807F /* TaxiOnBoardStorageVC.m */,
+				2F01D1201982742900C840E7 /* TaxiCheckPointVC.h */,
+				2F01D1211982742900C840E7 /* TaxiCheckPointVC.m */,
 			);
 			name = "VC+Detail";
 			sourceTree = "<group>";
@@ -423,6 +432,8 @@
 		2FB84B82197F5A66002B807F /* images */ = {
 			isa = PBXGroup;
 			children = (
+				2F01D12519827D3100C840E7 /* 06.png */,
+				2F01D12319827CC200C840E7 /* 步行去乘车点.png */,
 				2F01D118198252DF00C840E7 /* 1.png */,
 				2F01D119198252DF00C840E7 /* 2.png */,
 				2F01D11A198252DF00C840E7 /* 3.png */,
@@ -627,7 +638,9 @@
 				2F01D104198210F900C840E7 /* 选择.png in Resources */,
 				2F01D0F619820B2E00C840E7 /* 我的_pressed.png in Resources */,
 				2F01D106198210F900C840E7 /* 选择航班号.png in Resources */,
+				2F01D12619827D3100C840E7 /* 06.png in Resources */,
 				2FB84B86197F5A66002B807F /* 1.jpg in Resources */,
+				2F01D12419827CC200C840E7 /* 步行去乘车点.png in Resources */,
 				2FB84B87197F5A66002B807F /* back@2x.png in Resources */,
 				2F01D0F419820B2E00C840E7 /* 退税_pressed.png in Resources */,
 				2F01D1151982511B00C840E7 /* 车上货柜，头部信息.png in Resources */,
@@ -672,6 +685,7 @@
 				2F1C6032197AD52F004D3C2A /* TaxiPickingUpVC.m in Sources */,
 				2F1C6068197BACD0004D3C2A /* PlaneToHotelVC.m in Sources */,
 				2FB84BC7197FDF90002B807F /* NSMutableDictionary+Driver.m in Sources */,
+				2F01D1221982742900C840E7 /* TaxiCheckPointVC.m in Sources */,
 				2FB84BA5197F5AAE002B807F /* Orgrimar.m in Sources */,
 				2FB84BCA1980A8A2002B807F /* NSMutableDictionary+OrderDetail.m in Sources */,
 				2F1C6063197BACD0004D3C2A /* FrostwyrmLairVC.m in Sources */,

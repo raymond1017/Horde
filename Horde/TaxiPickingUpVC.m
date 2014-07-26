@@ -11,11 +11,19 @@
 #import "UILabel+Util.h"
 #import "TaxiPickingUpOrder.h"
 
-@interface TaxiPickingUpVC ()
+@interface TaxiPickingUpVC () <UITextFieldDelegate>
 
 @property (strong, nonatomic) UIImageView* carSelection;
 @property (strong, nonatomic) UIImageView* sexSelection;
 
+@property (weak, nonatomic) UILabel* pickingUpStart;
+@property (weak, nonatomic) UILabel* pickingDate;
+@property (weak, nonatomic) UITextField* pickingUpEnd;
+
+@property (weak, nonatomic) UITextField* flightNo;
+@property (weak, nonatomic) UIView* calSelector;
+
+@property (weak, nonatomic) UIDatePicker* picker;
 @end
 
 @implementation TaxiPickingUpVC
@@ -59,13 +67,16 @@
             
             [btn1 addSubview:img];
             
-            UILabel* lab = [UILabel new];
-            [lab setText:T_(@"TaxiPickingUp_FlightNumber")];
-            [lab centerWithLeft:img.frame.origin.x + img.frame.size.width + iconMargin andView:btn1];
+            UITextField* lab = [[UITextField alloc] initWithFrame:[UIHelper rightTo:img.frame margin:iconMargin width:btn1.frame.size.width height:30]];
+//            UILabel* lab = [UILabel new];
+            [lab setPlaceholder:T_(@"TaxiPickingUp_FlightNumber")];
+//            [lab centerWithLeft:img.frame.origin.x + img.frame.size.width + iconMargin andView:btn1];
             [lab setTextColor:[UIColor colorWithRed:141.0/255.0 green:141.0/255.0 blue:141.0/255.0 alpha:1.0]];
             [lab setFont:font];
+            [lab setDelegate:self];
             [btn1 addSubview:lab];
             
+            self.flightNo = lab;
 //            UIImageView* imgArrow = [[UIImageView alloc] initWithImage:[UIImage imageNamed:@"back"]];
 //            [imgArrow centerWithRight:iconMargin andView:btn1];
 //            [btn1 addSubview:imgArrow];
@@ -87,11 +98,14 @@
             [lab centerWithLeft:img.frame.origin.x + img.frame.size.width + iconMargin andView:btn2];
             [lab setTextColor:[UIColor colorWithRed:141.0/255.0 green:141.0/255.0 blue:141.0/255.0 alpha:1.0]];
             [lab setFont:font];
+            self.pickingDate = lab;
             [btn2 addSubview:lab];
             
             UIImageView* imgArrow = IMAGEVIEW_SCALE(@"填写接机_进入");
             [imgArrow centerWithRight:iconMargin andView:btn1];
             [btn2 addSubview:imgArrow];
+            
+            [btn2 addTarget:self action:@selector(handleDateTouched:) forControlEvents:UIControlEventTouchUpInside];
         }
         
         topOffset += btn2.frame.size.height;
@@ -123,6 +137,8 @@
             UIImageView* imgArrow = IMAGEVIEW_SCALE(@"填写接机_进入");
             [imgArrow centerWithRight:iconMargin andView:btn1];
             [btn1 addSubview:imgArrow];
+            
+            self.pickingUpStart = lab;
         }
         
         topOffset += btn1.frame.size.height + margin;
@@ -135,16 +151,19 @@
             
             [btn2 addSubview:img];
             
-            UILabel* lab = [UILabel new];
-            [lab setText:T_(@"TaxiPickingUp_Location_End")];
-            [lab centerWithLeft:img.frame.origin.x + img.frame.size.width + iconMargin andView:btn2];
-            [lab setTextColor:[UIColor colorWithRed:141.0/255.0 green:141.0/255.0 blue:141.0/255.0 alpha:1.0]];
+            UITextField* lab = [[UITextField alloc] initWithFrame:[UIHelper rightTo:img.frame margin:iconMargin width:btn2.frame.size.width height:30]];
+            [lab setPlaceholder:T_(@"TaxiPickingUp_Location_End")];
+//            [lab setTextColor:[UIColor colorWithRed:141.0/255.0 green:141.0/255.0 blue:141.0/255.0 alpha:1.0]];
             [lab setFont:font];
+            [lab setDelegate:self];
             [btn2 addSubview:lab];
             
             UIImageView* imgArrow = IMAGEVIEW_SCALE(@"填写接机_进入");
             [imgArrow centerWithRight:iconMargin andView:btn1];
             [btn2 addSubview:imgArrow];
+            
+            
+            self.pickingUpEnd = lab;
         }
         
         topOffset += btn2.frame.size.height;
@@ -273,5 +292,81 @@
     [self.sexSelection setFrame:CGRectMake(btn.frame.size.width - 20, 5, self.sexSelection.image.size.width, self.sexSelection.image.size.width)];
     [btn addSubview:self.sexSelection];
     
+}
+
+-(void)handleDateTouched:(id)sender {
+    int margin = 20;
+    
+    UIDatePicker* picker = [UIDatePicker new];
+    self.picker = picker;
+    
+    UIButton* settingbackground = [[UIButton alloc] initWithFrame:self.view.bounds];
+    self.calSelector = settingbackground;
+    [settingbackground addTarget:self action:@selector(handleTouchOutside:) forControlEvents:UIControlEventTouchUpInside];
+//    [settingbackground setBackgroundColor:[UIColor colorWithRed:200.0/255.0 green:200.0/255.0 blue:200.0/255.0 alpha:0.8]];
+    [self.view addSubview:settingbackground];
+
+    int height = picker.frame.size.height;
+    int width = settingbackground.frame.size.width;
+
+    int controlHeight = 30;
+    CGRect pos2 = CGRectMake(0, settingbackground.frame.size.height - picker.frame.size.height - controlHeight, width, height + controlHeight);
+    CGRect pos1 = CGRectMake(0, settingbackground.frame.size.height + height + controlHeight, width, height + controlHeight);
+    UIView* setting = [[UIView alloc] initWithFrame:pos1];
+    [setting setBackgroundColor:[UIColor colorWithRed:200/255.0 green:200/255.0 blue:200/255.0 alpha:1.0]];
+    [settingbackground addSubview:setting];
+
+    {
+        UIView* view = [[UIView alloc] initWithFrame:CGRectMake(0, 0, width, controlHeight)];
+//        [view setBackgroundColor:[UIColor yellowColor]];
+        picker.frame = CGRectMake(0, controlHeight, width, height);
+        [picker setDatePickerMode:UIDatePickerModeDate];
+        
+        UIButton* btn = [[UIButton alloc] initWithFrame:CGRectMake(view.frame.size.width - 60, 0, 50, 30)];
+        [btn setTitle:@"确定" forState:UIControlStateNormal];
+        [btn setBackgroundColor:[UIColor blueColor]];
+        [btn addTarget:self action:@selector(handleTouchCal:) forControlEvents:UIControlEventTouchUpInside];
+        [view addSubview:btn];
+        
+        [setting addSubview:view];
+        [setting addSubview:picker];
+    }
+
+    [UIView animateWithDuration:1 animations:^{
+        setting.frame = pos2;
+    } completion:^(BOOL finished){
+
+    }];
+}
+
+-(void)handleTouchCal:(id)sender {
+    NSDate* date = [self.picker date];
+    
+    NSDateFormatter* formatter = [[NSDateFormatter alloc] init];
+    [formatter setDateFormat:@"yyyy年MM月dd日"];
+    
+    [self.pickingDate setText: [formatter stringFromDate:date]];
+    [self handleTouchOutside:sender];
+}
+
+-(void)handleTouchOutside:(id)sender {
+    [UIView animateWithDuration:1 animations:^{
+        self.calSelector.frame = CGRectMake(0, self.view.frame.size.height + self.calSelector.frame.size.height, self.calSelector.frame.size.width, self.calSelector.frame.size.height);
+    } completion:^(BOOL finished){
+        if(finished){
+            [self.calSelector removeFromSuperview];
+        }
+    }];
+}
+
+#pragma mark TextField Delegate
+-(BOOL)textFieldShouldReturn:(UITextField *)textField{
+    [textField resignFirstResponder];
+    if(textField == self.flightNo){
+        [self.pickingUpStart setText:@"曼谷素万那普机场"];
+    }else if(textField == self.pickingUpEnd){
+        [self.pickingUpEnd setText:@"曼谷莲花大酒店"];
+    }
+    return NO;
 }
 @end
