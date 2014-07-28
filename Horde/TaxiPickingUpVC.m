@@ -38,7 +38,7 @@
 {
     self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil];
     if (self) {
-        // Custom initialization
+        [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(dismiss) name:@"BACKTOINDEXNOTE" object:nil];
     }
     return self;
 }
@@ -299,7 +299,7 @@
         
     }];
     
-    TaxiPickingUpOrder* vc = [TaxiPickingUpOrder new];
+    TaxiPickingUpOrder* vc = [[TaxiPickingUpOrder alloc] init];
     [self presentViewController:vc animated:YES completion:^{
     }];
 }
@@ -409,6 +409,10 @@
             self.calSelector = nil;
         }
     }];
+}
+
+- (void)dismiss{
+    [self dismissViewControllerAnimated:NO completion:nil];
 }
 
 #pragma mark TextField Delegate

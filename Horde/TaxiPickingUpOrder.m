@@ -20,8 +20,13 @@
 {
     self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil];
     if (self) {
-        // Custom initialization
     }
+    return self;
+}
+
+- (id)init {
+    self = [super init];
+    
     return self;
 }
 
@@ -190,6 +195,7 @@
         [btn setBackgroundColor:[UIColor blackColor]];
         [btn setTitle:T_(@"TaxiPickingUpDetail_Tips") forState:UIControlStateNormal];
         [container addSubview:btn];
+        [btn addTarget:self action:@selector(handleBack:) forControlEvents:UIControlEventTouchUpInside];
     }
     
 }
@@ -223,5 +229,10 @@
 - (void) handleViewDetail:(id)sender {
     TaxiCheckPointVC* vc = [TaxiCheckPointVC new];
     [self presentViewController:vc animated:YES completion:nil];
+}
+
+- (void) handleBack:(id)sender {
+    NSNotification * notification = [NSNotification notificationWithName:@"BACKTOINDEXNOTE" object:nil];
+    [[NSNotificationCenter defaultCenter] postNotification:notification];
 }
 @end

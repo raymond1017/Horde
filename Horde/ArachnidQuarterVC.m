@@ -225,8 +225,8 @@
 -(void)handlePickup:(id)sender {
     TaxiPickingUpVC* vc = [TaxiPickingUpVC new];
     vc.orderDelegate = self;
-    [self.navigationController pushViewController:vc animated:YES];
-//    [self presentViewController:vc animated:YES completion:nil];
+//    [self.navigationController pushViewController:vc animated:YES];
+    [self presentViewController:vc animated:YES completion:nil];
 }
 
 -(void)handleBooking:(id)sender {
