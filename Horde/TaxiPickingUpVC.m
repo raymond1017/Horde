@@ -25,6 +25,7 @@
 
 @property (weak, nonatomic) UITextField* flightNo;
 @property (weak, nonatomic) UIView* calSelector;
+@property (weak, nonatomic) UIView* calBackgounrd;
 
 @property (weak, nonatomic) UIDatePicker* picker;
 
@@ -98,9 +99,9 @@
             
             [btn2 addSubview:img];
             
-            UILabel* lab = [UILabel new];
+            UILabel* lab = [[UILabel alloc] initWithFrame:CGRectMake(48, 15, 300, 20)];
             [lab setText:T_(@"TaxiPickingUp_Date")];
-            [lab centerWithLeft:img.frame.origin.x + img.frame.size.width + iconMargin andView:btn2];
+//            [lab centerWithLeft:img.frame.origin.x + img.frame.size.width + iconMargin andView:btn2];
             [lab setTextColor:[UIColor colorWithRed:141.0/255.0 green:141.0/255.0 blue:141.0/255.0 alpha:1.0]];
             [lab setFont:font];
             self.pickingDate = lab;
@@ -325,12 +326,13 @@
     
     UIDatePicker* picker = [UIDatePicker new];
     self.picker = picker;
+    [picker setLocale: [[NSLocale alloc] initWithLocaleIdentifier:@"zh_CN"]];
     
     UIButton* settingbackground = [[UIButton alloc] initWithFrame:self.view.bounds];
-    self.calSelector = settingbackground;
     [settingbackground addTarget:self action:@selector(handleTouchOutside:) forControlEvents:UIControlEventTouchUpInside];
-//    [settingbackground setBackgroundColor:[UIColor colorWithRed:200.0/255.0 green:200.0/255.0 blue:200.0/255.0 alpha:0.8]];
+    [settingbackground setBackgroundColor:RGBA(171,171,171, 0.5)];
     [self.view addSubview:settingbackground];
+    self.calBackgounrd = settingbackground;
 
     int height = picker.frame.size.height;
     int width = settingbackground.frame.size.width;
@@ -339,7 +341,7 @@
     CGRect pos2 = CGRectMake(0, settingbackground.frame.size.height - picker.frame.size.height - controlHeight, width, height + controlHeight);
     CGRect pos1 = CGRectMake(0, settingbackground.frame.size.height + height + controlHeight, width, height + controlHeight);
     UIView* setting = [[UIView alloc] initWithFrame:pos1];
-    [setting setBackgroundColor:RGB(171,171,171))];
+    [setting setBackgroundColor:RGB(255,255,255)];
     [settingbackground addSubview:setting];
 
     {
@@ -349,7 +351,7 @@
         [picker setDatePickerMode:UIDatePickerModeDateAndTime];
         
         {
-            UIButton* btn = [[UIButton alloc] initWithFrame:CGRectMake(view.frame.size.width - 60, 5, 50, 30)];
+            UIButton* btn = [[UIButton alloc] initWithFrame:CGRectMake(view.frame.size.width - 60, 3, 50, 30)];
             [btn setTitle:@"确定" forState:UIControlStateNormal];
             [btn.titleLabel setFont:[UIFont systemFontOfSize:15]];
             [btn setTitleColor:[UIColor blackColor] forState:UIControlStateNormal];
@@ -358,41 +360,53 @@
         }
         
         {
-            UIButton* btn = [[UIButton alloc] initWithFrame:CGRectMake(20, 5, 50, 30)];
+            UIButton* btn = [[UIButton alloc] initWithFrame:CGRectMake(10, 3, 50, 30)];
             [btn setTitle:@"取消" forState:UIControlStateNormal];
             [btn.titleLabel setFont:[UIFont systemFontOfSize:15]];
             [btn setTitleColor:[UIColor blackColor] forState:UIControlStateNormal];
             [btn addTarget:self action:@selector(handleTouchCal:) forControlEvents:UIControlEventTouchUpInside];
             [view addSubview:btn];
         }
+        {
+            UIView* line = [[UIView alloc] initWithFrame:CGRectMake(0, 33, view.frame.size.width, 1)];
+            [line setBackgroundColor:RGB(171, 171, 171)];
+            [view addSubview:line];
+        }
         
         [setting addSubview:view];
         [setting addSubview:picker];
     }
 
-    [UIView animateWithDuration:1 animations:^{
+    [UIView animateWithDuration:0.2 animations:^{
         setting.frame = pos2;
     } completion:^(BOOL finished){
 
     }];
+    self.calSelector = setting;
 }
 
 -(void)handleTouchCal:(id)sender {
     NSDate* date = [self.picker date];
     
     NSDateFormatter* formatter = [[NSDateFormatter alloc] init];
-    [formatter setDateFormat:@"yyyy年MM月dd日"];
+    [formatter setDateFormat:@"yyyy年MM月dd日 hh:mm"];
     
     [self.pickingDate setText: [formatter stringFromDate:date]];
     [self handleTouchOutside:sender];
 }
 
 -(void)handleTouchOutside:(id)sender {
+    if(self.calSelector == nil){
+        return;
+    }
     [UIView animateWithDuration:1 animations:^{
         self.calSelector.frame = CGRectMake(0, self.view.frame.size.height + self.calSelector.frame.size.height, self.calSelector.frame.size.width, self.calSelector.frame.size.height);
+        [self.calBackgounrd setAlpha:0];
     } completion:^(BOOL finished){
         if(finished){
-            [self.calSelector removeFromSuperview];
+            [self.calBackgounrd removeFromSuperview];
+            self.calBackgounrd = nil;
+            self.calSelector = nil;
         }
     }];
 }
