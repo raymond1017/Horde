@@ -71,6 +71,7 @@
 		2F5028731977DD430052F818 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2F5028551977DD420052F818 /* UIKit.framework */; };
 		2F50287D1977DD430052F818 /* HordeTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 2F50287C1977DD430052F818 /* HordeTests.m */; };
 		2F8C791A197CCF3A0071297C /* Dungeons.strings in Resources */ = {isa = PBXBuildFile; fileRef = 2F8C791C197CCF3A0071297C /* Dungeons.strings */; };
+		2F9B64381984F8A1003EF37F /* NSMutableDictionary+Mission.m in Sources */ = {isa = PBXBuildFile; fileRef = 2F9B64371984F8A1003EF37F /* NSMutableDictionary+Mission.m */; };
 		2FB84B74197E75DA002B807F /* TaxiPickingUpOrder.m in Sources */ = {isa = PBXBuildFile; fileRef = 2FB84B73197E75DA002B807F /* TaxiPickingUpOrder.m */; };
 		2FB84B7A197E84DC002B807F /* TaxiPickingUpCompletedVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 2FB84B79197E84DC002B807F /* TaxiPickingUpCompletedVC.m */; };
 		2FB84B86197F5A66002B807F /* 1.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 2FB84B83197F5A66002B807F /* 1.jpg */; };
@@ -196,6 +197,8 @@
 		2F5028781977DD430052F818 /* HordeTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "HordeTests-Info.plist"; sourceTree = "<group>"; };
 		2F50287C1977DD430052F818 /* HordeTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HordeTests.m; sourceTree = "<group>"; };
 		2F8C791D197CD0420071297C /* zh-Hans */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hans"; path = "zh-Hans.lproj/Dungeons.strings"; sourceTree = "<group>"; };
+		2F9B64361984F8A1003EF37F /* NSMutableDictionary+Mission.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSMutableDictionary+Mission.h"; sourceTree = "<group>"; };
+		2F9B64371984F8A1003EF37F /* NSMutableDictionary+Mission.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSMutableDictionary+Mission.m"; sourceTree = "<group>"; };
 		2FB84B72197E75DA002B807F /* TaxiPickingUpOrder.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TaxiPickingUpOrder.h; sourceTree = "<group>"; };
 		2FB84B73197E75DA002B807F /* TaxiPickingUpOrder.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TaxiPickingUpOrder.m; sourceTree = "<group>"; };
 		2FB84B78197E84DC002B807F /* TaxiPickingUpCompletedVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TaxiPickingUpCompletedVC.h; sourceTree = "<group>"; };
@@ -282,6 +285,8 @@
 		2F1C6006197A94F8004D3C2A /* Service+bean */ = {
 			isa = PBXGroup;
 			children = (
+				2F9B64361984F8A1003EF37F /* NSMutableDictionary+Mission.h */,
+				2F9B64371984F8A1003EF37F /* NSMutableDictionary+Mission.m */,
 				2F1C600D197AA590004D3C2A /* NSMutableDictionary+Weather.h */,
 				2F1C600E197AA590004D3C2A /* NSMutableDictionary+Weather.m */,
 				2FBA0D85197D04F000B8C280 /* NSMutableDictionary+Flight.h */,
@@ -685,6 +690,7 @@
 				2F1C6032197AD52F004D3C2A /* TaxiPickingUpVC.m in Sources */,
 				2F1C6068197BACD0004D3C2A /* PlaneToHotelVC.m in Sources */,
 				2FB84BC7197FDF90002B807F /* NSMutableDictionary+Driver.m in Sources */,
+				2F9B64381984F8A1003EF37F /* NSMutableDictionary+Mission.m in Sources */,
 				2F01D1221982742900C840E7 /* TaxiCheckPointVC.m in Sources */,
 				2FB84BA5197F5AAE002B807F /* Orgrimar.m in Sources */,
 				2FB84BCA1980A8A2002B807F /* NSMutableDictionary+OrderDetail.m in Sources */,

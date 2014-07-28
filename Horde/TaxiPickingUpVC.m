@@ -10,6 +10,9 @@
 #import "UIImageView+Util.h"
 #import "UILabel+Util.h"
 #import "TaxiPickingUpOrder.h"
+#import "TheDarkPortal.h"
+#import "UIView+Util.h"
+#import "NSMutableDictionary+OrderDetail.h"
 
 @interface TaxiPickingUpVC () <UITextFieldDelegate>
 
@@ -24,6 +27,8 @@
 @property (weak, nonatomic) UIView* calSelector;
 
 @property (weak, nonatomic) UIDatePicker* picker;
+
+@property (strong, nonatomic) NSString* orderID;
 @end
 
 @implementation TaxiPickingUpVC
@@ -254,6 +259,16 @@
     }
 }
 
+- (void)viewDidAppear:(BOOL)animated {
+    if(self.orderID == nil){
+        return;
+    }
+    
+    [self.orderDelegate handleWaitingOrder:self.orderID];
+    
+    [self dismissViewControllerAnimated:NO completion:nil];
+}
+
 - (void)didReceiveMemoryWarning
 {
     [super didReceiveMemoryWarning];
@@ -273,8 +288,19 @@
 
 -(void)handlePickingUp:(id)sender {
     
+    
+    [TheDarkPortal commitOrder:[NSNumber numberWithInt:0] onSucceed:^(NSMutableDictionary* succeed){
+        
+        
+        NSString* orderID = [succeed orderdetail_orderID];
+        self.orderID = orderID;
+    }onFailure:^(NSMutableDictionary* status){
+        
+    }];
+    
     TaxiPickingUpOrder* vc = [TaxiPickingUpOrder new];
-    [self presentViewController:vc animated:YES completion:nil];
+    [self presentViewController:vc animated:YES completion:^{
+    }];
 }
 
 -(void)handleSexChanged:(id)sender {
@@ -313,20 +339,32 @@
     CGRect pos2 = CGRectMake(0, settingbackground.frame.size.height - picker.frame.size.height - controlHeight, width, height + controlHeight);
     CGRect pos1 = CGRectMake(0, settingbackground.frame.size.height + height + controlHeight, width, height + controlHeight);
     UIView* setting = [[UIView alloc] initWithFrame:pos1];
-    [setting setBackgroundColor:[UIColor colorWithRed:200/255.0 green:200/255.0 blue:200/255.0 alpha:1.0]];
+    [setting setBackgroundColor:RGB(171,171,171))];
     [settingbackground addSubview:setting];
 
     {
         UIView* view = [[UIView alloc] initWithFrame:CGRectMake(0, 0, width, controlHeight)];
-//        [view setBackgroundColor:[UIColor yellowColor]];
+        [view setBackgroundColor:[UIColor whiteColor]];
         picker.frame = CGRectMake(0, controlHeight, width, height);
-        [picker setDatePickerMode:UIDatePickerModeDate];
+        [picker setDatePickerMode:UIDatePickerModeDateAndTime];
         
-        UIButton* btn = [[UIButton alloc] initWithFrame:CGRectMake(view.frame.size.width - 60, 0, 50, 30)];
-        [btn setTitle:@"确定" forState:UIControlStateNormal];
-        [btn setBackgroundColor:[UIColor blueColor]];
-        [btn addTarget:self action:@selector(handleTouchCal:) forControlEvents:UIControlEventTouchUpInside];
-        [view addSubview:btn];
+        {
+            UIButton* btn = [[UIButton alloc] initWithFrame:CGRectMake(view.frame.size.width - 60, 5, 50, 30)];
+            [btn setTitle:@"确定" forState:UIControlStateNormal];
+            [btn.titleLabel setFont:[UIFont systemFontOfSize:15]];
+            [btn setTitleColor:[UIColor blackColor] forState:UIControlStateNormal];
+            [btn addTarget:self action:@selector(handleTouchCal:) forControlEvents:UIControlEventTouchUpInside];
+            [view addSubview:btn];
+        }
+        
+        {
+            UIButton* btn = [[UIButton alloc] initWithFrame:CGRectMake(20, 5, 50, 30)];
+            [btn setTitle:@"取消" forState:UIControlStateNormal];
+            [btn.titleLabel setFont:[UIFont systemFontOfSize:15]];
+            [btn setTitleColor:[UIColor blackColor] forState:UIControlStateNormal];
+            [btn addTarget:self action:@selector(handleTouchCal:) forControlEvents:UIControlEventTouchUpInside];
+            [view addSubview:btn];
+        }
         
         [setting addSubview:view];
         [setting addSubview:picker];

@@ -11,7 +11,7 @@
 @implementation NSMutableDictionary(OrderDetail)
 
 -(NSString*) orderdetail_orderID {
-    return [self objectForKey:@"id"];
+    return [self objectForKey:@"orderId"];
 }
 
 -(NSString*) orderdetail_cost {

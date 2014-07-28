@@ -49,4 +49,13 @@
     }];
 }
 
+- (void)testCommit {
+    
+    [TheDarkPortal commitOrder:[NSNumber numberWithInt:0] onSucceed:^(NSMutableDictionary* succeed){
+        
+    }onFailure:^(NSMutableDictionary* status){
+        
+    }];
+}
+
 @end

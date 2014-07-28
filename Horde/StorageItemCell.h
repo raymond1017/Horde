@@ -8,7 +8,7 @@
 
 #import <UIKit/UIKit.h>
 
-#define StorageItemCellHeight 188
+#define StorageItemCellHeight 196
 
 @class StorageItemSectionView;
 

@@ -8,6 +8,14 @@
 
 #import "DungeonsVC.h"
 
+
+@protocol OrderDelegate <NSObject>
+
+-(void)handleWaitingOrder:(NSString*)orderID;
+
+@end
+
 @interface TaxiPickingUpVC : DungeonsVC
 
+@property (assign, nonatomic) id<OrderDelegate> orderDelegate;
 @end

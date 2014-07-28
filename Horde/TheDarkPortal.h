@@ -13,7 +13,8 @@
 #define REQUEST_QUERY_STORAGE @"storage/query"
 #define REQUEST_DRIVERINFO @"driver/query"
 #define REQUEST_ORDER_QUERY @"order/query"
-#define REQUEST_PLACEORDER @"order/commit"
+#define COMMIT_ORDER @"user/commit"
+#define PULL_ORDER @"order/pull"
 
 @interface TheDarkPortal : NSObject
 
@@ -25,6 +26,10 @@
              onSucceed:(void(^) (NSMutableDictionary* response)) response
              onFailure:(void(^) (NSMutableDictionary* status)) failure;
 
++(void) pullOrder:(NSString*)orderID
+        onSucceed:(void(^) (NSMutableDictionary* response)) response
+        onFailure:(void(^) (NSMutableDictionary* status)) failure;
+
 +(void) queryStorageByID:(NSNumber*)storageID
                onSucceed:(void(^) (NSMutableDictionary* response)) response
                onFailure:(void(^) (NSMutableDictionary* status)) failure;
@@ -32,7 +37,6 @@
 +(void) queryOrder:(NSNumber*)orderID
          onSucceed:(void(^) (NSMutableDictionary* response)) response
          onFailure:(void(^) (NSMutableDictionary* status)) failure;
-
 
 
 +(NSMutableURLRequest*) makeUrlWithMethod:(NSString *)method;

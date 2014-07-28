@@ -15,8 +15,9 @@
 #import "UIImageView+Util.h"
 #import "NSMutableDictionary+Weather.h"
 #import "TaxiPickingUpCompletedVC.h"
+#import "NSMutableDictionary+Mission.h"
 
-@interface ArachnidQuarterVC ()
+@interface ArachnidQuarterVC () <OrderDelegate, UIAlertViewDelegate>
 
 @end
 
@@ -223,19 +224,84 @@
 
 -(void)handlePickup:(id)sender {
     TaxiPickingUpVC* vc = [TaxiPickingUpVC new];
+    vc.orderDelegate = self;
     [self presentViewController:vc animated:YES completion:nil];
 }
 
 -(void)handleBooking:(id)sender {
-    TaxiBookingVC* vc = [TaxiBookingVC new];
+    TaxiPickingUpCompletedVC* vc = [TaxiPickingUpCompletedVC new];
     [self presentViewController:vc animated:YES completion:nil];
+    return;
+//    TaxiBookingVC* vc = [TaxiBookingVC new];
+//    [self presentViewController:vc animated:YES completion:nil];
 }
 
 -(void)handleLookingFor:(id)sender {
-//    TaxiLookingForVC* vc = [TaxiLookingForVC new];
-//    [self presentViewController:vc animated:YES completion:nil];
-
-    TaxiPickingUpCompletedVC* vc = [TaxiPickingUpCompletedVC new];
+    TaxiLookingForVC* vc = [TaxiLookingForVC new];
     [self presentViewController:vc animated:YES completion:nil];
+
 }
+
+#pragma pickingup delegate
+-(void) handleWaitingOrder:(NSString *)orderID {
+    [self timerRequest:orderID];
+}
+
+
+-(void) timerRequest:(NSString*)orderID {
+    int64_t delay = 2.0f;
+    dispatch_time_t timer = dispatch_time(DISPATCH_TIME_NOW, delay * NSEC_PER_SEC);
+    
+    dispatch_after(timer, dispatch_get_main_queue(), ^(void){
+        
+        dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0), ^(void){
+
+            [TheDarkPortal pullOrder:orderID onSucceed:^(NSMutableDictionary* succeed){
+                do{
+                    if([[succeed mission_items] count] < 1){
+                        break;
+                    }
+                    
+                    NSNumber* driverId = [[[succeed mission_items] firstObject] mission_item_driverId];
+                    if([driverId intValue] == 0){
+                        break;
+                    }
+                    
+                    dispatch_async(dispatch_get_main_queue(), ^(void){
+                        UIAlertView *alertView = [[UIAlertView alloc] initWithTitle:T_(@"Alert_title") message:T_(@"Alert_title_content") delegate:self cancelButtonTitle:T_(@"Alert_title_cancel") otherButtonTitles:T_(@"Alert_title_confirm"), nil];
+                        
+                        [alertView show];
+
+//                        [self.view addSubview:alertView];
+                    });
+                    
+                    return;
+                }while (false);
+                [self timerRequest:orderID];
+                
+                
+            }onFailure:^(NSMutableDictionary* status) {
+                [self timerRequest:orderID];
+            }];
+            
+            
+        });
+    });
+}
+
+#pragma mark alertview
+
+- (void)alertView:(UIAlertView *)alertView clickedButtonAtIndex:(NSInteger)buttonIndex {
+    if(buttonIndex == 0){
+        return;
+    }else if(buttonIndex == 1) {
+        TaxiPickingUpCompletedVC* vc = [TaxiPickingUpCompletedVC new];
+        [self presentViewController:vc animated:YES completion:nil];
+    }
+}
+
+- (void)alertViewCancel:(UIAlertView *)alertView {
+    
+}
+
 @end

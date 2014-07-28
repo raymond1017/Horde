@@ -51,10 +51,16 @@
 
 
 //Common
-"Pay_Ailpay" = "支付宝支付";
-"Pay_Wechatpay" = "微信支付";
-"Pay_CreditCard" = "信用卡支付";
+"Pay_Ailpay" = "支付宝预付";
+"Pay_Wechatpay" = "微信预付";
+"Pay_CreditCard" = "信用卡预付";
 "Common_Back" = "返回";
+
+//Alert
+"Alert_title" = "注意";
+"Alert_title_content" = "您的订单状态有更新，请点击查看";
+"Alert_title_confirm" = "查看";
+"Alert_title_cancel" = "取消";
 
 
 //Weather

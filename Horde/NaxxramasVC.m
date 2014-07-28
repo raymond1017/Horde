@@ -44,10 +44,10 @@
     
     IMAGE_SCALE(@"约车_normal");
     
-    item1.tabBarItem = [[UITabBarItem alloc] initWithTitle:nil image:IMAGE_SCALE(@"约车_normal") selectedImage:nil];
-    item2.tabBarItem = [[UITabBarItem alloc] initWithTitle:nil image:IMAGE_SCALE(@"货柜_normal") selectedImage:nil];
-    item3.tabBarItem = [[UITabBarItem alloc] initWithTitle:nil image:IMAGE_SCALE(@"退税_normal") selectedImage:nil];
-    item4.tabBarItem = [[UITabBarItem alloc] initWithTitle:nil image:IMAGE_SCALE(@"我的_normal") selectedImage:nil];
+    item1.tabBarItem = [[UITabBarItem alloc] initWithTitle:@"叫车" image:IMAGE_SCALE(@"约车_normal") selectedImage:nil];
+    item2.tabBarItem = [[UITabBarItem alloc] initWithTitle:@"货柜" image:IMAGE_SCALE(@"货柜_normal") selectedImage:nil];
+    item3.tabBarItem = [[UITabBarItem alloc] initWithTitle:@"退税" image:IMAGE_SCALE(@"退税_normal") selectedImage:nil];
+    item4.tabBarItem = [[UITabBarItem alloc] initWithTitle:@"我的" image:IMAGE_SCALE(@"我的_normal") selectedImage:nil];
     
     [self addChildViewController:item1];
     [self addChildViewController:item2];

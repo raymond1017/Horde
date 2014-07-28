@@ -138,6 +138,11 @@
             [btn1 addSubview:label];
             
             [btn1 addTarget:self action:@selector(handlePaymentChanged:) forControlEvents:UIControlEventTouchUpInside];
+            
+            
+            UIImageView* arrow = IMAGEVIEW_SCALE(@"查看路线");
+            arrow.frame = CGRectMake(btn1.frame.size.width - arrow.image.size.width - 5, 15, arrow.image.size.width, arrow.image.size.height);
+            [btn1 addSubview:arrow];
         }
         [section addSubview:btn1];
         
@@ -151,6 +156,10 @@
             [btn2 addSubview:label];
             
             [btn2 addTarget:self action:@selector(handlePaymentChanged:) forControlEvents:UIControlEventTouchUpInside];
+            
+            UIImageView* arrow = IMAGEVIEW_SCALE(@"查看路线");
+            arrow.frame = CGRectMake(btn1.frame.size.width - arrow.image.size.width - 5, 15, arrow.image.size.width, arrow.image.size.height);
+            [btn2 addSubview:arrow];
         }
         [section addSubview:btn2];
         
@@ -164,6 +173,10 @@
             [btn3 addSubview:label];
             
             [btn3 addTarget:self action:@selector(handlePaymentChanged:) forControlEvents:UIControlEventTouchUpInside];
+            
+            UIImageView* arrow = IMAGEVIEW_SCALE(@"查看路线");
+            arrow.frame = CGRectMake(btn1.frame.size.width - arrow.image.size.width - 5, 15, arrow.image.size.width, arrow.image.size.height);
+            [btn3 addSubview:arrow];
         }
         [section addSubview:btn3];
         
@@ -199,7 +212,7 @@
 */
 
 - (void) handlePaymentChanged:(id)sender {
- 
+    return;
     [self.paymentSelection removeFromSuperview];
     UIButton* btn = (UIButton*)sender;
     
