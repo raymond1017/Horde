@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>IDESourceControlProjectFavoriteDictionaryKey</key>
+	<false/>
+	<key>IDESourceControlProjectIdentifier</key>
+	<string>DFE1E93D-1100-413E-8BAA-B54A29EC0C15</string>
+	<key>IDESourceControlProjectName</key>
+	<string>Dungeons</string>
+	<key>IDESourceControlProjectOriginsDictionary</key>
+	<dict>
+		<key>47A04856-3DF7-4EE2-8D15-AB0BA8E8EF7A</key>
+		<string>https://github.com/raymond1017/Horde.git</string>
+		<key>E3B0E84D-00EC-4DD4-9699-E99603B5126B</key>
+		<string>https://github.com/raymond1017/Dungeons.git</string>
+	</dict>
+	<key>IDESourceControlProjectPath</key>
+	<string>Dungeons.xcodeproj/project.xcworkspace</string>
+	<key>IDESourceControlProjectRelativeInstallPathDictionary</key>
+	<dict>
+		<key>47A04856-3DF7-4EE2-8D15-AB0BA8E8EF7A</key>
+		<string>../..</string>
+		<key>E3B0E84D-00EC-4DD4-9699-E99603B5126B</key>
+		<string>../../Horde/Dungeons</string>
+	</dict>
+	<key>IDESourceControlProjectURL</key>
+	<string>https://github.com/raymond1017/Horde.git</string>
+	<key>IDESourceControlProjectVersion</key>
+	<integer>110</integer>
+	<key>IDESourceControlProjectWCCIdentifier</key>
+	<string>47A04856-3DF7-4EE2-8D15-AB0BA8E8EF7A</string>
+	<key>IDESourceControlProjectWCConfigurations</key>
+	<array>
+		<dict>
+			<key>IDESourceControlRepositoryExtensionIdentifierKey</key>
+			<string>public.vcs.git</string>
+			<key>IDESourceControlWCCIdentifierKey</key>
+			<string>E3B0E84D-00EC-4DD4-9699-E99603B5126B</string>
+			<key>IDESourceControlWCCName</key>
+			<string>Dungeons</string>
+		</dict>
+		<dict>
+			<key>IDESourceControlRepositoryExtensionIdentifierKey</key>
+			<string>public.vcs.git</string>
+			<key>IDESourceControlWCCIdentifierKey</key>
+			<string>47A04856-3DF7-4EE2-8D15-AB0BA8E8EF7A</string>
+			<key>IDESourceControlWCCName</key>
+			<string>Horde</string>
+		</dict>
+	</array>
+</dict>
+</plist>
