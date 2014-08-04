@@ -9,5 +9,5 @@
 #import "DungeonsVC.h"
 
 @interface TaxiPickingUpCompletedVC : DungeonsVC
-
+@property (strong, nonatomic) NSString* orderID;
 @end

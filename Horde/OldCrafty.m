@@ -111,6 +111,24 @@
             [item setObject:[NSNumber numberWithInt:1] forKey:@"type"];
             [array addObject:item];
         }
+        {
+            NSMutableDictionary* item = [NSMutableDictionary new];
+            [item setObject:@"巴厘岛3天2晚5星自由行" forKey:@"title"];
+            [item setObject:@"价值50元代金卷新鲜优质" forKey:@"desc"];
+            [item setObject:@"888" forKey:@"value"];
+            [item setObject:@"5" forKey:@"image"];
+            [item setObject:[NSNumber numberWithInt:1] forKey:@"type"];
+            [array addObject:item];
+        }
+        {
+            NSMutableDictionary* item = [NSMutableDictionary new];
+            [item setObject:@"巴厘岛3天2晚5星自由行" forKey:@"title"];
+            [item setObject:@"价值50元代金卷新鲜优质" forKey:@"desc"];
+            [item setObject:@"888" forKey:@"value"];
+            [item setObject:@"6" forKey:@"image"];
+            [item setObject:[NSNumber numberWithInt:1] forKey:@"type"];
+            [array addObject:item];
+        }
         
         [resp setObject:array forKey:@"list"];
         return resp;
@@ -133,9 +151,9 @@
             }
             {
                 NSMutableDictionary* dict = [NSMutableDictionary new];
-                [dict setObject:@"后天 4月16日 12:15" forKey:@"date"];
+                [dict setObject:@"后天 12:15" forKey:@"date"];
                 [dict setObject:@"素万那普国际机场" forKey:@"begin"];
-                [dict setObject:@"曼谷莲花大酒店" forKey:@"end"];
+                [dict setObject:@"曼谷文华东方酒店" forKey:@"end"];
                 [dict setObject:@"0066-26249999" forKey:@"tel"];
                 
                 [resp setObject:dict forKey:@"info"];

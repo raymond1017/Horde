@@ -26,10 +26,12 @@
 @property (weak, nonatomic) UITextField* flightNo;
 @property (weak, nonatomic) UIView* calSelector;
 @property (weak, nonatomic) UIView* calBackgounrd;
-
+@property (strong, nonatomic) NSString* orderID;
 @property (weak, nonatomic) UIDatePicker* picker;
 
-@property (strong, nonatomic) NSString* orderID;
+@property (assign, nonatomic) CGFloat distance;
+@property (assign, nonatomic) CGFloat amount;
+@property (weak, nonatomic) UILabel* cost;
 @end
 
 @implementation TaxiPickingUpVC
@@ -161,6 +163,8 @@
             [lab setPlaceholder:T_(@"TaxiPickingUp_Location_End")];
 //            [lab setTextColor:[UIColor colorWithRed:141.0/255.0 green:141.0/255.0 blue:141.0/255.0 alpha:1.0]];
             [lab setFont:font];
+//            [lab setKeyboardType:UIKeyboardTypeNumberPad];
+//            [lab setReturnKeyType:UIReturnKeyDone];
             [lab setDelegate:self];
             [btn2 addSubview:lab];
             
@@ -178,28 +182,53 @@
         [container addSubview:btn2];
     }
     
-    int btnHeight = 40;
+    int btnHeight = 48;
     {
-        UIButton* btn = [[UIButton alloc] initWithFrame:CGRectMake(0, container.frame.size.height - btnHeight * 2, container.frame.size.width, itemHeihgt)];
-        [btn setImage:IMAGE_SCALE(@"价格") forState:UIControlStateNormal];
-        [btn setTitle:T_(@"TaxiPickingUp_Estimated") forState:UIControlStateNormal];
-        [btn setTitleColor:[UIColor colorWithRed:106.0/255.0 green:107.0/255.0 blue:111.0/255.0 alpha:1.0] forState:UIControlStateNormal];
+        UIImageView* image = IMAGEVIEW_SCALE(@"价格");
+        image.frame = CGRectMake(100, container.frame.size.height - 80, image.image.size.width, image.image.size.height);
+        [container addSubview:image];
         
-        [btn setImageEdgeInsets:UIEdgeInsetsMake(0.0,
-                                                     0.0,
-                                                     0.0,
-                                                     10.0)];
-
+        UILabel* label = [[UILabel alloc] initWithFrame:CGRectMake(125, container.frame.size.height - 80, 120, 20)];
+        [label setText:T_(@"TaxiPickingUp_Estimated")];
+        [container addSubview:label];
         
-        [container addSubview:btn];
+        
+        UILabel* cost = [[UILabel alloc] initWithFrame:CGRectMake(200, container.frame.size.height - 80, 120, 20)];
+        [cost setText:@"35"];
+//        [value setTextColor:RGB(<#x#>, <#y#>, <#z#>)];
+        [container addSubview:cost];
+        
+        self.cost = cost;
+//        UIButton* btn = [[UIButton alloc] initWithFrame:CGRectMake(0, container.frame.size.height - btnHeight * 2, container.frame.size.width, itemHeihgt)];
+//        [btn setImage:IMAGE_SCALE(@"价格") forState:UIControlStateNormal];
+//        [btn setTitle:T_(@"TaxiPickingUp_Estimated") forState:UIControlStateNormal];
+//        [btn setTitleColor:[UIColor colorWithRed:106.0/255.0 green:107.0/255.0 blue:111.0/255.0 alpha:1.0] forState:UIControlStateNormal];
+//        
+//        [btn setImageEdgeInsets:UIEdgeInsetsMake(0.0,
+//                                                     0.0,
+//                                                     0.0,
+//                                                     10.0)];
+//
+//        
+//        [container addSubview:btn];
     }
     {
         UIButton* btn = [[UIButton alloc] initWithFrame:CGRectMake(0, container.frame.size.height - btnHeight, container.frame.size.width, btnHeight)];
-        [btn setTitle:T_(@"TaxiPickingUp_PlaceOrder") forState:UIControlStateNormal];
+//        [btn setTitle:T_(@"TaxiPickingUp_PlaceOrder") forState:UIControlStateNormal];
         [btn setBackgroundColor:[UIColor blackColor]];
         [btn addTarget:self action:@selector(handlePickingUp:) forControlEvents:UIControlEventTouchUpInside];
         
         [container addSubview:btn];
+        
+        UIImageView* image = IMAGEVIEW_SCALE(@"框");
+        image.frame = CGRectMake(btn.frame.size.width / 2 - image.image.size.width / 2, btn.frame.size.height / 2 - image.image.size.height / 2, image.image.size.width, image.image.size.height);
+        [btn addSubview:image];
+        
+        UILabel* lab = [[UILabel alloc] initWithFrame:[btn bounds]];
+        [lab setText:T_(@"TaxiPickingUp_PlaceOrder")];
+        [lab setTextAlignment:NSTextAlignmentCenter];
+        [lab setTextColor:[UIColor whiteColor]];
+        [btn addSubview:lab];
     }
     
     //活动区域
@@ -227,21 +256,25 @@
         UIButton* car1 = [[UIButton alloc] initWithFrame:CGRectMake(0, 22, viewContainer.frame.size.width / carCount - margin, 73)];
         [car1 setBackgroundColor:[UIColor clearColor]];
         [viewContainer addSubview:car1];
+        car1.tag = 1.0 * 100;
         [car1 addTarget:self action:@selector(handleCarChanged:) forControlEvents:UIControlEventTouchUpInside];
         
         UIButton* car2 = [[UIButton alloc] initWithFrame:CGRectMake(car1.frame.origin.x + car1.frame.size.width + margin, car1.frame.origin.y, viewContainer.frame.size.width / carCount - margin, 73)];
         [car2 setBackgroundColor:[UIColor clearColor]];
         [viewContainer addSubview:car2];
+        car2.tag = 1.5 * 100;
         [car2 addTarget:self action:@selector(handleCarChanged:) forControlEvents:UIControlEventTouchUpInside];
         
         UIButton* car3 = [[UIButton alloc] initWithFrame:CGRectMake(car2.frame.origin.x + car2.frame.size.width + margin, car1.frame.origin.y, viewContainer.frame.size.width / carCount - margin, 73)];
         [car3 setBackgroundColor:[UIColor clearColor]];
         [viewContainer addSubview:car3];
-        [car3 addTarget:self action:@selector(handleCarChanged:) forControlEvents:UIControlEventTouchUpInside];
+        car3.tag = 1.8 * 100;
+//        [car3 addTarget:self action:@selector(handleCarChanged:) forControlEvents:UIControlEventTouchUpInside];
         
         UIButton* car4 = [[UIButton alloc] initWithFrame:CGRectMake(car3.frame.origin.x + car3.frame.size.width + margin, car1.frame.origin.y, viewContainer.frame.size.width / carCount, 73)];
         [car4 setBackgroundColor:[UIColor clearColor]];
         [viewContainer addSubview:car4];
+        car4.tag = 2 * 100;
         [car4 addTarget:self action:@selector(handleCarChanged:) forControlEvents:UIControlEventTouchUpInside];
         int sexCount = 2;
         //选择性别
@@ -258,16 +291,6 @@
         [self handleSexChanged:sex1];
         [self handleCarChanged:car1];
     }
-}
-
-- (void)viewDidAppear:(BOOL)animated {
-    if(self.orderID == nil){
-        return;
-    }
-    
-    [self.orderDelegate handleWaitingOrder:self.orderID];
-    
-    [self dismissViewControllerAnimated:NO completion:nil];
 }
 
 - (void)didReceiveMemoryWarning
@@ -291,10 +314,7 @@
     
     
     [TheDarkPortal commitOrder:[NSNumber numberWithInt:0] onSucceed:^(NSMutableDictionary* succeed){
-        
-        
-        NSString* orderID = [succeed orderdetail_orderID];
-        self.orderID = orderID;
+        self.orderID = [succeed orderdetail_orderID];
     }onFailure:^(NSMutableDictionary* status){
         
     }];
@@ -316,8 +336,12 @@
     UIButton* btn = (UIButton*)sender;
     [self.sexSelection removeFromSuperview];
     
+    
     [self.sexSelection setFrame:CGRectMake(btn.frame.size.width - 20, 5, self.sexSelection.image.size.width, self.sexSelection.image.size.width)];
     [btn addSubview:self.sexSelection];
+    
+    self.amount = btn.tag;
+    [self countdown];
     
 }
 
@@ -412,7 +436,14 @@
 }
 
 - (void)dismiss{
+    [self.orderDelegate handleWaitingOrder:self.orderID];
     [self dismissViewControllerAnimated:NO completion:nil];
+}
+
+- (void)countdown {
+    CGFloat count = self.amount * self.distance / 100.0;
+    
+    [self.cost setText:[[NSNumber numberWithFloat:count] stringValue]];
 }
 
 #pragma mark TextField Delegate
@@ -421,7 +452,21 @@
     if(textField == self.flightNo){
         [self.pickingUpStart setText:@"曼谷素万那普机场"];
     }else if(textField == self.pickingUpEnd){
-        [self.pickingUpEnd setText:@"曼谷莲花大酒店"];
+        NSString* input = [textField text];
+        
+        NSString* start = [input substringToIndex:3];
+        if([start isEqualToString:@"021"]){
+            [self.pickingUpEnd setText:@"曼谷四季酒店"];
+            self.distance = 83;
+        }else if( [start isEqualToString:@"022"] ){
+            [self.pickingUpEnd setText:@"曼谷文华东方酒店"];
+            self.distance = 102;
+        }else {
+            [self.pickingUpEnd setText:@"未找到相关酒店"];
+            self.distance = 0;
+        }
+        
+        [self countdown];
     }
     return NO;
 }

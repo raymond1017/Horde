@@ -19,4 +19,5 @@
 -(NSString*) mission_item_end;
 -(NSString*) mission_item_cost;
 -(NSNumber*) mission_item_driverId;
+-(NSString*) mission_item_status;
 @end

@@ -7,6 +7,7 @@
 //
 
 #import "ConstructQuarterVC.h"
+#import "TaxiPickingUpCompletedVC.h"
 
 @interface ConstructQuarterVC ()
 
@@ -32,6 +33,17 @@
     [self.container_body addSubview:scrollview];
     UIView* container = scrollview;
     [container setBackgroundColor:[UIColor colorWithRed:248.0/255.0 green:248.0/255.0 blue:237.0/255.0 alpha:1.0]];
+    
+    [self navigationWithTitle:T_(@"Tab_3") isHiddenBack:YES];
+    
+    UIImageView* view = IMAGEVIEW_SCALE(@"订单 2");
+    [scrollview setContentSize:view.image.size];
+    
+    UIButton* fakeButton = [[UIButton alloc] initWithFrame:view.bounds];
+    [fakeButton addSubview:view];
+    [fakeButton addTarget:self action:@selector(handleOrderClicked:) forControlEvents:UIControlEventTouchUpInside];
+    
+    [container addSubview:fakeButton];
 }
 
 - (void)didReceiveMemoryWarning
@@ -51,4 +63,12 @@
 }
 */
 
+- (void) handleOrderClicked:(id)sender {
+    if(self.orderID == nil)
+        return;
+    
+    TaxiPickingUpCompletedVC* vc = [TaxiPickingUpCompletedVC new];
+    vc.orderID = self.orderID;
+    [self presentViewController:vc animated:YES completion:nil];
+}
 @end

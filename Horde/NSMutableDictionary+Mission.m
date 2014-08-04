@@ -42,4 +42,8 @@
 -(NSNumber*) mission_item_driverId {
     return [self objectForKey:@"driverId"];
 }
+
+-(NSString*) mission_item_status {
+    return [self objectForKey:@"status"];
+}
 @end

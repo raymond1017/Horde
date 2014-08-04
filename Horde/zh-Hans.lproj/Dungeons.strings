@@ -6,12 +6,12 @@
  Copyright (c) 2014年 Bwl. All rights reserved.
  */
 
-"Application_Name" = "说走就走";
+"Application_Name" = "旅途易";
 
 //Main
-"MainVC_Action_PickingUp" = "接机";
-"MainVC_Action_Booking" = "预约叫车";
-"MainVC_Action_LookingFor" = "即时叫车";
+"MainVC_Action_PickingUp" = "接送机";
+"MainVC_Action_Booking" = "线路包车";
+"MainVC_Action_LookingFor" = "景点穿梭";
 
 //Taxi PickingUp
 "TaxiPickingUp_Title" = "填写接机信息";
@@ -28,33 +28,48 @@
 
 //Taxi PickingUp Detail
 "TaxiPickingUpDetail_Title" = "预定成功";
-"TaxiPickingUpDetail_Tips" = "2天后，将显示司机信息";
+"TaxiPickingUpDetail_Tips" = "本订单将从尾号为0425的信用卡中预授权125元，到达目的地后交易以实际情况结算";
 "TaxiPickingUpDetail_Succeed" = "恭喜你，接机服务预定成功！";
 "TaxiPickingUpDetail_Succeed_Tip" = "系统将在您出行前一天，告知相关司机信息";
 
 //Taxi PickingUp Completed
-"TaxiPickingUpCompleted_Title" = "司机信息";
+"TaxiPickingUpCompleted_Title" = "订单详情";
 "TaxiPickingUpCompleted_Storage" = "车上货柜";
 "TaxiPickingUpCompleted_Wifi" = "信息";
 "TaxiPickingUpCompleted_PayInfo" = "支付方式";
-"TaxiPickingUpCompleted_PathDetail" = "查看路线";
-"TaxiPickingUpCompleted_Completed" = "我已到达";
+"TaxiPickingUpCompleted_PathDetail" = "步行到乘车点";
+"TaxiPickingUpCompleted_Completed" = "服务完成后，将根据实际情况结算";
 "TaxiPickingUpCompleted_Lisence" = "车牌：%@";
 "TaxiPickingUpCompleted_Cost" = "预计花费%@泰铢";
 "TaxiPickingUpCompleted_Selection" = "车载商品";
+
+"TaxiPickingUpCompleted_Order_Booking" = "我已下单";
+"TaxiPickingUpCompleted_Order_Checkout" = "司机已接单";
+"TaxiPickingUpCompleted_Order_Start" = "司机已出发";
+"TaxiPickingUpCompleted_Order_Arrived" = "司机已到达";
+"TaxiPickingUpCompleted_Order_Finish" = "订单完成";
 
 //Taxi Onboard Storage
 "TaxiOnBoardStorage_Title" = "车上货柜";
 "TaxiOnBoardStorage_Tip" = "下车结账时，我会把所购物品直接交付给您";
 "TaxiOnBoardStorage_Buy" = "放入购物车";
-"TaxiOnBoradStorage_Selection" = "已选%d件商品"; 
+"TaxiOnBoradStorage_Selection" = "已选%d件商品";
 
+//Storage
+"Storage_title" = "货柜";
+
+// Tab
+"Tab_3" = "订单列表";
+
+// Info
+"Info_title" = "我的";
 
 //Common
 "Pay_Ailpay" = "支付宝预付";
 "Pay_Wechatpay" = "微信预付";
 "Pay_CreditCard" = "信用卡预付";
 "Common_Back" = "返回";
+"Common_Title" = "";
 
 //Alert
 "Alert_title" = "注意";

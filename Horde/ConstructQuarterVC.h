@@ -9,5 +9,5 @@
 #import "DungeonsVC.h"
 
 @interface ConstructQuarterVC : DungeonsVC
-
+@property (strong, nonatomic) NSString* orderID;
 @end

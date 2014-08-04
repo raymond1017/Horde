@@ -12,8 +12,11 @@
 #import "ConstructQuarterVC.h"
 #import "PlagueQuarterVC.h"
 
-@interface NaxxramasVC ()
-
+@interface NaxxramasVC ()<MissionDelegate>
+@property (weak, nonatomic) ArachnidQuarterVC* item1;
+@property (weak, nonatomic) MilitaryQuarterVC* item2;
+@property (weak, nonatomic) ConstructQuarterVC* item3;
+@property (weak, nonatomic) PlagueQuarterVC* item4;
 @end
 
 @implementation NaxxramasVC
@@ -37,6 +40,13 @@
     ConstructQuarterVC* item3 = [ConstructQuarterVC new];
     PlagueQuarterVC* item4 = [PlagueQuarterVC new];
     
+    self.item1 = item1;
+    self.item2 = item2;
+    self.item3 = item3;
+    self.item4 = item4;
+    
+    item1.missionDelegate = self;
+    
     item1.tabBarHeight = self.tabBar.frame.size.height;
     item2.tabBarHeight = self.tabBar.frame.size.height;
     item3.tabBarHeight = self.tabBar.frame.size.height;
@@ -46,7 +56,7 @@
     
     item1.tabBarItem = [[UITabBarItem alloc] initWithTitle:@"叫车" image:IMAGE_SCALE(@"约车_normal") selectedImage:nil];
     item2.tabBarItem = [[UITabBarItem alloc] initWithTitle:@"货柜" image:IMAGE_SCALE(@"货柜_normal") selectedImage:nil];
-    item3.tabBarItem = [[UITabBarItem alloc] initWithTitle:@"退税" image:IMAGE_SCALE(@"退税_normal") selectedImage:nil];
+    item3.tabBarItem = [[UITabBarItem alloc] initWithTitle:@"订单" image:IMAGE_SCALE(@"退税_normal") selectedImage:nil];
     item4.tabBarItem = [[UITabBarItem alloc] initWithTitle:@"我的" image:IMAGE_SCALE(@"我的_normal") selectedImage:nil];
     
     [self addChildViewController:item1];
@@ -75,6 +85,12 @@
     // Pass the selected object to the new view controller.
 }
 */
+
+#pragma mark Mission Delegate
+-(void) handleNewMission:(NSString *)missionID {
+    [self setSelectedIndex:1];
+    self.item3.orderID = missionID;
+}
 
 // lock direction
 -(UIStatusBarStyle)preferredStatusBarStyle{

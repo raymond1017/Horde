@@ -8,6 +8,14 @@
 
 #import "DungeonsVC.h"
 
-@interface ArachnidQuarterVC : DungeonsVC
 
+@protocol MissionDelegate <NSObject>
+
+-(void) handleNewMission:(NSString*)missionID;
+
+@end
+
+
+@interface ArachnidQuarterVC : DungeonsVC
+@property (assign, nonatomic) id<MissionDelegate> missionDelegate;
 @end

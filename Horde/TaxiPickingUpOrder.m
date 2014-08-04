@@ -72,12 +72,12 @@
     {
         topOffset += 20;
         
-        UIView* section = [[UIView alloc] initWithFrame:CGRectMake(0, topOffset, container.frame.size.width, 140)];
+        UIButton* section = [[UIButton alloc] initWithFrame:CGRectMake(0, topOffset, container.frame.size.width, 140)];
         [section setBackgroundColor:[UIColor whiteColor]];
         [container addSubview:section];
         
         UILabel* date = [[UILabel alloc] initWithFrame:CGRectMake(leftMargin, 15, section.frame.size.width, 20)];
-        [date setText:@"后天 4月16日 12:15"];
+        [date setText:@"后天 12:15"];
         [date setTextAlignment:NSTextAlignmentLeft];
         [date setTextColor:[UIColor colorWithRed:233/255.0 green:40/255.0 blue:0/255.0 alpha:1.0]];
         [section addSubview:date];
@@ -96,7 +96,7 @@
         [section addSubview:start];
         
         UILabel* end = [[UILabel alloc] initWithFrame:CGRectMake(ivStart.frame.origin.x + ivStart.frame.size.width + 15, start.frame.origin.y + start.frame.size.height + 15, section.frame.size.width, 20)];
-        [end setText:@"曼谷莲花大酒店"];
+        [end setText:@"曼谷文华东方酒店"];
         [end setTextColor: [UIColor colorWithRed:100.0/255.0 green:100.0/255.0 blue:100.0/255.0 alpha:1.0]];
         [section addSubview:end];
         
@@ -105,22 +105,53 @@
         [endTel setTextColor: [UIColor colorWithRed:141.0/255.0 green:141.0/255.0 blue:141.0/255.0 alpha:1.0]];
         [section addSubview:endTel];
         
-        UIButton* detail = [[UIButton alloc] initWithFrame:CGRectMake(section.frame.size.width - 130, section.frame.size.height/2, 150, 20)];
-        [detail setTitle:T_(@"TaxiPickingUpCompleted_PathDetail") forState:UIControlStateNormal];
-//        [detail setTextAlignment:NSTextAlignmentRight];
-        [detail setTitleColor:[UIColor colorWithRed:233/255.0 green:40/255.0 blue:0/255.0 alpha:1.0] forState:UIControlStateNormal];
-        [detail.titleLabel setFont:[UIFont systemFontOfSize:15]];
-        [detail setImage:IMAGE_SCALE(@"查看路线") forState:UIControlStateNormal];
-        [detail addTarget:self action:@selector(handleViewDetail:) forControlEvents:UIControlEventTouchUpInside];
-        [detail setImageEdgeInsets:UIEdgeInsetsMake(0.0,
-                                                     0.0,
-                                                     0.0,
-                                                     -(detail.frame.size.width))];
-        [detail setBackgroundColor:[UIColor clearColor]];
+//        UIButton* detail = [[UIButton alloc] initWithFrame:CGRectMake(section.frame.size.width - 130, section.frame.size.height/2, 150, 20)];
+//        [detail setTitle:T_(@"TaxiPickingUpCompleted_PathDetail") forState:UIControlStateNormal];
+////        [detail setTextAlignment:NSTextAlignmentRight];
+//        [detail setTitleColor:[UIColor colorWithRed:233/255.0 green:40/255.0 blue:0/255.0 alpha:1.0] forState:UIControlStateNormal];
+//        [detail.titleLabel setFont:[UIFont systemFontOfSize:15]];
+//        [detail setImage:IMAGE_SCALE(@"查看路线") forState:UIControlStateNormal];
+//        [detail addTarget:self action:@selector(handleViewDetail:) forControlEvents:UIControlEventTouchUpInside];
+//        [detail setImageEdgeInsets:UIEdgeInsetsMake(0.0,
+//                                                     0.0,
+//                                                     0.0,
+//                                                     -(detail.frame.size.width))];
         
+        
+        UIImageView* arrow = IMAGEVIEW_SCALE(@"查看路线");
+        arrow.frame = CGRectMake(section.frame.size.width - arrow.image.size.width - 5, section.frame.size.height/2, arrow.image.size.width, arrow.image.size.height);
+        [section addSubview:arrow];
+        
+        UILabel* detail = [UILabel new];
+        detail.frame = CGRectMake(section.frame.size.width - 110, 67, 200, 20);
+        [detail setText:T_(@"TaxiPickingUpCompleted_PathDetail")];
+        [detail setTextColor:RGB(233, 40, 0)];
+        [detail setFont:[UIFont systemFontOfSize:15]];
+//        [detail setBackgroundColor:[UIColor redColor]];
         [section addSubview:detail];
+        [section addTarget:self action:@selector(handleViewDetail:) forControlEvents:UIControlEventTouchUpInside];
         
         topOffset += section.frame.size.height;
+    }
+    {
+        topOffset += 20;
+        
+        UIView* section = [[UIView alloc] initWithFrame:CGRectMake(0, topOffset, container.frame.size.width, 80)];
+        [section setBackgroundColor:RGB(255, 243, 219)];
+        
+        
+//        "TaxiPickingUpDetail_Tips" = "本订单将从尾号为0425的信用卡中预授权125元，到达目的地后交易以实际情况结算";
+        NSMutableAttributedString* str = [[NSMutableAttributedString alloc] initWithString:T_(@"TaxiPickingUpDetail_Tips")];
+        [str addAttribute:NSForegroundColorAttributeName value:[UIColor redColor] range:NSMakeRange(8,4)];
+        [str addAttribute:NSForegroundColorAttributeName value:[UIColor redColor] range:NSMakeRange(20,4)];
+        
+        UILabel* label = [[UILabel alloc] initWithFrame:CGRectMake(10, 16, container.frame.size.width - 20, 45)];
+//        [label setText:T_(@"TaxiPickingUpDetail_Tips")];
+        label.attributedText = str;
+        [label setFont:[UIFont systemFontOfSize:16]];
+        [label setNumberOfLines:2];
+        [section addSubview:label];
+        [container addSubview:section];
     }
     {
         topOffset += 20;
@@ -130,7 +161,7 @@
         
         UIView* section = [[UIView alloc] initWithFrame:CGRectMake(0, topOffset, container.frame.size.width, 150)];
         [section setBackgroundColor:[UIColor colorWithRed:229.0/255.0 green:229.0/255.0 blue:229.0/255.0 alpha:1.0]];
-        [container addSubview:section];
+//        [container addSubview:section];
         
         UIButton* btn1 = [[UIButton alloc] initWithFrame:CGRectMake(0, margin, section.frame.size.width, section.frame.size.height / 3 - margin)];
         [btn1 setBackgroundColor:[UIColor whiteColor]];
@@ -190,12 +221,22 @@
         topOffset += section.frame.size.height;
     }
     {
-        int btnHeight = 40;
+        int btnHeight = 48;
         UIButton* btn = [[UIButton alloc] initWithFrame:CGRectMake(0, container.frame.size.height - btnHeight, container.frame.size.width, btnHeight)];
         [btn setBackgroundColor:[UIColor blackColor]];
-        [btn setTitle:T_(@"TaxiPickingUpDetail_Tips") forState:UIControlStateNormal];
+//        [btn setTitle:T_(@"TaxiPickingUpDetail_Tips") forState:UIControlStateNormal];
         [container addSubview:btn];
         [btn addTarget:self action:@selector(handleBack:) forControlEvents:UIControlEventTouchUpInside];
+        
+        UIImageView* image = IMAGEVIEW_SCALE(@"框");
+        image.frame = CGRectMake(btn.frame.size.width / 2 - image.image.size.width / 2, btn.frame.size.height / 2 - image.image.size.height / 2, image.image.size.width, image.image.size.height);
+        [btn addSubview:image];
+        
+        UILabel* lab = [[UILabel alloc] initWithFrame:[btn bounds]];
+        [lab setText:@"免费选取泰国特色赠品"];
+        [lab setTextAlignment:NSTextAlignmentCenter];
+        [lab setTextColor:[UIColor whiteColor]];
+        [btn addSubview:lab];
     }
     
 }
@@ -232,6 +273,7 @@
 }
 
 - (void) handleBack:(id)sender {
+    [self dismissViewControllerAnimated:NO completion:nil];
     NSNotification * notification = [NSNotification notificationWithName:@"BACKTOINDEXNOTE" object:nil];
     [[NSNotificationCenter defaultCenter] postNotification:notification];
 }

@@ -10,6 +10,7 @@
 #import "TaxiOnBoardStorageVC.h"
 #import "UILabel+Util.h"
 #import "NSMutableDictionary+OrderDetail.h"
+#import "NSMutableDictionary+Mission.h"
 #import "TheDarkPortal.h"
 #import "TaxiCheckPointVC.h"
 
@@ -36,6 +37,8 @@
 @property (strong, nonatomic) NSMutableDictionary* orderDetail;
 
 @property (assign, nonatomic) NSInteger selection;
+
+@property (weak, nonatomic) UIImageView* fake1;
 @end
 
 @implementation TaxiPickingUpCompletedVC
@@ -59,7 +62,7 @@
     UIView* container = self.container_body;
     
     [container setBackgroundColor:[UIColor colorWithRed:248.0/255.0 green:248.0/255.0 blue:237.0/255.0 alpha:1.0]];
-    int topOffset = 20;
+    int topOffset = 10;
     int leftMargin = 20;
     {
         UIView* section = [[UIView alloc] initWithFrame:CGRectMake(0, topOffset, container.frame.size.width, 91)];
@@ -102,8 +105,9 @@
         [spend setBackgroundColor:[UIColor redColor]];
 //        [section addSubview:spend];
         
-        
-        [section addSubview:IMAGEVIEW_SCALE(@"司机信息")];
+        UIImageView* fakeImage = IMAGEVIEW_SCALE(@"未出发");
+        self.fake1 = fakeImage;
+        [section addSubview:fakeImage];
         
         self.driver_name = name;
         self.driver_portrait = portrait;
@@ -114,14 +118,14 @@
         topOffset += section.frame.size.height;
     }
     {
-        topOffset += 20;
+        topOffset += 40;
         
-        UIView* section = [[UIView alloc] initWithFrame:CGRectMake(0, topOffset, container.frame.size.width, 140)];
+        UIButton* section = [[UIButton alloc] initWithFrame:CGRectMake(0, topOffset, container.frame.size.width, 140)];
         [section setBackgroundColor:[UIColor whiteColor]];
         [container addSubview:section];
         
         UILabel* date = [[UILabel alloc] initWithFrame:CGRectMake(leftMargin, 15, section.frame.size.width, 20)];
-        [date setText:@"后天 4月16日 12:15"];
+        [date setText:@"后天 12:15"];
         [date setTextAlignment:NSTextAlignmentLeft];
         [date setTextColor:[UIColor colorWithRed:233/255.0 green:40/255.0 blue:0/255.0 alpha:1.0]];
         [section addSubview:date];
@@ -140,7 +144,7 @@
         [section addSubview:start];
         
         UILabel* end = [[UILabel alloc] initWithFrame:CGRectMake(ivStart.frame.origin.x + ivStart.frame.size.width + 15, start.frame.origin.y + start.frame.size.height + 15, section.frame.size.width, 20)];
-        [end setText:@"曼谷莲花大酒店"];
+        [end setText:@"曼谷文华东方酒店"];
         [end setTextColor: [UIColor colorWithRed:100.0/255.0 green:100.0/255.0 blue:100.0/255.0 alpha:1.0]];
         [section addSubview:end];
         
@@ -149,25 +153,29 @@
         [endTel setTextColor: [UIColor colorWithRed:141.0/255.0 green:141.0/255.0 blue:141.0/255.0 alpha:1.0]];
         [section addSubview:endTel];
         
-        UIButton* detail = [[UIButton alloc] initWithFrame:CGRectMake(section.frame.size.width - 130, section.frame.size.height/2, 150, 20)];
-        [detail setTitle:T_(@"TaxiPickingUpCompleted_PathDetail") forState:UIControlStateNormal];
-        //        [detail setTextAlignment:NSTextAlignmentRight];
-        [detail setTitleColor:[UIColor colorWithRed:233/255.0 green:40/255.0 blue:0/255.0 alpha:1.0] forState:UIControlStateNormal];
-        [detail.titleLabel setFont:[UIFont systemFontOfSize:15]];
-        [detail setImage:IMAGE_SCALE(@"查看路线") forState:UIControlStateNormal];
-        [detail addTarget:self action:@selector(handleViewDetail:) forControlEvents:UIControlEventTouchUpInside];
-        [detail setImageEdgeInsets:UIEdgeInsetsMake(0.0,
-                                                    0.0,
-                                                    0.0,
-                                                    -(detail.frame.size.width))];
+        
+        UIImageView* arrow = IMAGEVIEW_SCALE(@"查看路线");
+        arrow.frame = CGRectMake(section.frame.size.width - arrow.image.size.width - 5, section.frame.size.height/2, arrow.image.size.width, arrow.image.size.height);
+        [section addSubview:arrow];
+        
+        UILabel* detail = [UILabel new];
+        detail.frame = CGRectMake(section.frame.size.width - 110, 67, 200, 20);
+        [detail setText:T_(@"TaxiPickingUpCompleted_PathDetail")];
+        [detail setTextColor:RGB(233, 40, 0)];
+        [detail setFont:[UIFont systemFontOfSize:15]];
+        //        [detail setBackgroundColor:[UIColor redColor]];
+        [section addSubview:detail];
+        
         [detail setBackgroundColor:[UIColor clearColor]];
         
         [section addSubview:detail];
         
+        [section addTarget:self action:@selector(handleViewDetail:) forControlEvents:UIControlEventTouchUpInside];
+        
         topOffset += section.frame.size.height;
     }
     {
-        topOffset += 20;
+        topOffset += 10;
         
         int margin = 1;
         
@@ -213,17 +221,18 @@
             [label centerWithLeft:leftMargin andView:btn2];
             [btn2 addSubview:label];
             
-            UIButton* tip = [[UIButton alloc] initWithFrame:CGRectMake(section.frame.size.width - 130, btn1.frame.size.height/2 - 10, 150, 20)];
-            //            [tip setText:@"微信支付"];;
-            [tip setTitleColor:[UIColor colorWithRed:233/255.0 green:40/255.0 blue:0/255.0 alpha:1.0] forState:UIControlStateNormal];
-            [tip.titleLabel setFont:[UIFont systemFontOfSize:15]];
-            [tip setImage:IMAGE_SCALE(@"查看路线") forState:UIControlStateNormal];
-            [tip setImageEdgeInsets:UIEdgeInsetsMake(0.0,
-                                                     0.0,
-                                                     0.0,
-                                                     -(tip.frame.size.width))];
+            UIImageView* arrow = IMAGEVIEW_SCALE(@"查看路线");
+            [arrow setFrame:CGRectMake(btn2.frame.size.width - arrow.image.size.width - 5, btn2.frame.size.height/2 - 8, arrow.image.size.width, arrow.image.size.height)];
+            [btn2 addSubview:arrow];
             
-            self.payment_type = tip;
+            UILabel* tip = [[UILabel alloc] initWithFrame:CGRectMake(btn1.frame.size.width - 160 - arrow.frame.size.width, btn1.frame.size.height/2 - 10, 150, 20)];
+            [tip setText:T_(@"Pay_Wechatpay")];
+            [tip setTextColor:[UIColor colorWithRed:233/255.0 green:40/255.0 blue:0/255.0 alpha:1.0]];
+            [tip setFont:[UIFont systemFontOfSize:15]];
+            //            [tip setBackgroundColor:[UIColor yellowColor]];
+            [tip setTextAlignment:NSTextAlignmentRight];
+            
+//            self.payment_type = tip;
             
             [btn2 addSubview:tip];
         }
@@ -253,42 +262,53 @@
         topOffset += section.frame.size.height;
     }
     {
-        int btnHeight = 40;
+        int btnHeight = 49;
         UIButton* btn = [[UIButton alloc] initWithFrame:CGRectMake(0, container.frame.size.height - btnHeight, container.frame.size.width, btnHeight)];
         [btn setBackgroundColor:[UIColor blackColor]];
         [btn setTitle:T_(@"TaxiPickingUpCompleted_Completed") forState:UIControlStateNormal];
         [container addSubview:btn];
+        
     }
     
     {
-        [TheDarkPortal queryOrder:[NSNumber numberWithInt:0] onSucceed:^(NSMutableDictionary* succeed){
-            
-            NSString* cost = [succeed orderdetail_cost];
-            {
-                NSMutableDictionary* dict = [succeed orderdetail_driverinfo];
-                [self.driver_portrait setImage:[UIImage imageNamed:[dict orderdetail_driverinfo_avator]]];
-                [self.driver_name setText:[dict orderdetail_driverinfo_name]];
-                [self.driver_desc setText:[dict orderdetail_driverinfo_carinfo]];
-                [self.driver_license setText:[[NSString alloc] initWithFormat:T_(@"TaxiPickingUpCompleted_Lisence"), [dict orderdetail_driverinfo_license]]];
-                [self.driver_cost setText:[[NSString alloc] initWithFormat:T_(@"TaxiPickingUpCompleted_Cost"), cost]];
-            }
-            {
-                NSMutableDictionary* dict = [succeed orderdetail_info];
-                [self.info_date setText:[dict orderdetail_info_date]];
-                [self.info_begin setText:[dict orderdetail_info_begin]];
-                [self.info_end setText:[dict orderdetail_info_end]];
-                [self.info_tel setText:[dict orderdetail_info_tel]];
-            }
-            {
-                NSMutableDictionary* dict = [succeed orderdetail_payment];
-                [self.payment_type setTitle:[dict orderdetail_payment_type] forState:UIControlStateNormal];
-//                [self.payment_type setText:[dict orderdetail_payment_type]];
-            }
-            {
-                NSMutableDictionary* dict = [succeed orderdetail_storage];
-                [self.storage_count setText:[[NSString alloc] initWithFormat:T_(@"TaxiPickingUpCompleted_Selection"), [dict orderdetail_storage_selectCount]]];
+        [TheDarkPortal queryOrder:[NSNumber numberWithInt:[self.orderID intValue]] onSucceed:^(NSMutableDictionary* succeed){
+            dispatch_async(dispatch_get_main_queue(), ^(void){
+                if([[[[succeed mission_items] firstObject] mission_item_status] isEqualToString:@"free"]) {
+                    [self.fake1 setImage:IMAGE_SCALE(@"未出发")];
+                }else if([[[[succeed mission_items] firstObject] mission_item_status] isEqualToString:@"busy"]){
+                    [self.fake1 setImage:IMAGE_SCALE(@"在路上")];
+                }else if([[[[succeed mission_items] firstObject] mission_item_status] isEqualToString:@"waiting"]){
+                    [self.fake1 setImage:IMAGE_SCALE(@"已到达")];
+                }else {
+                    [self.fake1 setImage:IMAGE_SCALE(@"未出发")];
+                }
+            });
+//            NSString* cost = [succeed orderdetail_cost];
+//            {
+//                NSMutableDictionary* dict = [succeed orderdetail_driverinfo];
+//                [self.driver_portrait setImage:[UIImage imageNamed:[dict orderdetail_driverinfo_avator]]];
+//                [self.driver_name setText:[dict orderdetail_driverinfo_name]];
+//                [self.driver_desc setText:[dict orderdetail_driverinfo_carinfo]];
+//                [self.driver_license setText:[[NSString alloc] initWithFormat:T_(@"TaxiPickingUpCompleted_Lisence"), [dict orderdetail_driverinfo_license]]];
+//                [self.driver_cost setText:[[NSString alloc] initWithFormat:T_(@"TaxiPickingUpCompleted_Cost"), cost]];
+//            }
+//            {
+//                NSMutableDictionary* dict = [succeed orderdetail_info];
+//                [self.info_date setText:[dict orderdetail_info_date]];
+//                [self.info_begin setText:[dict orderdetail_info_begin]];
+//                [self.info_end setText:[dict orderdetail_info_end]];
+//                [self.info_tel setText:[dict orderdetail_info_tel]];
+//            }
+//            {
+//                NSMutableDictionary* dict = [succeed orderdetail_payment];
+//                [self.payment_type setTitle:[dict orderdetail_payment_type] forState:UIControlStateNormal];
+////                [self.payment_type setText:[dict orderdetail_payment_type]];
+//            }
+//            {
+//                NSMutableDictionary* dict = [succeed orderdetail_storage];
 //                [self.storage_count setText:[[NSString alloc] initWithFormat:T_(@"TaxiPickingUpCompleted_Selection"), [dict orderdetail_storage_selectCount]]];
-            }
+////                [self.storage_count setText:[[NSString alloc] initWithFormat:T_(@"TaxiPickingUpCompleted_Selection"), [dict orderdetail_storage_selectCount]]];
+//            }
             self.orderDetail = succeed;
         }onFailure:^(NSMutableDictionary* status){
             
@@ -333,4 +353,6 @@
     self.selection = count;
     [self.storage_count setText:[[NSString alloc] initWithFormat:T_(@"TaxiOnBoradStorage_Selection"), count]];
 }
+
+
 @end

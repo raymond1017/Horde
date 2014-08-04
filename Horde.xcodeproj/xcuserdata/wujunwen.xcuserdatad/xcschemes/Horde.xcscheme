@@ -15,7 +15,7 @@
             <BuildableReference
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "2F50284D1977DD420052F818"
-               BuildableName = "&#x8bf4;&#x8d70;&#x5c31;&#x8d70;.app"
+               BuildableName = "&#x65c5;&#x9014;&#x6613;.app"
                BlueprintName = "Horde"
                ReferencedContainer = "container:Horde.xcodeproj">
             </BuildableReference>
@@ -43,7 +43,7 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "2F50284D1977DD420052F818"
-            BuildableName = "&#x8bf4;&#x8d70;&#x5c31;&#x8d70;.app"
+            BuildableName = "&#x65c5;&#x9014;&#x6613;.app"
             BlueprintName = "Horde"
             ReferencedContainer = "container:Horde.xcodeproj">
          </BuildableReference>
@@ -62,7 +62,7 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "2F50284D1977DD420052F818"
-            BuildableName = "&#x8bf4;&#x8d70;&#x5c31;&#x8d70;.app"
+            BuildableName = "&#x65c5;&#x9014;&#x6613;.app"
             BlueprintName = "Horde"
             ReferencedContainer = "container:Horde.xcodeproj">
          </BuildableReference>
@@ -80,7 +80,7 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "2F50284D1977DD420052F818"
-            BuildableName = "&#x8bf4;&#x8d70;&#x5c31;&#x8d70;.app"
+            BuildableName = "&#x65c5;&#x9014;&#x6613;.app"
             BlueprintName = "Horde"
             ReferencedContainer = "container:Horde.xcodeproj">
          </BuildableReference>

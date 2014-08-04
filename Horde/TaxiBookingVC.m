@@ -32,6 +32,8 @@
     [self.container_body addSubview:scrollview];
     UIView* container = scrollview;
     [container setBackgroundColor:[UIColor colorWithRed:248.0/255.0 green:248.0/255.0 blue:237.0/255.0 alpha:1.0]];
+    
+    [self navigationWithTitle:T_(@"Common_Title") isHiddenBack:NO];
 }
 
 - (void)didReceiveMemoryWarning

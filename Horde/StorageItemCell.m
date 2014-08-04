@@ -82,7 +82,7 @@
         NSMutableDictionary* dict = [list objectAtIndex:i];
         [item addObject:dict];
         
-        if(i+1 < [dict count]){
+        if(i+1 < ([dict count] + 1)){
             NSMutableDictionary* dictNext = [list objectAtIndex:i+1];
             [item addObject:dictNext];
         }

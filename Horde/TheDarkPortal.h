@@ -12,7 +12,7 @@
 #define REQUEST_FLIGHT @"common/flight.htm"
 #define REQUEST_QUERY_STORAGE @"storage/query"
 #define REQUEST_DRIVERINFO @"driver/query"
-#define REQUEST_ORDER_QUERY @"order/query"
+#define REQUEST_ORDER_QUERY @"order/pull"
 #define COMMIT_ORDER @"user/commit"
 #define PULL_ORDER @"order/pull"
 

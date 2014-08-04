@@ -114,6 +114,12 @@
             [label centerWithLeft:imageView.frame.size.width + imageView.frame.origin.x + textLeftMargin andView:btn1];
             [btn1 addSubview:label];
             
+            UILabel* lab = [[UILabel alloc] initWithFrame:CGRectMake(label.frame.origin.x + label.frame.size.width, 29, 100, 20)];
+            [lab setText:@"享车载免费WIFI"];
+            [lab setFont:[UIFont systemFontOfSize:12]];
+            [lab setTextColor:RGB(255, 255, 255)];
+            [btn1 addSubview:lab];
+            
             UIImageView* imgArrow = [[UIImageView alloc] initWithImage:[UIImage imageNamed:@"进入"]];
             [imgArrow centerWithRight:arrowRightMargin andView:btn1];
             [btn1 addSubview:imgArrow];
@@ -230,11 +236,8 @@
 }
 
 -(void)handleBooking:(id)sender {
-    TaxiPickingUpCompletedVC* vc = [TaxiPickingUpCompletedVC new];
+    TaxiBookingVC* vc = [TaxiBookingVC new];
     [self presentViewController:vc animated:YES completion:nil];
-    return;
-//    TaxiBookingVC* vc = [TaxiBookingVC new];
-//    [self presentViewController:vc animated:YES completion:nil];
 }
 
 -(void)handleLookingFor:(id)sender {
@@ -246,6 +249,10 @@
 #pragma pickingup delegate
 -(void) handleWaitingOrder:(NSString *)orderID {
     [self timerRequest:orderID];
+    
+    if(self.missionDelegate == nil)
+        return;
+    [self.missionDelegate handleNewMission:orderID];
 }
 
 

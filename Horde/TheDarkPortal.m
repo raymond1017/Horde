@@ -118,7 +118,8 @@
          onSucceed:(void(^) (NSMutableDictionary* response)) response
          onFailure:(void(^) (NSMutableDictionary* status)) failure {
     NSMutableDictionary* reqData = [NSMutableDictionary new];
-    [self executeFakeRequest:[self makeUrlWithMethod:REQUEST_ORDER_QUERY] requestData:reqData onSucceed:response onFailure:failure];
+    [reqData setValue:orderID forKeyPath:@"orderId"];
+    [self executeRequest:[self makeUrlWithMethod:REQUEST_ORDER_QUERY] requestData:reqData onSucceed:response onFailure:failure];
 }
 
 +(void) commitOrder:(NSNumber*)flightNumber
